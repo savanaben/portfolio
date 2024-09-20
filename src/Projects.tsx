@@ -2,15 +2,25 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ProjectTile from './components/ProjectTile';
 
-function Projects() {
-  const projects = [
+interface Project {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  imageAlt: string;
+  link: string;
+  categories: string[];
+}
+
+const Projects: React.FC = () => {
+  const projects: Project[] = [
     {
       id: "design-system",
       title: "Design System",
       description: "UI, Process, Design System, Project Management",
       image: "/img/design-system-cover.svg",
       imageAlt: "Abstract image of three shapes coming together to create a page template",
-      link: "/project1",
+      link: "/design-system",
       categories: ["design", "ui"]
     },
     {
@@ -19,7 +29,7 @@ function Projects() {
       description: "Data viz, D3, UI, html, css, js, Student Work",
       image: "/img/SFdataViz-cover.jpg",
       imageAlt: "Floating circular nodes in space with various book labels",
-      link: "/SFdataViz",
+      link: "/project1",
       categories: ["data-viz", "dev"]
     },
     {
@@ -120,16 +130,13 @@ function Projects() {
     <section id="projects" className="container mx-auto px-4">
       <h2 id="work" className="text-5xl font-bold mb-8 text-center">Work</h2>
       <div className="flex flex-wrap -mx-4">
-
-      {projects.map((project) => (
-  <div key={project.id} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-2 mb-4">
-    <Link to={project.link}>
-      <ProjectTile project={project} />
-    </Link>
-  </div>
-))}
-
-
+        {projects.map((project) => (
+          <div key={project.id} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-2 mb-4">
+            <Link to={project.link}>
+              <ProjectTile project={project} />
+            </Link>
+          </div>
+        ))}
       </div>
     </section>
   );

@@ -1,6 +1,18 @@
 import React from 'react';
 
-function ProjectTile({ project }) {
+interface Project {
+  image: string;
+  imageAlt: string;
+  title: string;
+  description: string;
+  categories: string[];
+}
+
+interface ProjectTileProps {
+  project: Project;
+}
+
+function ProjectTile({ project }: ProjectTileProps): JSX.Element {
   return (
     <figure className={`rounded-lg bg-white ${project.categories.join(' ')} flex flex-col h-full`}>
       <div className="block flex-grow">

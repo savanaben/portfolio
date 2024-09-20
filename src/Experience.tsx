@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Experience() {
+const Experience: React.FC = () => {
   return (
     <section className="py-12 max-w-3xl mx-auto">
       <div className="bg-white rounded-lg p-8">
@@ -26,7 +26,7 @@ function Experience() {
               <li>Led the user experience design across complex scenario-based student assessments. Responsibilities included design system ownership, content reviews, design mentorship, project assignment/management, and keeping our team nimble and happy.</li>
               <li>Persona/empathy development and iterative usability testing to ensure products meet the goals and wants of the people using them.</li>
               <li>Scrum/Agile/Design Thinking methodologies utilized to cut through big company bloat, create team diversity, and clearly scope goals.</li>
-              <li>Ensured all front-end functionality and style specifications were clear for developers - provided front-end development support QC'ing implementation and prioritizing features.</li>
+              <li>Ensured all front-end functionality and style specifications were clear for developers - provided front-end development support QC&apos;ing implementation and prioritizing features.</li>
             </ul>
           </div>
           <div>
@@ -44,9 +44,9 @@ function Experience() {
             <h3 className="text-xl font-semibold">Consultant</h3>
             <p className="text-gray-600">Educational Testing Service</p>
             <p className="text-sm text-gray-500">2014–2015</p>
-            <p className="mt-2">Worked primarily on the National Assessment of Educational Progress designing UI's and creating digital assets of all types.</p>
+            <p className="mt-2">Worked primarily on the National Assessment of Educational Progress designing UI&apos;s and creating digital assets of all types.</p>
             <ul className="list-disc list-inside mt-2 space-y-1">
-              <li>Compositing and layout - Paper-to-digital recreations supporting NAEP's transition to a fully online assessment delivery.</li>
+              <li>Compositing and layout - Paper-to-digital recreations supporting NAEP&apos;s transition to a fully online assessment delivery.</li>
               <li>Illustration - Maps, scientific phenomena, diagrams, scenic backgrounds, and other art as-necessary (vector and raster).</li>
               <li>Animation - World-building, scientific, subtle, stimulus for assessment.</li>
               <li>UI/UX - assessment platform UI, Scenario Based Task UI, and component design.</li>
