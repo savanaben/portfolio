@@ -17,11 +17,17 @@ interface PhotoSwipeGalleryProps {
   images: Image[];
   options?: Partial<PhotoSwipeLightbox['options']>;
   className?: string;
+  showCaptions?: boolean;  // Add this line
 }
 
 let galleryCounter = 0;
 
-const PhotoSwipeGallery: React.FC<PhotoSwipeGalleryProps> = ({ images, options = {}, className = '' }) => {
+const PhotoSwipeGallery: React.FC<PhotoSwipeGalleryProps> = ({ 
+  images, 
+  options = {}, 
+  className = '',
+  showCaptions = false  // Add this line
+}) => {
   const galleryRef = useRef<HTMLDivElement | null>(null);
   const galleryId = useRef(`gallery-${galleryCounter++}`);
 
@@ -52,15 +58,19 @@ const PhotoSwipeGallery: React.FC<PhotoSwipeGalleryProps> = ({ images, options =
   return (
     <div id={galleryId.current} className={`pswp-gallery ${className}`} ref={galleryRef}>
       {images.map((image, index) => (
-        <a
-          href={image.largeURL}
-          data-pswp-width={image.width}
-          data-pswp-height={image.height}
-          key={`${galleryId.current}-item-${index}`}
-          data-pswp-caption={image.caption}
-        >
-          <img src={image.thumbnailURL} alt={image.alt || ''} className="w-full h-auto" />
-        </a>
+        <div key={`${galleryId.current}-item-${index}`} className="relative">
+          <a
+            href={image.largeURL}
+            data-pswp-width={image.width}
+            data-pswp-height={image.height}
+            data-pswp-caption={image.caption}
+          >
+            <img src={image.thumbnailURL} alt={image.alt || ''} className="w-full h-auto" />
+          </a>
+          {showCaptions && image.caption && (
+            <p className="mt-2 text-md text-gray-600 mb-4">{image.caption}</p>
+          )}
+        </div>
       ))}
     </div>
   );

@@ -13,6 +13,10 @@ module.exports = {
         disc: 'disc',
         decimal: 'decimal',
       },
+      textColor: {
+        'link': '#0070f3',
+        'link-hover': '#0050a3',
+      },
     },
   },
   plugins: [

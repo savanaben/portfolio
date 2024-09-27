@@ -1,78 +1,87 @@
-import React, { useEffect, useRef } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import { MantineProvider } from '@mantine/core';
 import { AnimatePresence } from 'framer-motion';
-import Projects from './Projects';
-import Experience from './Experience';
-import About from './About';
-import Project1 from './projects/Project1';
-import TestletDesignSystem from './projects/TestletDesignSystem';
 import { HeaderResponsive } from './components/Header';
+import routeConfig from './routeConfig';
 import './index.css';
 
-const MainPage: React.FC = () => {
-  const location = useLocation();
-  const projectsRef = useRef<HTMLDivElement>(null);
-  const experienceRef = useRef<HTMLDivElement>(null);
-  const aboutRef = useRef<HTMLDivElement>(null);
+// Create a context for the background color
+const BackgroundColorContext = createContext<{
+  backgroundColor: string;
+  setBackgroundColor: (color: string) => void;
+}>({
+  backgroundColor: '#f3f4f6', // Default light gray
+  setBackgroundColor: () => { /* no-op */ },
+});
 
-  useEffect(() => {
-    if (location.state && location.state.scrollTo) {
-      const targetRef = 
-        location.state.scrollTo === 'projects' ? projectsRef :
-        location.state.scrollTo === 'experience' ? experienceRef :
-        location.state.scrollTo === 'about' ? aboutRef : null;
-
-      if (targetRef && targetRef.current) {
-        targetRef.current.scrollIntoView({ behavior: 'auto' });
-        window.scrollTo({
-          top: targetRef.current.offsetTop - 80, // Adjust 80 based on your header height
-          behavior: 'auto'
-        });
-      }
-    }
-  }, [location]);
-
-  return (
-    <>
-      <div id="projects" ref={projectsRef}>
-        <Projects />
-      </div>
-      <div id="experience" ref={experienceRef}>
-        <Experience />
-      </div>
-      <div id="about" ref={aboutRef}>
-        <About />
-      </div>
-    </>
-  );
-}
+// Custom hook to use the background color context
+const useBackgroundColor = () => useContext(BackgroundColorContext);
 
 const AnimatedRoutes = () => {
   const location = useLocation();
+  const { setBackgroundColor } = useBackgroundColor();
+
+  useEffect(() => {
+    const currentRoute = routeConfig.find(route => route.path === location.pathname);
+    if (currentRoute) {
+      setBackgroundColor(currentRoute.backgroundColor);
+    } else {
+      setBackgroundColor('#f3f4f6'); // Default color if route not found
+    }
+  }, [location, setBackgroundColor]);
+
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/project1" element={<Project1 />} />
-        <Route path="/design-system" element={<TestletDesignSystem />} />
+        {routeConfig.map(({ path, element: Element, fullWidth }) => (
+          <Route 
+            key={path} 
+            path={path} 
+            element={<MainContent fullWidth={fullWidth}><Element /></MainContent>} 
+          />
+        ))}
       </Routes>
     </AnimatePresence>
   );
+};
+
+interface MainContentProps {
+  children: React.ReactNode;
+  fullWidth?: boolean;
 }
 
-const App: React.FC = () => {
+export const MainContent: React.FC<MainContentProps> = ({ 
+  children, 
+  fullWidth = false,
+}) => {
+  const widthClass = fullWidth ? "w-full" : "container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl";
+
   return (
-    <MantineProvider>
-      <Router>
-        <div className="bg-gray-100 min-h-screen">
-          <HeaderResponsive />
-          <main className="container mx-auto max-w-9xl px-4 py-8 pt-20">
+    <main className={`${widthClass} pt-[56px]`}>
+      {children}
+    </main>
+  );
+};
+
+const App: React.FC = () => {
+  const [backgroundColor, setBackgroundColor] = useState('#f3f4f6');
+
+  useEffect(() => {
+    document.body.style.backgroundColor = backgroundColor;
+  }, [backgroundColor]);
+
+  return (
+    <BackgroundColorContext.Provider value={{ backgroundColor, setBackgroundColor }}>
+      <MantineProvider>
+        <Router>
+          <div className="min-h-screen">
+            <HeaderResponsive />
             <AnimatedRoutes />
-          </main>
-        </div>
-      </Router>
-    </MantineProvider>
+          </div>
+        </Router>
+      </MantineProvider>
+    </BackgroundColorContext.Provider>
   );
 }
 

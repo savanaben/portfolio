@@ -1,0 +1,39 @@
+.toolbar {
+    height: 60px;
+    padding: 0;
+    background-color: white;
+    border-bottom: 1px solid #e9ecef;
+    position: relative;
+  }
+  
+  .toolbarPlaceholder {
+    height: 60px; /* Same as toolbar height */
+    display: none; /* Hidden by default */
+  }
+  
+  .stickyContainer {
+    position: relative;
+  }
+  
+  .sticky {
+    position: fixed;
+    top: 56px; /* Update this to match your header height */
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  
+  .stickyContainer .toolbarPlaceholder {
+    display: block; /* Show placeholder when container has sticky class */
+  }
+  
+  .inner {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .group {
+    height: 100%;
+  }

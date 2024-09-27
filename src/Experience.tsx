@@ -1,10 +1,13 @@
 import React from 'react';
+import Heading from './components/Heading';
 
 const Experience: React.FC = () => {
   return (
     <section className="py-12 max-w-3xl mx-auto">
       <div className="bg-white rounded-lg p-8">
-        <h2 id="experience" className="text-3xl font-bold mb-8 text-center">Experience</h2>
+      <Heading level={1} visualLevel="h2" alignment="center" color="">
+            From Style Guide to Design System
+      </Heading>
         <div className="space-y-8">
           <div>
             <h3 className="text-xl font-semibold">Lead UI/UX Specialist</h3>

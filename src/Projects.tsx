@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ProjectTile from './components/ProjectTile';
+import Heading from './components/Heading';
 
 interface Project {
   id: string;
@@ -38,7 +39,7 @@ const Projects: React.FC = () => {
       description: "Data viz, Vue, Front end dev, Storytelling, Student Work",
       image: "/img/NJ-cover.jpg",
       imageAlt: "Image related to New Jersey affordable housing visualization",
-      link: "/NJ-affordable-housing-2",
+      link: "/affordable-housing-viz",
       categories: ["data-viz", "ux"]
     },
     {
@@ -56,7 +57,7 @@ const Projects: React.FC = () => {
       description: "Accessibility, UI, UX",
       image: "/img/IIC-card-cover.png",
       imageAlt: "Image of a coordinate plane with points and lines",
-      link: "/math-mania",
+      link: "/MathMania",
       categories: ["ui", "case-study"]
     },
     {
@@ -74,7 +75,7 @@ const Projects: React.FC = () => {
       description: "Animation, Assessment, Illustration, Content, UI, UX",
       image: "/img/mango.jpg",
       imageAlt: "Image of a user interface for a reading assessment",
-      link: "/test-design",
+      link: "/TestDesign",
       categories: ["ui", "assessment"]
     },
     {
@@ -101,7 +102,7 @@ const Projects: React.FC = () => {
       description: "3D Modeling, Abstract, Illustration, Data viz",
       image: "/img/3D-cover.jpg",
       imageAlt: "Fantastical image of melting mushroom and orange candy-cane trees",
-      link: "/3D",
+      link: "/DigitalWork",
       categories: ["art"]
     },
     {
@@ -128,11 +129,13 @@ const Projects: React.FC = () => {
 
   return (
     <section id="projects" className="container mx-auto px-4">
-      <h2 id="work" className="text-5xl font-bold mb-8 text-center">Work</h2>
+      <Heading level={1} visualLevel="h2" alignment="center" color="">
+        Work
+      </Heading>     
       <div className="flex flex-wrap -mx-4">
         {projects.map((project) => (
           <div key={project.id} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-2 mb-4">
-            <Link to={project.link}>
+            <Link to={project.link} className="block h-full">
               <ProjectTile project={project} />
             </Link>
           </div>
