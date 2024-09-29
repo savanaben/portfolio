@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import ProjectTile from './components/ProjectTile';
 import Heading from './components/Heading';
+import useScrollPosition from './hooks/useScrollPosition';
 
 interface Project {
   id: string;
@@ -14,6 +15,12 @@ interface Project {
 }
 
 const Projects: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleProjectClick = (link: string) => {
+    navigate(link);
+  };
+
   const projects: Project[] = [
     {
       id: "design-system",
@@ -135,9 +142,12 @@ const Projects: React.FC = () => {
       <div className="flex flex-wrap -mx-4">
         {projects.map((project) => (
           <div key={project.id} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-2 mb-4">
-            <Link to={project.link} className="block h-full">
+            <button 
+              onClick={() => handleProjectClick(project.link)} 
+              className="block h-full w-full text-left"
+            >
               <ProjectTile project={project} />
-            </Link>
+            </button>
           </div>
         ))}
       </div>

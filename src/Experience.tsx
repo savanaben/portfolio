@@ -4,7 +4,7 @@ import Heading from './components/Heading';
 const Experience: React.FC = () => {
   return (
     <section className="py-12 max-w-3xl mx-auto">
-      <div className="bg-white rounded-lg p-8">
+      <div className="bg-white rounded-lg p-12">
       <Heading level={1} visualLevel="h2" alignment="center" color="">
             From Style Guide to Design System
       </Heading>

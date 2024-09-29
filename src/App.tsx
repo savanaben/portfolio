@@ -5,6 +5,7 @@ import { AnimatePresence } from 'framer-motion';
 import { HeaderResponsive } from './components/Header';
 import routeConfig from './routeConfig';
 import './index.css';
+import ScrollToTop from './components/ScrollToTop';
 
 // Create a context for the background color
 const BackgroundColorContext = createContext<{
@@ -17,6 +18,7 @@ const BackgroundColorContext = createContext<{
 
 // Custom hook to use the background color context
 const useBackgroundColor = () => useContext(BackgroundColorContext);
+
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -33,6 +35,7 @@ const AnimatedRoutes = () => {
 
   return (
     <AnimatePresence mode="wait">
+            <ScrollToTop />  {/* Add ScrollToTop component here */}
       <Routes location={location} key={location.pathname}>
         {routeConfig.map(({ path, element: Element, fullWidth }) => (
           <Route 

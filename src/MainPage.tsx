@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import Projects from './Projects';
 import Experience from './Experience';
 import About from './About';
+import AnimatedPage from './components/AnimatedPage';
 
 export const MainPage: React.FC = () => {
   const location = useLocation();
@@ -28,7 +29,7 @@ export const MainPage: React.FC = () => {
   }, [location]);
 
   return (
-    <>
+    <AnimatedPage>
       <div id="projects" ref={projectsRef}>
         <Projects />
       </div>
@@ -38,7 +39,7 @@ export const MainPage: React.FC = () => {
       <div id="about" ref={aboutRef}>
         <About />
       </div>
-    </>
+    </AnimatedPage>
   );
 }
 
