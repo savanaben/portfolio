@@ -1,21 +1,15 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, ReactNode } from 'react';
 import { Image, Button, Container, Group } from '@mantine/core';
 import { IconExternalLink } from '@tabler/icons-react';
-import PhotoSwipeGallery from './PhotoSwipeGallery';
 import AnimatedPage from './AnimatedPage';
-import Paragraph from './Paragraph';
 import TextContainer from './TextContainer';
 import Heading from './Heading';
 import ProjectFooter from '../components/ProjectFooter';
 import classes from './ExternalProjectTemplate.module.css';
 
-interface Image {
-  thumbnailURL: string;
-  largeURL: string;
-  width: number;
-  height: number;
-  caption: string;
-  alt: string;
+interface ProjectLink {
+  url: string;
+  isInternal?: boolean;
 }
 
 interface ExternalProjectTemplateProps {
@@ -24,10 +18,10 @@ interface ExternalProjectTemplateProps {
   title: string;
   titleLevel?: 1 | 2 | 3 | 4 | 5 | 6;
   titleVisualLevel?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
-  description: string;
-  projectLink: string;
-  images?: Image[];
+  content: ReactNode;
+  projectLink: string | ProjectLink;
 }
+
 
 const HEADER_HEIGHT = 56; // Update this to match your actual header height
 
@@ -38,9 +32,8 @@ const ExternalProjectTemplate: React.FC<ExternalProjectTemplateProps> = ({
   title,
   titleLevel = 1,
   titleVisualLevel = 'h2',
-  description,
+  content,
   projectLink,
-  images,
 }) => {
   const [isSticky, setIsSticky] = useState(false);
   const toolbarRef = useRef<HTMLDivElement>(null);
@@ -54,6 +47,32 @@ const ExternalProjectTemplate: React.FC<ExternalProjectTemplateProps> = ({
       setIsSticky(shouldBeSticky);
     }
   };
+
+
+  const handleProjectLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (typeof projectLink === 'object' && projectLink.isInternal) {
+      e.preventDefault();
+      window.open(`${process.env.PUBLIC_URL}${projectLink.url}`, '_blank');
+    }
+  };
+
+  const getLinkProps = () => {
+    if (typeof projectLink === 'string') {
+      return {
+        href: projectLink,
+        target: "_blank",
+        rel: "noopener noreferrer",
+      };
+    } else {
+      return {
+        href: projectLink.url,
+        onClick: handleProjectLinkClick,
+        target: projectLink.isInternal ? undefined : "_blank",
+        rel: projectLink.isInternal ? undefined : "noopener noreferrer",
+      };
+    }
+  };
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -103,9 +122,7 @@ const ExternalProjectTemplate: React.FC<ExternalProjectTemplateProps> = ({
               <Group gap={5} className={classes.group}>
                 <Button
                   component="a"
-                  href={projectLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  {...getLinkProps()}
                   size="md"
                   radius="xl"
                   className="bg-blue-500 hover:bg-blue-600 text-white"
@@ -121,23 +138,11 @@ const ExternalProjectTemplate: React.FC<ExternalProjectTemplateProps> = ({
           <Heading level={titleLevel} visualLevel={titleVisualLevel}>
             {title}
           </Heading>
-
-          {description.split('\n').map((paragraph, index) => (
-            <Paragraph key={index}>{paragraph.trim()}</Paragraph>
-          ))}
-
-          {/* Optional Images */}
-          {images && images.length > 0 && (
-            <div className="mb-8">
-              <PhotoSwipeGallery
-                images={images}
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
-              />
-            </div>
-          )}
-
-          <ProjectFooter />
         </TextContainer>
+
+        {content}
+
+        <ProjectFooter />
       </div>
     </AnimatedPage>
   );

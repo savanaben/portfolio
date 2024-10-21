@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Group, Burger } from '@mantine/core';
+import { Group, Burger, Drawer, Stack, CloseButton } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import classes from './Header.module.css';
@@ -18,13 +18,12 @@ const links: NavLink[] = [
 const HEADER_HEIGHT = 80; // Adjust this value to match your header's height
 
 export function HeaderResponsive(): JSX.Element {
-  const [opened, { toggle }] = useDisclosure(false);
+  const [opened, { toggle, close }] = useDisclosure(false);
   const navigate = useNavigate();
   const location = useLocation();
 
   const handleNavClick = (link: string) => {
     if (location.pathname === '/') {
-      // If already on the homepage, scroll to the section with offset
       const element = document.getElementById(link);
       if (element) {
         const elementPosition = element.getBoundingClientRect().top;
@@ -36,15 +35,15 @@ export function HeaderResponsive(): JSX.Element {
         });
       }
     } else {
-      // If on another page, navigate to homepage with state
       navigate('/', { state: { scrollTo: link } });
     }
+    close();
   };
 
-  const items = links.map((link) => (
+ const items = links.map((link) => (
     <button
       key={link.label}
-      className={classes.link}
+      className={`${classes.link} w-full text-left`}
       onClick={() => handleNavClick(link.link)}
     >
       {link.label}
@@ -52,16 +51,44 @@ export function HeaderResponsive(): JSX.Element {
   ));
 
   return (
-    <header className={classes.header}>
-      <Container size="md" className={classes.inner}>
-        <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-          <h1>Ben Gross</h1>
-        </Link>
-        <Group gap={5} visibleFrom="xs" className={classes.group}>
+    <header className={`${classes.header} w-full`}>
+      <div className="container mx-auto px-4">
+        <div className={`${classes.inner} flex justify-between items-center`}>
+          <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <h1>Ben Gross</h1>
+          </Link>
+          <Group gap="sm" visibleFrom="xs" className={classes.group} wrap="nowrap">
+            {items}
+          </Group>
+          <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
+        </div>
+      </div>
+
+      <Drawer
+        opened={opened}
+        onClose={close}
+        size="auto"
+        position="right"
+        padding="0"
+        hiddenFrom="xs"
+        zIndex={1000000}
+        withCloseButton={false}
+        styles={{
+          body: {
+            padding: 0,
+          },
+          content: {
+            boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
+          },
+        }}
+      >
+        <div className="flex justify-end items-center h-12 px-4">
+          <CloseButton onClick={close} size="lg" />
+        </div>
+        <Stack gap="lg" p="md">
           {items}
-        </Group>
-        <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
-      </Container>
+        </Stack>
+      </Drawer>
     </header>
   );
 }

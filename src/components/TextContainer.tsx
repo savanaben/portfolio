@@ -4,9 +4,15 @@ interface TextContainerProps {
   children: React.ReactNode;
   className?: string;
   size?: 'none' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl' | 'full';
+  removeHorizontalPadding?: boolean; // New prop
 }
 
-const TextContainer: React.FC<TextContainerProps> = ({ children, className = '', size = '3xl' }) => {
+const TextContainer: React.FC<TextContainerProps> = ({ 
+  children, 
+  className = '', 
+  size = '3xl',
+  removeHorizontalPadding = false // Default to false
+}) => {
   const getSizeClass = (size: TextContainerProps['size']) => {
     switch (size) {
       case 'sm':
@@ -37,8 +43,9 @@ const TextContainer: React.FC<TextContainerProps> = ({ children, className = '',
   };
 
   const sizeClass = getSizeClass(size);
+  const paddingClass = removeHorizontalPadding ? 'mx-auto' : 'mx-auto px-4';
 
-  return <div className={`mx-auto px-4 ${sizeClass} ${className}`}>{children}</div>;
+  return <div className={`${paddingClass} ${sizeClass} ${className}`}>{children}</div>;
 };
 
 export default TextContainer;

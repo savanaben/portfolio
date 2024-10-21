@@ -23,6 +23,15 @@ const Projects: React.FC = () => {
 
   const projects: Project[] = [
     {
+      id: "draw-probability",
+      title: "Probability Crunching",
+      description: "UI, svelte, Design System, simulations",
+      image: "/img/DrawProbability/drawProbCover.svg",
+      imageAlt: "Abstract image of a magic card with a percent symbol overtop.",
+      link: "/DrawProbability",
+      categories: ["design", "ui"]
+    },
+    {
       id: "design-system",
       title: "Design System",
       description: "UI, Process, Design System, Project Management",
@@ -37,7 +46,7 @@ const Projects: React.FC = () => {
       description: "Data viz, D3, UI, html, css, js, Student Work",
       image: "/img/SFdataViz-cover.jpg",
       imageAlt: "Floating circular nodes in space with various book labels",
-      link: "/project1",
+      link: "/ScienceFictionDataViz",
       categories: ["data-viz", "dev"]
     },
     {

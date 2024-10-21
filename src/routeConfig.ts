@@ -7,7 +7,8 @@ import AffordableHousing from './projects/AffordableHousing';
 import MathMania from './projects/MathMania';
 import TestDesign from './projects/TestDesign';
 import DigitalWork from './projects/DigitalWork';
-
+import ScienceFictionDataViz from './projects/ScienceFictionDataViz';
+import DrawProbability from './projects/DrawProbability';
 
 interface RouteConfig {
   path: string;
@@ -24,6 +25,10 @@ const routeConfig: RouteConfig[] = [
   { path: '/MathMania', element: MathMania, backgroundColor: '#ffffff', fullWidth: true },
   { path: '/TestDesign', element: TestDesign, backgroundColor: '#fff9ef', fullWidth: true },
   { path: '/DigitalWork', element: DigitalWork, backgroundColor: '#f3f4f6', fullWidth: true },
+  { path: '/DrawProbability', element: DrawProbability, backgroundColor: '#fff9ef', fullWidth: true },
+  { path: '/ScienceFictionDataViz', element: ScienceFictionDataViz, backgroundColor: '#fff9ef', fullWidth: true },
+
+
 
 ];
 

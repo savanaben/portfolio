@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Projects from './Projects';
 import Experience from './Experience';
+import Education from './Education';
 import About from './About';
 import AnimatedPage from './components/AnimatedPage';
 
@@ -30,14 +31,19 @@ export const MainPage: React.FC = () => {
 
   return (
     <AnimatedPage>
-      <div id="projects" ref={projectsRef}>
-        <Projects />
-      </div>
-      <div id="experience" ref={experienceRef}>
-        <Experience />
-      </div>
-      <div id="about" ref={aboutRef}>
-        <About />
+      <div className="space-y-12 mb-12"> {/* Add vertical spacing between sections */}
+        <div id="projects" ref={projectsRef}>
+          <Projects />
+        </div>
+        <div id="experience" ref={experienceRef}>
+          <Experience />
+        </div>
+        <div id="education">
+          <Education />
+        </div>
+        <div id="about" ref={aboutRef}>
+          <About />
+        </div>
       </div>
     </AnimatedPage>
   );
