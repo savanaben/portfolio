@@ -1,0 +1,170 @@
+﻿id,name,group,frequency,author,date,goodreads,wikipedia,images
+,,,,,,,,
+1,"Robots, Androids, or AI",2,11,,,,,
+2,Battles,2,11,,,,,
+3,Romance,2,11,,,,,
+4,Magic,2,11,,,,,
+5,Time Travel,2,11,,,,,
+6,Interplanetary,2,11,,,,,
+7,Multi-species,2,11,,,,,
+8,Beasts,2,11,,,,,
+9,Psychic Powers,2,11,,,,,
+10,Novel Technology,2,11,,,,,
+11,After Catastrophe,2,11,,,,,
+12,Frankenstein,1,6,Mary Shelley,1818,https://www.goodreads.com/book/show/53972862-frankenstein,https://en.wikipedia.org/wiki/Frankenstein,book-covers-img\Frankenstein.jpg
+13,Twenty Thousand Leagues Under the Sea,1,7,Jules Vernes,1870,https://www.goodreads.com/book/show/33507.Twenty_Thousand_Leagues_Under_the_Sea,https://en.wikipedia.org/wiki/Twenty_Thousand_Leagues_Under_the_Seas,book-covers-img\Twenty_Thousand_Leagues_Under_the_Sea.jpg
+14,Journey to the Center of the Earth,1,2,Jules Verne,1874,https://www.goodreads.com/book/show/32829.Journey_to_the_Center_of_the_Earth,https://en.wikipedia.org/wiki/Journey_to_the_Center_of_the_Earth,book-covers-img\Journey_to_the_Center_of_the_Earth.jpg
+15,The Time Machine,1,6,H. G. Wells,1895,https://www.goodreads.com/book/show/2493.The_Time_Machine,https://en.wikipedia.org/wiki/The_Time_Machine,book-covers-img\The_Time_Machine.jpg
+16,The War of the Worlds,1,3,H. G. Wells,1898,https://www.goodreads.com/book/show/8909.The_War_of_the_Worlds,https://en.wikipedia.org/wiki/The_War_of_the_Worlds,book-covers-img\The_War_of_the_Worlds.jpg
+17,A Princess of Mars,1,2,Edgar Rice Burroughs,1917,https://www.goodreads.com/book/show/40395.A_Princess_of_Mars,https://en.wikipedia.org/wiki/A_Princess_of_Mars,book-covers-img\A_Princess_of_Mars.jpg
+18,The Skylark of Space,1,2,E E Doc Smith,1919,https://www.goodreads.com/book/show/576879.The_Skylark_of_Space,https://en.wikipedia.org/wiki/The_Skylark_of_Space,book-covers-img\The_Skylark_of_Space.jpg
+19,Last and First Men,1,3,Olaf Stapledon,1930,https://www.goodreads.com/book/show/2749148-last-and-first-men,https://en.wikipedia.org/wiki/Last_and_First_Men,book-covers-img\Last_and_First_Men.jpg
+20,Brave New World,1,6,Aldous Huxley,1932,https://www.goodreads.com/book/show/5129.Brave_New_World,https://en.wikipedia.org/wiki/Brave_New_World,book-covers-img\Brave-New-World.jpg
+21,Swastika Night,1,2,Katharine Burdekin aka Murray Constantine,1937,https://www.goodreads.com/book/show/387373.Swastika_Night,https://en.wikipedia.org/wiki/Swastika_Night,book-covers-img\swastika_night.jpg
+22,The Space Trilogy,1,2,C. S. Lewis,1938,https://www.goodreads.com/book/show/30628.Space_Trilogy,https://en.wikipedia.org/wiki/The_Space_Trilogy,book-covers-img\the_space_trilogy.jpg
+23,The Foundation Trilogy,1,8,Isaac Asimov,1942,https://www.goodreads.com/book/show/46654.The_Foundation_Trilogy,https://en.wikipedia.org/wiki/Foundation_series,book-covers-img\The_Foundation_Trilogy.jpg
+24,Chronicles of the Lensmen,1,2,E E Doc Smith,1948,https://www.goodreads.com/book/show/1992216.Chronicles_of_the_Lensmen_Volume_1,https://en.wikipedia.org/wiki/Lensman_series,book-covers-img\Chronicles_of_the_Lensmen_Volume_1.jpg
+25,1984,1,6,George Orwell,1949,https://www.goodreads.com/book/show/40961427-1984,https://en.wikipedia.org/wiki/Nineteen_Eighty-Four,book-covers-img\1984.jpg
+26,Earth Abides,1,3,George R. Stewart,1949,https://www.goodreads.com/book/show/93269.Earth_Abides,https://en.wikipedia.org/wiki/Earth_Abides,book-covers-img\earth_abides.jpg
+27,"The Lion, the Witch and the Wardrobe",1,2,C. S. Lewis,1950,https://www.goodreads.com/book/show/100915.The_Lion_the_Witch_and_the_Wardrobe,"https://en.wikipedia.org/wiki/The_Lion,_the_Witch_and_the_Wardrobe",book-covers-img\the_lion_witch_wardrobe.jpg
+28,"I, Robot",1,4,Isaac Asimov,1950,https://www.goodreads.com/book/show/41804.I_Robot,"https://en.wikipedia.org/wiki/I,_Robot",book-covers-img\I_Robot.jpg
+29,Tales of the Dying Earth,1,2,Jack Vance,1950,https://www.goodreads.com/book/show/40866.Tales_of_the_Dying_Earth,https://en.wikipedia.org/wiki/Dying_Earth,book-covers-img\Tales_of_the_Dying_Earth.jpg
+30,The Martian Chronicles,1,6,Ray Bradbury,1950,https://www.goodreads.com/book/show/76778.The_Martian_Chronicles,https://en.wikipedia.org/wiki/The_Martian_Chronicles,book-covers-img\The_Martian_Chronicles.jpg
+31,Day of the Triffids,1,3,John Wyndham,1951,https://www.goodreads.com/book/show/530965.The_Day_of_the_Triffids,https://en.wikipedia.org/wiki/The_Day_of_the_Triffids,book-covers-img\Day_of_the_Triffids.jpg
+32,City,1,2,Clifford D. Simak,1952,https://www.goodreads.com/book/show/222093.City,https://en.wikipedia.org/wiki/City_(novel),book-covers-img\City.jpg
+33,Childhood's End,1,4,Arthur C. Clarke,1953,https://www.goodreads.com/book/show/414999.Childhood_s_End,https://en.wikipedia.org/wiki/Childhood%27s_End,book-covers-img\Childhood's_End.jpg
+34,The Space Merchants,1,3,Frederik Pohl,1953,https://www.goodreads.com/book/show/392566.The_Space_Merchants,https://en.wikipedia.org/wiki/The_Space_Merchants,book-covers-img\The_Space_Merchants.jpg
+35,The Caves of Steel,1,2,Isaac Asimov,1953,https://www.goodreads.com/book/show/41811.The_Caves_of_Steel,https://en.wikipedia.org/wiki/The_Caves_of_Steel,book-covers-img\The_Caves_of_Steel.jpg
+36,Fahrenheit 451,1,4,Ray Bradbury,1953,https://www.goodreads.com/book/show/13079982-fahrenheit-451,https://en.wikipedia.org/wiki/Fahrenheit_451,book-covers-img\Fahrenheit_451.jpg
+37,Bring the Jubilee,1,2,Ward Moore,1953,https://www.goodreads.com/book/show/91099.Bring_the_Jubilee,https://en.wikipedia.org/wiki/Bring_the_Jubilee,book-covers-img\Bring_the_Jubilee.jpg
+38,Mission of Gravity,1,2,Hal Clement,1954,https://www.goodreads.com/book/show/525285.Mission_of_Gravity,https://en.wikipedia.org/wiki/Mission_of_Gravity,book-covers-img\Mission_of_Gravity.jpg
+39,I am Legend,1,5,Richard Matheson,1954,https://www.goodreads.com/book/show/40940649-i-am-legend,https://en.wikipedia.org/wiki/I_Am_Legend_(novel),book-covers-img\i_am_legend.jpg
+40,The Lord of the Rings,1,4,J. R. R. Tolkein,1955,https://www.goodreads.com/book/show/33.The_Lord_of_the_Rings,https://en.wikipedia.org/wiki/The_Lord_of_the_Rings,book-covers-img\The_Lord_of_the_Rings.jpg
+41,The Death of Grass,1,2,John Christopher,1956,https://www.goodreads.com/book/show/941731.The_Death_of_Grass,https://en.wikipedia.org/wiki/The_Death_of_Grass,book-covers-img\The_Death_of_Grass.jpg
+42,The Stars My Destination,1,6,Alfred Bester,1957,https://www.goodreads.com/book/show/333867.The_Stars_My_Destination,https://en.wikipedia.org/wiki/The_Stars_My_Destination,book-covers-img\The_Stars_My_Destination.jpg
+43,The Once and Future King,1,2,T. H. White,1958,https://www.goodreads.com/book/show/43545.The_Once_and_Future_King,https://en.wikipedia.org/wiki/The_Once_and_Future_King,book-covers-img\The_Once_and_Future_King.jpg
+44,The Rediscovery of Man,1,2,Cordwainer Smith,1959,https://www.goodreads.com/book/show/18952.The_Rediscovery_of_Man,https://en.wikipedia.org/wiki/The_Rediscovery_of_Man,book-covers-img\The_Rediscovery_of_Man.jpg
+45,Flowers for Algernon,1,4,Daniel Keyes,1959,https://www.goodreads.com/book/show/36576608-flowers-for-algernon,https://en.wikipedia.org/wiki/Flowers_for_Algernon,book-covers-img\FlowersForAlgernon.jpg
+46,A Canticle for Leibowitz,1,7,Walter M. Miller Jr,1959,https://www.goodreads.com/book/show/164154.A_Canticle_for_Leibowitz,https://en.wikipedia.org/wiki/A_Canticle_for_Leibowitz,book-covers-img\A_Canticle_for_Leibowitz.jpg
+47,Rogue Moon,1,2,Algis Budrys,1960,https://www.goodreads.com/book/show/939709.Rogue_Moon,https://en.wikipedia.org/wiki/Rogue_Moon,book-covers-img\Rogue_Moon.jpg
+48,Stranger in a Stange Land,1,4,Robert A. Heinlein,1961,https://www.goodreads.com/book/show/350.Stranger_in_a_Strange_Land,https://en.wikipedia.org/wiki/Stranger_in_a_Strange_Land,book-covers-img\Stranger_in_a_Stange_Land.jpg
+49,Solaris,1,5,Stanislaw Lem,1961,https://www.goodreads.com/book/show/95558.Solaris,https://en.wikipedia.org/wiki/Solaris_(novel),book-covers-img\Solaris.jpg
+50,A Clockwork Orange,1,5,Anthony Burgess,1962,https://www.goodreads.com/book/show/41817486-a-clockwork-orange,https://en.wikipedia.org/wiki/A_Clockwork_Orange_(novel),book-covers-img\A_Clockwork_Orange.jpg
+51,The Drowned World,1,2,J. G. Ballard,1962,https://www.goodreads.com/book/show/16234584-the-drowned-world,https://en.wikipedia.org/wiki/The_Drowned_World,book-covers-img\The_Drowned_World.jpg
+52,The Man in the High Castle,1,3,Philip K. Dick,1962,https://www.goodreads.com/book/show/216363.The_Man_in_the_High_Castle,https://en.wikipedia.org/wiki/The_Man_in_the_High_Castle,book-covers-img\The_Man_in_the_High_Castle.jpg
+53,Something Wicked This Way Comes,1,2,Ray Bradbury,1962,https://www.goodreads.com/book/show/248596.Something_Wicked_This_Way_Comes,https://en.wikipedia.org/wiki/Something_Wicked_This_Way_Comes_(novel),book-covers-img\Something_Wicked_This_Way_Comes.jpg
+54,Witch World,1,2,Andre Norton,1963,https://www.goodreads.com/book/show/462448.Witch_World,https://en.wikipedia.org/wiki/Witch_World_(novel),book-covers-img\Witch_World.jpg
+55,Cat's Cradle,1,2,Kurt Vonnegut,1963,https://www.goodreads.com/book/show/135479.Cat_s_Cradle,https://en.wikipedia.org/wiki/Cat%27s_Cradle,book-covers-img\Cat's_Cradle.jpg
+56,A Wrinkle in Time,1,3,Madeleine L'Engle,1963,https://www.goodreads.com/book/show/33574273-a-wrinkle-in-time,https://en.wikipedia.org/wiki/A_Wrinkle_in_Time,book-covers-img\WrinkleInTime.jpg
+57,The Wanderer,1,2,Fritz Leiber,1964,https://www.goodreads.com/book/show/218709.The_Wanderer,https://en.wikipedia.org/wiki/The_Wanderer_(Leiber_novel),book-covers-img\The_Wanderer.jpg
+58,The Dune Chronicles,1,9,Frank Herbert,1965,https://www.goodreads.com/book/show/44767458-dune,https://en.wikipedia.org/wiki/Dune_(franchise),book-covers-img\dune.jpg
+59,The Moon is a Harsh Mistress,1,6,Robert A. Heinlein,1966,https://www.goodreads.com/book/show/16690.The_Moon_Is_a_Harsh_Mistress,https://en.wikipedia.org/wiki/The_Moon_Is_a_Harsh_Mistress,book-covers-img\The_Moon_Is_A_Harsh_Mistress_(book).jpg
+60,Babel 17,1,2,Samuel R. Delany,1966,https://www.goodreads.com/book/show/1199688.Babel_17,https://en.wikipedia.org/wiki/Babel-17,book-covers-img\Babel_17.jpg
+61,Dragon Riders of Pern Series,1,3,Anne McCaffrey,1967,https://www.goodreads.com/book/show/177001.Dragonflight_Dragonquest,https://en.wikipedia.org/wiki/Dragonriders_of_Pern,book-covers-img\Dragonflight.jpg
+62,Dangerous Visions,1,3,Harlan E. Ellison,1967,https://www.goodreads.com/book/show/600349.Dangerous_Visions,https://en.wikipedia.org/wiki/Dangerous_Visions,book-covers-img\DangerousVisions(1stEd).jpg
+63,Lord of Light,1,3,Roger Zelazny,1967,https://www.goodreads.com/book/show/13821.Lord_of_Light,https://en.wikipedia.org/wiki/Lord_of_Light,book-covers-img\LordofLight(Zelazny).jpg
+64,2001: A Space Odyssey,1,7,Arthur C. Clarke,1968,https://www.goodreads.com/book/show/70535.2001,https://en.wikipedia.org/wiki/2001:_A_Space_Odyssey_(novel),book-covers-img\2001_A_Space_Odyssey-Arthur_C_Clarke.jpg
+65,Stand on Zanzibar,1,4,John Brunner,1968,https://www.goodreads.com/book/show/41069.Stand_on_Zanzibar,https://en.wikipedia.org/wiki/Stand_on_Zanzibar,book-covers-img\Stand_on_Zanzibar.jpg
+66,Pavane,1,2,Keith Roberts,1968,https://www.goodreads.com/book/show/599588.Pavane,https://en.wikipedia.org/wiki/Pavane_(novel),book-covers-img\Pavane.jpg
+67,The Last Unicorn,1,3,Peter S. Beagle,1968,https://www.goodreads.com/book/show/29127.The_Last_Unicorn,https://en.wikipedia.org/wiki/The_Last_Unicorn,book-covers-img\Last_unicorn_hb.jpg
+68,Do Androids Dream of Electric Sheep,1,4,Philip K. Dick,1968,https://www.goodreads.com/book/show/36402034-do-androids-dream-of-electric-sheep,https://en.wikipedia.org/wiki/Do_Androids_Dream_of_Electric_Sheep%3F,book-covers-img\DoAndroidsDream.png
+69,Slaughterhouse Five,1,7,Kurt Vonnegut,1969,https://www.goodreads.com/book/show/4981.Slaughterhouse_Five,https://en.wikipedia.org/wiki/Slaughterhouse-Five,book-covers-img\slaughterhouse_5.jpg
+70,Behold the Man,1,2,Michael Moorcock,1969,https://www.goodreads.com/book/show/60146.Behold_the_Man,https://en.wikipedia.org/wiki/Behold_the_Man_(novel),book-covers-img\Behold_the_Man.jpg
+71,Ubik,1,3,Philip K. Dick,1969,https://www.goodreads.com/book/show/22590.Ubik,https://en.wikipedia.org/wiki/Ubik,book-covers-img\Ubik(1stEd).jpg
+72,The Left Hand of Darkness,1,7,Ursula K. Le Guin,1969,https://www.goodreads.com/book/show/18423.The_Left_Hand_of_Darkness,https://en.wikipedia.org/wiki/The_Left_Hand_of_Darkness,book-covers-img\TheLeftHandOfDarkness1stEd.jpg
+73,The Atrocity Exhibition,1,2,J G Ballard,1970,https://www.goodreads.com/book/show/70240.The_Atrocity_Exhibition,https://en.wikipedia.org/wiki/The_Atrocity_Exhibition,book-covers-img\The_Atrocity_Exhibition.jpg
+74,Ringworld,1,8,Larry Nivan,1970,https://www.goodreads.com/book/show/61179.Ringworld,https://en.wikipedia.org/wiki/Ringworld,book-covers-img\Ringworld(1stEd).jpg
+75,The Chronicles of Amber,1,2,Roger Zelazny,1970,https://www.goodreads.com/book/show/92121.Nine_Princes_in_Amber,https://en.wikipedia.org/wiki/The_Chronicles_of_Amber,book-covers-img\Nine_princes_in_amber.jpg
+76,The Fabulous Riverboat,1,2,Philip Jose Farmer,1971,https://www.goodreads.com/book/show/16536.The_Fabulous_Riverboat,https://en.wikipedia.org/wiki/The_Fabulous_Riverboat,book-covers-img\the_fabulous_river_boat.jpg
+77,Roadside Picnic,1,4,Arkady and Boris Strugatsky,1972,https://www.goodreads.com/book/show/331256.Roadside_Picnic,https://en.wikipedia.org/wiki/Roadside_Picnic,book-covers-img\Roadside-picnic-macmillan-cover.jpg
+78,Watership Down,1,2,Richard Adams,1972,https://www.goodreads.com/book/show/76620.Watership_Down,https://en.wikipedia.org/wiki/Watership_Down,book-covers-img\watership_down.jpg
+79,Dying Inside,1,2,Robert Silverberg,1972,https://www.goodreads.com/book/show/968902.Dying_Inside,https://en.wikipedia.org/wiki/Dying_Inside,book-covers-img\DyingInside(1stEd).jpg
+80,The Princess Bride,1,2,William Goldman,1973,https://www.goodreads.com/book/show/21787.The_Princess_Bride,https://en.wikipedia.org/wiki/The_Princess_Bride_(novel),book-covers-img\The_Princess_Bride_(First_Edition).jpg
+81,Inverted World,1,2,Christopher Priest,1974,https://www.goodreads.com/book/show/142181.The_Inverted_World,https://en.wikipedia.org/wiki/Inverted_World,book-covers-img\Inverted_World_cover.jpg
+82,The Forever War,1,8,Joe Haldeman,1974,https://www.goodreads.com/book/show/21611.The_Forever_War,https://en.wikipedia.org/wiki/The_Forever_War,book-covers-img\TheForeverWar(1stEd).jpg
+83,The Mote in God's Eye,1,3,Larry Nivan,1974,https://www.goodreads.com/book/show/100365.The_Mote_in_God_s_Eye,https://en.wikipedia.org/wiki/The_Mote_in_God%27s_Eye,book-covers-img\the_mote_in_gods_eye.jpg
+84,The Dispossessed,1,7,Ursula K. Le Guin,1974,https://www.goodreads.com/book/show/13651.The_Dispossessed,https://en.wikipedia.org/wiki/The_Dispossessed,book-covers-img\TheDispossed(1stEdHardcover).jpg
+85,The Female Man,1,4,Joanna Russ,1975,https://www.goodreads.com/book/show/908311.The_Female_Man,https://en.wikipedia.org/wiki/The_Female_Man,book-covers-img\TheFemaleMan(1stEd).jpg
+86,Dhalgren,1,6,Samuel R. Delany,1975,https://www.goodreads.com/book/show/40963358-dhalgren,https://en.wikipedia.org/wiki/Dhalgren,book-covers-img\Dhalgren-bantam-cover.jpg
+87,Where Late the Sweet Birds Sang,1,2,Kate Wilhelm,1976,https://www.goodreads.com/book/show/968827.Where_Late_the_Sweet_Birds_Sang,https://en.wikipedia.org/wiki/Where_Late_the_Sweet_Birds_Sang,book-covers-img\Wherelate.jpg
+88,Lucifer's Hammer,1,2,Larry Nivan,1977,https://www.goodreads.com/book/show/218467.Lucifer_s_Hammer,https://en.wikipedia.org/wiki/Lucifer%27s_Hammer,book-covers-img\LucifersHammer.jpg
+89,The Chronicles of Thomas Covenant the Unbeliever,1,2,Stephen R. Donaldson,1977,https://www.goodreads.com/book/show/219205.Lord_Foul_s_Bane,https://en.wikipedia.org/wiki/The_Chronicles_of_Thomas_Covenant,book-covers-img\The_Chronicles_of_Thomas_Covenant_the_Unbeliever.jpg
+90,The Sword of Shannara Trilogy,1,2,Terry Brooks,1977,https://www.goodreads.com/book/show/478894.The_Sword_of_Shannara_Trilogy,https://en.wikipedia.org/wiki/The_Sword_of_Shannara_Trilogy,book-covers-img\swords_of_shanaria.jpg
+91,The Hitchhiker's Guide to the Galaxy,1,11,Douglas Adams,1979,https://www.goodreads.com/book/show/13.The_Ultimate_Hitchhiker_s_Guide_to_the_Galaxy,https://en.wikipedia.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy_(novel),book-covers-img\H2G2_UK_front_cover.jpg
+92,The Mists of Avalon,1,3,Marion Zimmer Bradley,1979,https://www.goodreads.com/book/show/40605251-the-mists-of-avalon,https://en.wikipedia.org/wiki/The_Mists_of_Avalon,book-covers-img\Mists_of_Avalon-1st_ed.jpg
+93,Kindred,1,4,Octavia E Butler,1979,https://www.goodreads.com/book/show/60931.Kindred,https://en.wikipedia.org/wiki/Kindred_(novel),book-covers-img\OctaviaEButler_Kindred.jpg
+94,The Book of the New Sun,1,5,Gene Wolfe,1980,https://www.goodreads.com/book/show/968868.The_Book_of_the_New_Sun,https://en.wikipedia.org/wiki/The_Book_of_the_New_Sun,book-covers-img\Booknewsun.jpg
+95,Wild Seed,1,2,Octavia E Butler,1980,https://www.goodreads.com/book/show/52318.Wild_Seed,https://en.wikipedia.org/wiki/Wild_Seed_(novel),book-covers-img\Wildseed1001.jpg
+96,Discworld,1,3,Terry Pratchett,1983,https://www.goodreads.com/book/show/34497.The_Color_of_Magic,https://en.wikipedia.org/wiki/Discworld,book-covers-img\The_Colour_of_Magic_(cover_art).jpg
+97,Neuromancer,1,10,William Gibson,1984,https://www.goodreads.com/book/show/6088007-neuromancer,https://en.wikipedia.org/wiki/Neuromancer,book-covers-img\Neuromancer_(Book).jpg
+98,Schismatrix Plus,1,3,Bruce Sterling,1985,https://www.goodreads.com/book/show/161296.Schismatrix_Plus,https://en.wikipedia.org/wiki/Schismatrix,book-covers-img\Schismatrix(1stEd).jpg
+99,Blood Music,1,3,Greg Bear,1985,https://www.goodreads.com/book/show/340819.Blood_Music,https://en.wikipedia.org/wiki/Blood_Music_(novel),book-covers-img\BloodMusic(1stEd).jpg
+100,The Handmaid's Tale,1,6,Margaret Atwood,1985,https://www.goodreads.com/book/show/38447.The_Handmaid_s_Tale,https://en.wikipedia.org/wiki/The_Handmaid%27s_Tale,book-covers-img\TheHandmaidsTale(1stEd).jpg
+101,Ender's Game,1,7,Orson Scott Card,1985,https://www.goodreads.com/book/show/375802.Ender_s_Game,https://en.wikipedia.org/wiki/Ender%27s_Game_(novel_series),book-covers-img\Ender's_game_cover_ISBN_0312932081.jpg
+102,Howl's Moving Castle,1,2,Diana Wynne Jones,1986,https://www.goodreads.com/book/show/6294.Howl_s_Moving_Castle,https://en.wikipedia.org/wiki/Howl%27s_Moving_Castle,book-covers-img\Howl's_Moving_Castle_(Book_Cover).jpg
+103,The Vorkosigan Saga,1,4,Lois McMaster Bujold,1986,https://www.goodreads.com/book/show/61903.Shards_of_Honour,https://en.wikipedia.org/wiki/Vorkosigan_Saga,book-covers-img\Shards_of_honor_cover.jpg
+104,The Culture Series,1,3,Iain Banks,1987,https://www.goodreads.com/book/show/8935689-consider-phlebas,https://en.wikipedia.org/wiki/Culture_series,book-covers-img\Banksphlebas.jpg
+105,Life During Wartime,1,2,Lucius Shepard,1987,https://www.goodreads.com/book/show/707304.Life_During_Wartime,https://en.wikipedia.org/wiki/Life_During_Wartime_(novel),book-covers-img\life_during_wartime.jpg
+106,The Hyperion Cantos,1,7,Dan Simmons,1989,https://www.goodreads.com/book/show/45064996-hyperion,https://en.wikipedia.org/wiki/Hyperion_Cantos,book-covers-img\Hyperion_cover.jpg
+107,"The City, Not Long After",1,2,Pat Murphy,1989,https://www.goodreads.com/book/show/593789.The_City_Not_Long_After,"https://en.wikipedia.org/wiki/The_City,_Not_Long_After",book-covers-img\the_city_not_long_after.jpg
+108,Take Back Plenty,1,2,Colin Greenland,1990,https://www.goodreads.com/book/show/1415743.Take_Back_Plenty,https://en.wikipedia.org/wiki/Take_Back_Plenty,book-covers-img\Take_Back_Plenty.jpg
+109,Use of Weapons,1,2,Iain Banks,1990,https://www.goodreads.com/book/show/12007.Use_of_Weapons,https://en.wikipedia.org/wiki/Use_of_Weapons,book-covers-img\IainMBanksUseofWeapons.jpg
+110,Outlander,1,2,Dana Gabaldon,1991,https://www.goodreads.com/book/show/10964.Outlander,https://en.wikipedia.org/wiki/Outlander_(novel),book-covers-img\Outlander-1991_1st_Edition_cover.jpg
+111,Synners,1,2,Pat Cadigan,1991,https://www.goodreads.com/book/show/304806.Synners,https://en.wikipedia.org/wiki/Pat_Cadigan,book-covers-img\synners.jpg
+112,Doomsday Book,1,6,Connie Willis,1992,https://www.goodreads.com/book/show/24983.Doomsday_Book,https://en.wikipedia.org/wiki/Doomsday_Book_(novel),book-covers-img\DoomsdayBook(1stEd).jpg
+113,The Mars Trilogy,1,7,Kim Stanley Robinson,1992,https://www.goodreads.com/book/show/77507.Red_Mars,https://en.wikipedia.org/wiki/Mars_trilogy,book-covers-img\mars_trilogy.jpg
+114,Snow Crash,1,6,Neal Stephenson,1992,https://www.goodreads.com/book/show/40651883-snow-crash,https://en.wikipedia.org/wiki/Snow_Crash,book-covers-img\Snowcrash.jpg
+115,A Fire Upon the Deep,1,6,Vernor Vinge,1992,https://www.goodreads.com/book/show/77711.A_Fire_Upon_the_Deep,https://en.wikipedia.org/wiki/A_Fire_Upon_the_Deep,book-covers-img\A_Fire_Upon_the_Deepbookcover.jpg
+116,The Belgariad,1,2,David Eddings,1993,https://www.goodreads.com/book/show/44659.Pawn_of_Prophecy,https://en.wikipedia.org/wiki/The_Belgariad,book-covers-img\pawn_of_prophecy.jpg
+117,The Giver,1,2,Lois Lowry,1993,https://www.goodreads.com/book/show/3636.The_Giver,https://en.wikipedia.org/wiki/The_Giver,book-covers-img\The_Giver_first_edition_1993.jpg
+118,Beggars in Spain,1,3,Nancy Kress,1993,https://www.goodreads.com/book/show/68333.Beggars_in_Spain,https://en.wikipedia.org/wiki/Beggars_in_Spain,book-covers-img\BeggarsInSpain(1stEd).jpg
+119,Parable of the Sower,1,2,Octavia E Butler,1993,https://www.goodreads.com/book/show/52397.Parable_of_the_Sower,https://en.wikipedia.org/wiki/Parable_of_the_Sower_(novel),book-covers-img\ParableOfTheSower(1stEd).jpg
+120,Queen City Jazz,1,2,Kathleen Ann Goonan,1994,https://www.goodreads.com/book/show/597159.Queen_City_Jazz,https://en.wikipedia.org/wiki/Kathleen_Ann_Goonan,book-covers-img\queen_city_jazz.jpg
+121,The Diamond Age,1,4,Neal Stephenson,1995,https://www.goodreads.com/book/show/827.The_Diamond_Age,https://en.wikipedia.org/wiki/The_Diamond_Age,book-covers-img\The_Diamond_Age.jpg
+122,The Farseer Trilogy,1,2,Robin Hobb,1995,https://www.goodreads.com/book/show/57438319-assassin-s-apprentice,https://en.wikipedia.org/wiki/The_Farseer_Trilogy,book-covers-img\Robin_Hobb_-_Assassin's_Apprentice_Cover.jpg
+123,A Song of Ice and Fire,1,4,George R. R. Martin,1996,https://www.goodreads.com/book/show/13496.A_Game_of_Thrones,https://en.wikipedia.org/wiki/A_Song_of_Ice_and_Fire,book-covers-img\A_Song_of_Ice_and_Fire_book_collection_box_set_cover.jpg
+124,Harry Potter Series,1,3,J. K. Rowling,1997,https://www.goodreads.com/book/show/3.Harry_Potter_and_the_Sorcerer_s_Stone,https://en.wikipedia.org/wiki/Harry_Potter,book-covers-img\Harry_Potter_and_the_Philosopher's_Stone_Book_Cover.jpg
+125,Starship Troopers,1,4,Robert A. Heinlein,1959,https://www.goodreads.com/book/show/17214.Starship_Troopers,https://en.wikipedia.org/wiki/Starship_Troopers,book-covers-img\Starship_Troopers_(novel).jpg
+126,Contact,1,6,Carl Sagan,1985,https://www.goodreads.com/book/show/61666.Contact,https://en.wikipedia.org/wiki/Contact_(novel),book-covers-img\Contact_Sagan.jpg
+127,Brown Girl in the Ring,1,2,Nalo Hopkinson,1998,https://www.goodreads.com/book/show/57504.Brown_Girl_in_the_Ring,https://en.wikipedia.org/wiki/Brown_Girl_in_the_Ring_(novel),book-covers-img\Brown_Girl_in_the_Ring.jpg
+128,Cry of the Wind,1,2,Sue Harrison,1998,https://www.goodreads.com/book/show/301207.Cry_of_the_Wind,http://sueharrison.com/books/the-storyteller-trilogy/cry-of-the-wind/,book-covers-img\cry_of_the_wind.jpg
+129,Cryptonomicon,1,2,Neal Stephenson,1999,https://www.goodreads.com/book/show/816.Cryptonomicon,https://en.wikipedia.org/wiki/Cryptonomicon,book-covers-img\Cryptonomicon(1stEd).jpg
+130,Revelation Space,1,4,Alastair reynolds,2000,https://www.goodreads.com/book/show/89187.Revelation_Space,https://en.wikipedia.org/wiki/Revelation_Space,book-covers-img\Revelation_Space_cover_(Amazon).jpg
+131,Perdido Street Station,1,2,China Mieville,2000,https://www.goodreads.com/book/show/68494.Perdido_Street_Station,https://en.wikipedia.org/wiki/Perdido_Street_Station,book-covers-img\PerdidoStreetStation(1stEd).jpg
+132,Midnight Robber,1,2,Nalo Hopkinson,2000,https://www.goodreads.com/book/show/71409.Midnight_Robber,https://en.wikipedia.org/wiki/Midnight_Robber,book-covers-img\Midnight_Robber.jpg
+133,The Kushiel's Legacy Series,1,2,Jacqueline Carey,2001,https://www.goodreads.com/book/show/153008.Kushiel_s_Dart,https://en.wikipedia.org/wiki/Kushiel%27s_Legacy,book-covers-img\Kushiel's_Dart.jpg
+134,American Gods,1,3,Neil Gaiman,2001,https://www.goodreads.com/book/show/30165203-american-gods,https://en.wikipedia.org/wiki/American_Gods,book-covers-img\American_gods.jpg
+135,Contacting Aliens,1,2,David Brin,2002,https://www.goodreads.com/book/show/101888.Contacting_Aliens,https://www.davidbrin.com/contactingaliens.html,book-covers-img\contacting_aliens.jpg
+136,Altered Carbon,1,5,Richard Morgan,2002,https://www.goodreads.com/book/show/40792913-altered-carbon,https://en.wikipedia.org/wiki/Altered_Carbon,book-covers-img\altered_carbom.jpg
+137,The Time Traveler's Wife,1,3,Audrey Niffenegger,2003,https://www.goodreads.com/book/show/18619684-the-time-traveler-s-wife,https://en.wikipedia.org/wiki/The_Time_Traveler%27s_Wife,book-covers-img\TimeTravellersWife.jpg
+138,Oryx and Crake,1,2,Margaret Atwood,2003,https://www.goodreads.com/book/show/46756.Oryx_and_Crake,https://en.wikipedia.org/wiki/Oryx_and_Crake,book-covers-img\OryxAndCrake.jpg
+139,Cloud Atlas: A Novel,1,4,David Mitchell,2004,https://www.goodreads.com/book/show/49628.Cloud_Atlas,https://en.wikipedia.org/wiki/Cloud_Atlas_(novel),book-covers-img\Cloud_atlas.jpg
+140,"Air: Or, Have Not Have",1,2,Geoff Ryman,2004,https://www.goodreads.com/book/show/1165179.Air,"https://en.wikipedia.org/wiki/Air_(novel)#:~:text=Air%2C%20also%20known%20as%20Air,%2C%20the%20James%20Tiptree%2C%20Jr.&text=Dick%20Award%20in%202004%2C%20the,Campbell%20Memorial%20Award%20in%202006.",book-covers-img\GeoffRyman_Air.jpg
+141,River of Gods,1,2,Ian McDonald,2004,https://www.goodreads.com/book/show/278280.River_of_Gods,https://en.wikipedia.org/wiki/River_of_Gods,book-covers-img\Mcdonald-river_of_gods.jpg
+142,Her Smoke Rose Up Forever,1,2,James Tiptree aka Alice Bradley,2004,https://www.goodreads.com/book/show/27059.Her_Smoke_Rose_Up_Forever,https://en.wikipedia.org/wiki/Her_Smoke_Rose_Up_Forever,book-covers-img\Her_smoke_rose_up_forever.jpg
+143,Sarah Canary,1,3,Karen Joy Fowler,2004,https://www.goodreads.com/book/show/119990.Sarah_Canary,https://en.wikipedia.org/wiki/Karen_Joy_Fowler#Writing_career,book-covers-img\sarah_camary.jpg
+144,Pandora's Star,1,3,Peter F. Hamilton,2004,https://www.goodreads.com/book/show/45252.Pandora_s_Star,https://en.wikipedia.org/wiki/Commonwealth_Saga,book-covers-img\Pandora's_Star.jpg
+145,Jonathan Strange and Mr. Norrell,1,3,Susanna Clarke,2004,https://www.goodreads.com/book/show/14201.Jonathan_Strange_Mr_Norrell,https://en.wikipedia.org/wiki/Jonathan_Strange_%26_Mr_Norrell,book-covers-img\Jonathan_strange_and_mr_norrell_cover.jpg
+146,Old Man's War,1,5,John Scalzi,2005,https://www.goodreads.com/book/show/36510196-old-man-s-war,https://en.wikipedia.org/wiki/Old_Man%27s_War,book-covers-img\OldMansWar(1stEd).jpg
+147,Never Let Me Go,1,2,Kazuo Ishiguro,2005,https://www.goodreads.com/book/show/6334.Never_Let_Me_Go,https://en.wikipedia.org/wiki/Never_Let_Me_Go_(novel),book-covers-img\Never_Let_Me_Go.jpg
+148,Spin Trilogy,1,3,Robert Charles Wilson,2005,https://www.goodreads.com/book/show/910863.Spin,https://en.wikipedia.org/wiki/Spin_(novel),book-covers-img\Spin(1stEd).jpg
+149,The Road,1,5,Cormac McCarthy,2006,https://www.goodreads.com/book/show/6288.The_Road,https://en.wikipedia.org/wiki/The_Road,book-covers-img\The-road.jpg
+150,World War Z,1,5,Max Brooks,2006,https://www.goodreads.com/book/show/8908.World_War_Z,https://en.wikipedia.org/wiki/World_War_Z,book-covers-img\World_War_Z.jpg
+151,Blindsight,1,3,Peter Watts,2006,https://www.goodreads.com/book/show/48484.Blindsight,https://en.wikipedia.org/wiki/Blindsight_(Watts_novel),book-covers-img\Blindsight_(book_cover).jpg
+152,The Yiddish Policeman's Union,1,2,Michael Chabon,2007,https://www.goodreads.com/book/show/16703.The_Yiddish_Policemen_s_Union,https://en.wikipedia.org/wiki/The_Yiddish_Policemen%27s_Union,book-covers-img\Yiddishpol.jpg
+153,Anathem,1,2,Neal Stephenson,2008,https://www.goodreads.com/book/show/2845024-anathem,https://en.wikipedia.org/wiki/Anathem,book-covers-img\anathem.jpg
+154,The Hunger Games,1,3,Suzanne Collins,2008,https://www.goodreads.com/book/show/2767052-the-hunger-games,https://en.wikipedia.org/wiki/The_Hunger_Games,book-covers-img\The_Hunger_Games_cover.jpg
+155,The City & The City,1,2,China Mieville,2009,https://www.goodreads.com/book/show/4703581-the-city-the-city,https://en.wikipedia.org/wiki/The_City_%26_the_City,book-covers-img\Mieville_City_2009_UK.jpg
+156,The Windup Girl,1,6,Paolo Bacigalupi,2009,https://www.goodreads.com/book/show/6597651-the-windup-girl,https://en.wikipedia.org/wiki/The_Windup_Girl,book-covers-img\windup_girl.jpg
+157,The Way of Kings,1,2,Brandon Sanderson,2010,https://www.goodreads.com/book/show/7235533-the-way-of-kings,https://en.wikipedia.org/wiki/The_Way_of_Kings,book-covers-img\TheWayOfKings.png
+158,The Black Prism,1,2,Brent Weeks,2010,https://www.goodreads.com/book/show/7165300-the-black-prism,https://en.wikipedia.org/wiki/Brent_Weeks,book-covers-img\TheBlackPrism_cover.jpg
+159,How to Live Safely in a Science Fictional Universe: A Novel,1,3,Charles Yu,2010,https://www.goodreads.com/book/show/7726420-how-to-live-safely-in-a-science-fictional-universe,https://en.wikipedia.org/wiki/How_to_Live_Safely_in_a_Science_Fictional_Universe,book-covers-img\How_to_Live_Safely_in_a_Science_Fictional_Universe.jpg
+160,The Martian,1,3,Andy Weir,2011,https://www.goodreads.com/book/show/18007564-the-martian,https://en.wikipedia.org/wiki/The_Martian_(Weir_novel),book-covers-img\The_Martian_(Weir_novel).jpg
+161,Zone One,1,2,Colson Whitehead,2011,https://www.goodreads.com/book/show/10365343-zone-one,https://en.wikipedia.org/wiki/Zone_One,book-covers-img\Zone_One.jpg
+162,Ready Player One,1,3,Ernest Cline,2011,https://www.goodreads.com/book/show/9969571-ready-player-one,https://en.wikipedia.org/wiki/Ready_Player_One,book-covers-img\Ready_Player_One_cover.jpg
+163,Among Others,1,2,Jo Walton,2011,https://www.goodreads.com/book/show/8706185-among-others,https://en.wikipedia.org/wiki/Among_Others,book-covers-img\Among_Others_(Jo_Walton_novel).jpg
+164,Ancillary Justice,1,4,Ann Leckie,2013,https://www.goodreads.com/book/show/17333324-ancillary-justice,https://en.wikipedia.org/wiki/Ancillary_Justice,book-covers-img\Ann_Leckie_-_Ancillary_Justice.jpg
+165,The First Fifteen Lives of Harry August,1,2,Claire North aka Catherine Webb,2014,https://www.goodreads.com/book/show/35066358-the-first-fifteen-lives-of-harry-august,https://en.wikipedia.org/wiki/The_First_Fifteen_Lives_of_Harry_August,book-covers-img\TheFirstFifteenLivesOfHarryAugust.jpg
+166,We Were Liars,1,2,E Lockhart,2014,https://www.goodreads.com/book/show/16143347-we-were-liars,https://en.wikipedia.org/wiki/We_Were_Liars,book-covers-img\we_were_liears.jpg
+167,Area X: The Southern Research Trilogy,1,3,Jeff VanderMeer,2014,https://www.goodreads.com/book/show/17934530-annihilation,https://en.wikipedia.org/wiki/Southern_Reach_Trilogy,book-covers-img\anhialation.jpg
+168,Red Rising,1,3,Pierce Brown,2014,https://www.goodreads.com/book/show/15839976-red-rising,https://en.wikipedia.org/wiki/Red_Rising,book-covers-img\red_rising.jpg
