@@ -2,7 +2,7 @@
     height: 60px;
     padding: 0;
     background-color: white;
-    border-bottom: 1px solid #e9ecef;
+
     position: relative;
   }
   
@@ -17,6 +17,9 @@
   
   .sticky {
     position: fixed;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     top: 56px; /* Update this to match your header height */
     left: 0;
     right: 0;
@@ -36,4 +39,31 @@
   
   .group {
     height: 100%;
+  }
+
+
+
+  .rainbowButton {
+    position: relative;
+    transition: all 0.3s ease;
+    background-color: #0035ff !important;
+  }
+  
+  .rainbowButton:hover {
+    background-image: linear-gradient(124deg, #d900df, #ac38ff, #6d16ef, #3273dc);
+    background-size: 800% 800%;
+    animation: rainbow 6s ease infinite;
+    
+  }
+  
+  @keyframes rainbow {
+    0% {
+      background-position: 1% 80%;
+    }
+    50% {
+      background-position: 99% 20%;
+    }
+    100% {
+      background-position: 1% 80%;
+    }
   }

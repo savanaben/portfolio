@@ -19,32 +19,32 @@ interface Image {
 const TestletDesignSystem: React.FC = () => {
   const imageGroupOne: Image[] = [
     {
-      thumbnailURL: "/img/testlet-design-system/Tab.png",
-      largeURL: "/img/testlet-design-system/Tab.png",
+      thumbnailURL: `${process.env.PUBLIC_URL}/img/testlet-design-system/Tab.png`,
+      largeURL: `${process.env.PUBLIC_URL}/img/testlet-design-system/Tab.png`,
       width: 1074,
       height: 454,
       caption: "Tabs follow a minimalist design and allow for custom icons.",
       alt: "Tab component"
     },
     {
-      thumbnailURL: "/img/testlet-design-system/Match.png",
-      largeURL: "/img/testlet-design-system/Match.png",
+      thumbnailURL: `${process.env.PUBLIC_URL}/img/testlet-design-system/Match.png`,
+      largeURL: `${process.env.PUBLIC_URL}/img/testlet-design-system/Match.png`,
       width: 643,
       height: 223,
       caption: "Drag-and-drop interactions support two categories and include visually accessible styles across all states.",
       alt: "Match component"
     },
     {
-      thumbnailURL: "/img/testlet-design-system/accordion.png",
-      largeURL: "/img/testlet-design-system/accordion.png",
+      thumbnailURL: `${process.env.PUBLIC_URL}/img/testlet-design-system/accordion.png`,
+      largeURL: `${process.env.PUBLIC_URL}/img/testlet-design-system/accordion.png`,
       width: 749,
       height: 539,
       caption: "Accordions are often used to organize evidence or build a graphic organizer.",
       alt: "Accordion component"
     },
     {
-      thumbnailURL: "/img/testlet-design-system/SIP.png",
-      largeURL: "/img/testlet-design-system/SIP.png",
+      thumbnailURL: `${process.env.PUBLIC_URL}/img/testlet-design-system/SIP.png`,
+      largeURL: `${process.env.PUBLIC_URL}/img/testlet-design-system/SIP.png`,
       width: 655,
       height: 375,
       caption: "The select in passage component allows students to select text chunks directly in passages, articles, poems, etc as an answer to a question.",
@@ -54,24 +54,24 @@ const TestletDesignSystem: React.FC = () => {
 
   const biometricsImages: Image[] = [
     {
-      thumbnailURL: "/img/testlet-design-system/biometrics1.png",
-      largeURL: "/img/testlet-design-system/biometrics1.png",
+      thumbnailURL: `${process.env.PUBLIC_URL}/img/testlet-design-system/biometrics1.png`,
+      largeURL: `${process.env.PUBLIC_URL}/img/testlet-design-system/biometrics1.png`,
       width: 1366,
       height: 807,
       caption: "Biometrics example 1",
       alt: "Biometrics example 1"
     },
     {
-      thumbnailURL: "/img/testlet-design-system/biometrics2.png",
-      largeURL: "/img/testlet-design-system/biometrics2.png",
+      thumbnailURL: `${process.env.PUBLIC_URL}/img/testlet-design-system/biometrics2.png`,
+      largeURL: `${process.env.PUBLIC_URL}/img/testlet-design-system/biometrics2.png`,
       width: 1366,
       height: 807,
       caption: "Biometrics example 2",
       alt: "Biometrics example 2"
     },
     {
-      thumbnailURL: "/img/testlet-design-system/biometrics3.png",
-      largeURL: "/img/testlet-design-system/biometrics3.png",
+      thumbnailURL: `${process.env.PUBLIC_URL}/img/testlet-design-system/biometrics3.png`,
+      largeURL: `${process.env.PUBLIC_URL}/img/testlet-design-system/biometrics3.png`,
       width: 1366,
       height: 807,
       caption: "Biometrics example 3",
@@ -119,8 +119,11 @@ const TestletDesignSystem: React.FC = () => {
           </Paragraph>
         </TextContainer>
 
-        <img className="mx-auto max-w-full h-auto px-4 mb-8" src="/img/testlet-design-system/design-system-hierarchy.svg" alt="Design system hierarchy" />
-
+        <img 
+          className="mx-auto max-w-full h-auto px-4 mb-8" 
+           src={`${process.env.PUBLIC_URL}/img/testlet-design-system/design-system-hierarchy.svg`} 
+            alt="Design system hierarchy" 
+          />
         <TextContainer>
           <Paragraph>
             This new organizational system enables cross-linking and nesting of related materials, a unified location where people with no programming knowledge can create and update pages asynchronously, and better cross-specialty knowledge-sharing as the content and programming teams can more easily understand how their areas of ownership connect to other teams&apos; work.

@@ -6,8 +6,8 @@ import Paragraph from '../components/Paragraph';
 const AffordableHousing: React.FC = () => {
   return (
     <ExternalProjectTemplate
-      bannerImage="/img/affordableHousing/Merwick-Stanworth - Torti Gallas and Partners.16a52031.svg"
-      bannerImageStyle={{ objectPosition: 'center bottom' }}
+    bannerImage={`${process.env.PUBLIC_URL}/img/affordableHousing/Merwick-Stanworth - Torti Gallas and Partners.16a52031.svg`}
+    bannerImageStyle={{ objectPosition: 'center bottom' }}
       title="Visualizing NJ Affordable Housing"
       titleLevel={1}
       titleVisualLevel="h2"

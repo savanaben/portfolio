@@ -9,6 +9,9 @@ import TestDesign from './projects/TestDesign';
 import DigitalWork from './projects/DigitalWork';
 import ScienceFictionDataViz from './projects/ScienceFictionDataViz';
 import DrawProbability from './projects/DrawProbability';
+import MuseumMania from './projects/MuseumMania';
+import Maps from './projects/Maps';
+
 
 interface RouteConfig {
   path: string;
@@ -27,6 +30,8 @@ const routeConfig: RouteConfig[] = [
   { path: '/DigitalWork', element: DigitalWork, backgroundColor: '#f3f4f6', fullWidth: true },
   { path: '/DrawProbability', element: DrawProbability, backgroundColor: '#fff9ef', fullWidth: true },
   { path: '/ScienceFictionDataViz', element: ScienceFictionDataViz, backgroundColor: '#fff9ef', fullWidth: true },
+  { path: '/MuseumMania', element: MuseumMania, backgroundColor: '#FCF0F0', fullWidth: true },
+  { path: '/Maps', element: Maps, backgroundColor: '#f3f4f6', fullWidth: true },
 
 
 

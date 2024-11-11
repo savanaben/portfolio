@@ -21,7 +21,7 @@ const Experience: React.FC = () => {
           <Heading level={3} style={{ marginBottom: 0 }} className="text-xl font-semibold mb-0">Lead User Experience Designer</Heading>
             <Paragraph overrideMargin className="text-gray-600 mb-0">Educational Testing Service</Paragraph>
             <Paragraph className="text-sm text-gray-500 italic mb-0">2021–present</Paragraph>
-            <Paragraph>I lead the instructional design team for the National Assessment of Educational Progress (NAEP) and directly create components, prototypes, and digital content across a range of assessment and learning projects.</Paragraph>
+            <Paragraph>I lead the instructional design and content UX teams for the National Assessment of Educational Progress (NAEP) and directly create components, prototypes, and digital content across a range of assessment and learning projects.</Paragraph>
             <BulletedList items={[
               "Consistently collaborate with the NAEP client, presenting complex interactions and projects in understandable terms supported by visuals and prototypes.",
               "Coordinate design work across content and development teams to ensure schedules are met, design system expansions are carefully weighed, and products are successfully moved through design, study, and integration processes.",
@@ -83,7 +83,7 @@ const Experience: React.FC = () => {
           </div>
           <div>
             <Heading level={3} style={{ marginBottom: 0 }} className="text-xl font-semibold mb-0">3D Modeler</Heading>
-            <Paragraph className="text-gray-600 mb-0">Legends of Equestria</Paragraph>
+            <Paragraph overrideMargin className="text-gray-600 mb-0">Legends of Equestria</Paragraph>
             <Paragraph className="text-sm text-gray-500 italic">2012</Paragraph>
             <Paragraph>3D asset creation (hard surface modeling, toon texture work, Unity implementation and terrain support).</Paragraph>
           </div>

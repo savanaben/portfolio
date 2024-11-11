@@ -10,9 +10,10 @@ interface NavLink {
 }
 
 const links: NavLink[] = [
+  { link: 'about', label: 'About' },
   { link: 'projects', label: 'Projects' },
   { link: 'experience', label: 'Experience' },
-  { link: 'about', label: 'About' },
+  { link: 'contact', label: 'Contact' },
 ];
 
 const HEADER_HEIGHT = 80; // Adjust this value to match your header's height
@@ -55,7 +56,7 @@ export function HeaderResponsive(): JSX.Element {
       <div className="container mx-auto px-4">
         <div className={`${classes.inner} flex justify-between items-center`}>
           <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <h1>Ben Gross</h1>
+          <h1 className="text-2xl font-bold" style={{ color: '#00719c' }}>Ben Gross</h1>
           </Link>
           <Group gap="sm" visibleFrom="xs" className={classes.group} wrap="nowrap">
             {items}

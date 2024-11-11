@@ -4,15 +4,15 @@ import ProjectFooter from '../components/ProjectFooter';
 import Paragraph from '../components/Paragraph';
 import TextContainer from '../components/TextContainer';
 import Heading from '../components/Heading';
-import ExternalLink from '../components/ExternalLink';
+import Link from '../components/Link';
 import MediaContainer from '../components/MediaContainer';
 
 const MathMania: React.FC = () => {
   const functionTransformationImages = [
     {
       type: 'image' as const,
-      src: "/img/math-mania/function-transformation-before.png",
-      thumbnailSrc: "/img/math-mania/function-transformation-before.png",
+      src: `${process.env.PUBLIC_URL}/img/math-mania/function-transformation-before.png`,
+      thumbnailSrc: `${process.env.PUBLIC_URL}/img/math-mania/function-transformation-before.png`,
       width: 784,
       height: 614,
       caption: "Function Transformation - Before",
@@ -20,8 +20,8 @@ const MathMania: React.FC = () => {
     },
     {
       type: 'image' as const,
-      src: "/img/math-mania/function-transformation-after-1024x807.jpg",
-      thumbnailSrc: "/img/math-mania/function-transformation-after-1024x807.jpg",
+      src: `${process.env.PUBLIC_URL}/img/math-mania/function-transformation-after-1024x807.jpg`,
+      thumbnailSrc: `${process.env.PUBLIC_URL}/img/math-mania/function-transformation-after-1024x807.jpg`,
       width: 784,
       height: 614,
       caption: "Function Transformation - After",
@@ -32,8 +32,8 @@ const MathMania: React.FC = () => {
   const functionGraphImages = [
     {
       type: 'image' as const,
-      src: "/img/math-mania/function graph before.png",
-      thumbnailSrc: "/img/math-mania/function graph before.png",
+      src: `${process.env.PUBLIC_URL}/img/math-mania/function graph before.png`,
+      thumbnailSrc: `${process.env.PUBLIC_URL}/img/math-mania/function graph before.png`,
       width: 784,
       height: 614,
       caption: "Function Graph - Before",
@@ -41,8 +41,8 @@ const MathMania: React.FC = () => {
     },
     {
       type: 'image' as const,
-      src: "/img/math-mania/function-graph-after.jpg",
-      thumbnailSrc: "/img/math-mania/function-graph-after.jpg",
+      src: `${process.env.PUBLIC_URL}/img/math-mania/function-graph-after.jpg`,
+      thumbnailSrc: `${process.env.PUBLIC_URL}/img/math-mania/function-graph-after.jpg`,
       width: 784,
       height: 614,
       caption: "Function Graph - After",
@@ -53,8 +53,8 @@ const MathMania: React.FC = () => {
   const lineAndPointImages = [
     {
       type: 'image' as const,
-      src: "/img/math-mania/line and point before.png",
-      thumbnailSrc: "/img/math-mania/line and point before.png",
+      src: `${process.env.PUBLIC_URL}/img/math-mania/line and point before.png`,
+      thumbnailSrc: `${process.env.PUBLIC_URL}/img/math-mania/line and point before.png`,
       width: 868,
       height: 726,
       caption: "Line and Point - Before",
@@ -62,8 +62,8 @@ const MathMania: React.FC = () => {
     },
     {
       type: 'image' as const,
-      src: "/img/math-mania/line-and-point-after.jpg",
-      thumbnailSrc: "/img/math-mania/line-and-point-after.jpg",
+      src: `${process.env.PUBLIC_URL}/img/math-mania/line-and-point-after.jpg`,
+      thumbnailSrc: `${process.env.PUBLIC_URL}/img/math-mania/line-and-point-after.jpg`,
       width: 1400,
       height: 1103,
       caption: "Line and Point - After",
@@ -164,7 +164,7 @@ const MathMania: React.FC = () => {
           Fully Accessible and Customizable
         </Heading>
         <Paragraph>
-          Because this project was for the National Assessment of Educational Progress, we had to meet all <ExternalLink href="https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-ict-refresh/final-rule/text-of-the-standards-and-guidelines#E205-content">508 government standards</ExternalLink> under the Rehabilitation Act. Generally, this meant following all <ExternalLink href="https://www.w3.org/TR/WCAG21/">Web Content Accessibility Guidelines</ExternalLink>. I ensured all of these standards were embraced with contrast compliant colors, large enough touch targets, proper tagging, and full keyboard navigation support to name a few. In many situations, our complex graphing functionality required novel accessibility solutions because we could not find defining standards or exemplars.
+          Because this project was for the National Assessment of Educational Progress, we had to meet all <Link href="https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-ict-refresh/final-rule/text-of-the-standards-and-guidelines#E205-content">508 government standards</Link> under the Rehabilitation Act. Generally, this meant following all <Link href="https://www.w3.org/TR/WCAG21/">Web Content Accessibility Guidelines</Link>. I ensured all of these standards were embraced with contrast compliant colors, large enough touch targets, proper tagging, and full keyboard navigation support to name a few. In many situations, our complex graphing functionality required novel accessibility solutions because we could not find defining standards or exemplars.
         </Paragraph>
         <Paragraph>
           This graphing tool was particularly tricky to make fully keyboard navigable, as it includes multiple objects, deletion functionality, and free-form manipulation of points, lines, and line segments. Collaborating with accessibility specialists and developers, I designed an approach that applies tab grouping and an arrow-key-controlled reticle, leaning on commonly-tried keys and patterns to help keyboard users discover functionality.
@@ -184,14 +184,14 @@ const MathMania: React.FC = () => {
 
       <TextContainer>
         <Paragraph>
-          Another aspect of accessibility was the creation of two additional color themes (Dark and Low Contrast) for all components, allowing students to toggle between themes on-the-fly.
+          Another aspect of accessibility was the creation of two additional color themes (dark and low brightness) for all components, allowing students to pick what works best for them.
         </Paragraph>
       </TextContainer>
 
       <MediaContainer 
         items={[{
           type: 'image' as const,
-          src: "/img/math-mania/themes-optimized.gif",
+          src: `${process.env.PUBLIC_URL}/img/math-mania/themes-optimized.gif`,
           alt: "Animated gif of three color themes applied to a math graphing tool. The default theme is white, the dark theme has a black background and dark colors, while the middle theme has a soft creme background.",
           caption: "Color themes: Default, Dark, and Low Contrast",
         }]}
@@ -201,6 +201,12 @@ const MathMania: React.FC = () => {
       />
 
       <TextContainer>
+      <Heading level={2} visualLevel="h2">
+          Results
+        </Heading>
+      <Paragraph>
+        After a round of usability testing confirmed students down to 4th grade could use the tools with no issues, they were successfully integrated into the National Assessment of Educational Progress. Over several large scale administrations hundreds of thousands of students have now used these tools to demonstrate their knowledge and skills in math. 
+        </Paragraph>
         <ProjectFooter />
       </TextContainer>
     </AnimatedPage>

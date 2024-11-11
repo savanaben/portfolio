@@ -6,7 +6,7 @@ import Paragraph from '../components/Paragraph';
 const ScienceFictionDataViz: React.FC = () => {
   return (
     <ExternalProjectTemplate
-      bannerImage="/img/SFdataViz.png"
+      bannerImage={`${process.env.PUBLIC_URL}/img/SFdataViz.png`}
       bannerImageStyle={{ objectPosition: 'center' }}
       title="Science Fiction Data Viz"
       titleLevel={1}

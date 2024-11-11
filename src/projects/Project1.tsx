@@ -46,24 +46,24 @@ const Project1: React.FC = () => {
 
   const images: Image[] = [
     {
-      thumbnailURL: '/img/3D/AbstractLight.jpg',
-      largeURL: '/img/3D/AbstractLight.jpg',
+      thumbnailURL: 'img/3D/AbstractLight.jpg',
+      largeURL: 'img/3D/AbstractLight.jpg',
       width: 1000,
       height: 563,
       caption: 'Abstract Light: A mesmerizing play of colors and shapes',
       alt: 'Abstract light patterns'
     },
     {
-      thumbnailURL: '/img/3D/AbstractLight.jpg',
-      largeURL: '/img/3D/AbstractLight.jpg',
+      thumbnailURL: 'img/3D/AbstractLight.jpg',
+      largeURL: 'img/3D/AbstractLight.jpg',
       width: 1000,
       height: 563,
       caption: 'Abstract Light: A mesmerizing play of colors and shapes',
       alt: 'Abstract light patterns'
     },
     {
-      thumbnailURL: '/img/3D/AbstractLight.jpg',
-      largeURL: '/img/3D/AbstractLight.jpg',
+      thumbnailURL: 'img/3D/AbstractLight.jpg',
+      largeURL: 'img/3D/AbstractLight.jpg',
       width: 1000,
       height: 563,
       caption: 'Abstract Light: A mesmerizing play of colors and shapes',

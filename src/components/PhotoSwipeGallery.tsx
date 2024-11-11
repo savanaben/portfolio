@@ -65,10 +65,14 @@ const PhotoSwipeGallery: React.FC<PhotoSwipeGalleryProps> = ({
             data-pswp-height={image.height}
             data-pswp-caption={image.caption}
           >
-            <img src={image.thumbnailURL} alt={image.alt || ''} className="w-full h-auto" />
+<img 
+  src={image.thumbnailURL} 
+  alt={image.alt || ''} 
+  className="w-full h-auto rounded-lg" // Added rounded-lg
+/>
           </a>
           {showCaptions && image.caption && (
-            <p className="mt-2 text-md text-gray-600 mb-4">{image.caption}</p>
+            <p className="mt-2 mx-2 text-md text-gray-600 mb-4">{image.caption}</p>
           )}
         </div>
       ))}

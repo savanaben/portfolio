@@ -120,14 +120,16 @@ const ExternalProjectTemplate: React.FC<ExternalProjectTemplateProps> = ({
           >
             <Container size="md" className={classes.inner}>
               <Group gap={5} className={classes.group}>
-                <Button
+              <Button
                   component="a"
                   {...getLinkProps()}
                   size="md"
                   radius="xl"
-                  className="bg-blue-500 hover:bg-blue-600 text-white"
+                  className={`${classes.rainbowButton}`}
                 >
-                  View Project <IconExternalLink size={18} className="ml-2" />
+                  <span>
+                    View Project <IconExternalLink size={18} className="ml-2 inline" />
+                  </span>
                 </Button>
               </Group>
             </Container>
@@ -140,7 +142,11 @@ const ExternalProjectTemplate: React.FC<ExternalProjectTemplateProps> = ({
           </Heading>
         </TextContainer>
 
-        {content}
+
+        <div className="w-full">
+          {content}
+        </div>
+
 
         <ProjectFooter />
       </div>

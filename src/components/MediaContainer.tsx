@@ -79,7 +79,7 @@ const MediaContainer: React.FC<MediaContainerProps> = ({
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 title={item.caption || `Video ${index + 1}`}
-                className="absolute top-0 left-0 w-full h-full"
+                className="absolute top-0 left-0 w-full h-full rounded-lg"
               ></iframe>
             </div>
             {showCaptions && item.caption && (
@@ -92,7 +92,7 @@ const MediaContainer: React.FC<MediaContainerProps> = ({
     };
   
     return (
-      <div className={`w-full mx-auto ${maxWidthClass}`}>
+      <div className={`w-full mx-auto ${maxWidthClass} ${!showCaptions ? 'mb-6' : ''}`}>
         <div className={gridClass}>
           {images.length > 0 && (
             <PhotoSwipeGallery

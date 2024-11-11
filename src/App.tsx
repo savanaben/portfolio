@@ -1,6 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
-import { MantineProvider } from '@mantine/core';
+import { HashRouter as Router, Route, Routes, useLocation } from 'react-router-dom';import { MantineProvider } from '@mantine/core';
 import { AnimatePresence } from 'framer-motion';
 import { HeaderResponsive } from './components/Header';
 import routeConfig from './routeConfig';

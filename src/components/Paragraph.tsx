@@ -14,9 +14,18 @@ const Paragraph: React.FC<ParagraphProps> = ({ children, className = '', overrid
 
   if (typeof children === 'string') {
     const sanitizeConfig = {
-      ADD_ATTR: ['target', 'rel'],
+      ADD_ATTR: ['target', 'rel', 'class'],
+      ADD_TAGS: ['em', 'strong'], // Allow em and strong tags
     };
-    const sanitizedContent = DOMPurify.sanitize(children, sanitizeConfig);
+    
+    // First, process any markdown-like syntax for italic and bold
+    const processedContent = children
+      // Convert *text* to <em>text</em> for italics
+      .replace(/\*([^*]+)\*/g, '<em class="italic">$1</em>')
+      // Convert **text** to <strong>text</strong> for bold
+      .replace(/\*\*([^*]+)\*\*/g, '<strong class="font-bold">$1</strong>');
+
+    const sanitizedContent = DOMPurify.sanitize(processedContent, sanitizeConfig);
     
     // Add external link styles to all links
     const styledContent = sanitizedContent.replace(

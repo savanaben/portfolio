@@ -86,7 +86,7 @@ function ProjectTile({ project }: ProjectTileProps): JSX.Element {
         />
       </motion.div>
       <figcaption className="flex flex-col">
-        <h3 className={`text-lg font-semibold mb-1 ${hovered ? 'underline' : ''}`}>
+        <h3 className={`text-lg font-semibold ${hovered ? 'underline' : ''}`}>
           {project.title}
         </h3>
         <p className="text-sm text-gray-600">{project.description}</p>

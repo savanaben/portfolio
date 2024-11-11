@@ -38,14 +38,14 @@ const TestDesign: React.FC = () => {
           items={[
             {
               type: 'image',
-              src: '/img/test-design/oceans-1.jpg',
+              src: `${process.env.PUBLIC_URL}/img/test-design/oceans-1.jpg`,
               width: 1000,
               height: 557,
               alt: 'Oceans of Plastic design 1',
             },
             {
               type: 'image',
-              src: '/img/test-design/oceans-2.jpg',
+              src: `${process.env.PUBLIC_URL}/img/test-design/oceans-2.jpg`,
               width: 1000,
               height: 557,
               alt: 'Oceans of Plastic design 2',
@@ -66,14 +66,14 @@ const TestDesign: React.FC = () => {
           items={[
             {
               type: 'image',
-              src: '/img/test-design/des-1.jpg',
+              src: `${process.env.PUBLIC_URL}/img/test-design/des-1.jpg`,
               width: 1000,
               height: 557,
               alt: 'The Tale of Despereaux design 1',
             },
             {
               type: 'image',
-              src: '/img/test-design/des-2.jpg',
+              src: `${process.env.PUBLIC_URL}/img/test-design/des-2.jpg`,
               width: 1000,
               height: 557,
               alt: 'The Tale of Despereaux design 2',
@@ -94,14 +94,14 @@ const TestDesign: React.FC = () => {
           items={[
             {
               type: 'image',
-              src: '/img/test-design/mango-1.jpg',
+              src: `${process.env.PUBLIC_URL}/img/test-design/mango-1.jpg`,
               width: 1000,
               height: 557,
               alt: 'Mango Street design 1',
             },
             {
               type: 'image',
-              src: '/img/test-design/mango-2.jpg',
+              src: `${process.env.PUBLIC_URL}/img/test-design/mango-2.jpg`,
               width: 1000,
               height: 557,
               alt: 'Mango Street design 2',
@@ -122,7 +122,7 @@ const TestDesign: React.FC = () => {
           items={[
             {
               type: 'image',
-              src: '/img/test-design/space-1.jpg',
+              src: `${process.env.PUBLIC_URL}/img/test-design/space-1.jpg`,
               width: 1000,
               height: 557,
               alt: 'Space Junk design 1',
@@ -130,8 +130,7 @@ const TestDesign: React.FC = () => {
             },
             {
               type: 'image',
-              src: '/img/test-design/space-2.jpg',
-              width: 1000,
+              src: `${process.env.PUBLIC_URL}/img/test-design/space-2.jpg`,              width: 1000,
               height: 557,
               alt: 'Space Junk design 2',
             },

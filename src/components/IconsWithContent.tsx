@@ -2,7 +2,6 @@ import React from 'react';
 import TextContainer from './TextContainer';
 import Heading from './Heading';
 import Paragraph from './Paragraph';
-import ExternalLink from './ExternalLink';
 
 interface ContentItem {
   imageUrl: string;
@@ -19,7 +18,7 @@ interface IconsWithContentProps {
 
 const IconsWithContent: React.FC<IconsWithContentProps> = ({ items, containerSize = '3xl' }) => {
     return (
-      <TextContainer size={containerSize}>
+      <TextContainer size={containerSize} removeHorizontalPadding>
         <div className="space-y-4">
           {items.map((item, index) => (
             <div key={index} className="flex items-start">
