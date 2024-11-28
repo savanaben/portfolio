@@ -14,13 +14,14 @@ interface MediaItem {
 
 interface MediaContainerProps {
   items: MediaItem[];
-  maxWidth?: 'none' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl';
+  maxWidth?: 'none' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl';
   columns?: {
     sm?: 1 | 2 | 3 | 4;
     md?: 1 | 2 | 3 | 4;
     lg?: 1 | 2 | 3 | 4;
   };
   showCaptions?: boolean;
+  className?: string;
 }
 
 const MediaContainer: React.FC<MediaContainerProps> = ({
@@ -28,9 +29,12 @@ const MediaContainer: React.FC<MediaContainerProps> = ({
     maxWidth = 'none',
     columns = { sm: 1, md: 2, lg: 2 },
     showCaptions = false,
+    className = '',
   }) => {
     const getMaxWidthClass = (maxWidth: MediaContainerProps['maxWidth']) => {
       switch (maxWidth) {
+        case 'xs':
+          return 'max-w-xs';
         case 'sm':
           return 'max-w-sm';
         case 'md':
@@ -70,9 +74,22 @@ const MediaContainer: React.FC<MediaContainerProps> = ({
   
     const renderMediaItem = (item: MediaItem, index: number) => {
       if (item.type === 'video') {
+        // If width and height are provided, use them to calculate aspect ratio
+        const hasCustomDimensions = item.width && item.height;
+        const aspectRatio = hasCustomDimensions 
+          ? `${(item.height! / item.width!) * 100}%`
+          : '56.25%'; // Default 16:9 ratio
+    
         return (
           <div key={index} className="min-w-[150px] w-full">
-            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+            <div 
+              className="relative w-full" 
+              style={{ 
+                paddingBottom: aspectRatio,
+                maxWidth: item.width ? `${item.width}px` : undefined,
+                margin: item.width ? '0 auto' : undefined
+              }}
+            >
               <iframe
                 src={item.src}
                 frameBorder="0"
@@ -80,11 +97,11 @@ const MediaContainer: React.FC<MediaContainerProps> = ({
                 allowFullScreen
                 title={item.caption || `Video ${index + 1}`}
                 className="absolute top-0 left-0 w-full h-full rounded-lg"
-              ></iframe>
+              />
             </div>
             {showCaptions && item.caption && (
-  <RichTextCaption content={item.caption} />
-)}
+              <RichTextCaption content={item.caption} />
+            )}
           </div>
         );
       }
@@ -92,7 +109,7 @@ const MediaContainer: React.FC<MediaContainerProps> = ({
     };
   
     return (
-      <div className={`w-full mx-auto ${maxWidthClass} ${!showCaptions ? 'mb-6' : ''}`}>
+      <div className={`w-full mx-auto ${maxWidthClass} ${!showCaptions ? 'mb-6' : ''} ${className}`}>
         <div className={gridClass}>
           {images.length > 0 && (
             <PhotoSwipeGallery

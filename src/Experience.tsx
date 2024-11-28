@@ -11,6 +11,7 @@ const Experience: React.FC = () => {
       <Heading 
           level={1} 
           visualLevel="h2" 
+          color="#00719c"
           alignment="center" 
           style={{ marginTop: 0, marginBottom: '2rem' }}
         >
@@ -25,7 +26,7 @@ const Experience: React.FC = () => {
             <BulletedList items={[
               "Consistently collaborate with the NAEP client, presenting complex interactions and projects in understandable terms supported by visuals and prototypes.",
               "Coordinate design work across content and development teams to ensure schedules are met, design system expansions are carefully weighed, and products are successfully moved through design, study, and integration processes.",
-              "Provide leadership through example in the establishment of design processes, prioritization of research and study to validate assumptions, and promotion of a culture of shared critique, agency, and constant knowledge-sharing."
+              "Provide leadership through example in the establishment of design processes, prioritization of research and study to validate assumptions, and promotion of a culture of shared critique, agency, and knowledge-sharing."
             ]} />
           </div>
           <div>
@@ -52,7 +53,7 @@ const Experience: React.FC = () => {
             ]} />
           </div>
           <div>
-            <Heading level={3} style={{ marginBottom: 0 }} className="text-xl font-semibold mb-0">Consultant</Heading>
+            <Heading level={3}  style={{ marginBottom: 0 }} className="text-xl font-semibold mb-0">Consultant</Heading>
             <Paragraph overrideMargin className="text-gray-600 mb-0">Educational Testing Service</Paragraph>
             <Paragraph className="text-sm text-gray-500 italic">2014–2015</Paragraph>
             <Paragraph>Worked primarily on the National Assessment of Educational Progress designing UI&apos;s and creating digital assets of all types.</Paragraph>

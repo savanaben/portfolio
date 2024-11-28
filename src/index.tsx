@@ -5,6 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import '@mantine/core/styles.css';
 
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&display=swap" rel="stylesheet"></link>
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );

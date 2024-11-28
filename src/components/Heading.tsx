@@ -22,10 +22,10 @@ const Heading: React.FC<HeadingProps> = ({
   const Tag = `h${level}` as keyof JSX.IntrinsicElements;
   
   const baseStyles = {
-    h1: 'text-4xl font-weight-800 mt-8 mb-6',
-    h2: 'text-3xl font-weight-700 mt-7 mb-5',
-    h3: 'text-2xl font-weight-600 mt-6 mb-4',
-    h4: 'text-xl font-weight-600 mt-5 mb-3',
+    h1: 'text-4xl font-weight-700 mt-8 mb-5',
+    h2: 'text-3xl font-weight-700 mt-7 mb-4',
+    h3: 'text-2xl font-weight-600 mt-6 mb-3',
+    h4: 'text-xl font-weight-600 mt-5 mb-2',
     h5: 'text-lg font-weight-500 mt-4 mb-2',
     h6: 'text-base font-weight-500 mt-3 mb-2',
   };

@@ -27,6 +27,7 @@ const Education: React.FC = () => {
         <Heading 
           level={1} 
           visualLevel="h2" 
+          color='#00719c'
           alignment="center" 
           style={{ 
             marginTop: 0,

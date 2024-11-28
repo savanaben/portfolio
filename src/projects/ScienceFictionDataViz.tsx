@@ -10,6 +10,7 @@ const ScienceFictionDataViz: React.FC = () => {
       bannerImageStyle={{ objectPosition: 'center' }}
       title="Science Fiction Data Viz"
       titleLevel={1}
+      color="#00778b"
       titleVisualLevel="h2"
       content={
         <TextContainer size="3xl">

@@ -10,6 +10,7 @@ const ScienceFictionDataViz: React.FC = () => {
       bannerImageStyle={{ objectPosition: 'top' }}
       title="Museum Mania"
       titleLevel={1}
+      color="#6b2626"
       titleVisualLevel="h2"
       content={
         <TextContainer size="3xl">
@@ -20,7 +21,6 @@ const ScienceFictionDataViz: React.FC = () => {
       }
       projectLink={{
         url: 'https://bgross-museums.glitch.me/',
-        isInternal: true
       }}
     />
   );

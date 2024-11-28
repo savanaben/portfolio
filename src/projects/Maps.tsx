@@ -42,12 +42,12 @@ const Maps: React.FC = () => {
     I ❤️ Maps
             </h1>
         </div>
-      <div className="max-w-3xl bg-white rounded-lg px-2 pt-4 pb-4 mx-2 my-12 sm:px-6 sm:pt-4 sm:pb-6 md:px-8 md:pt-6 md:pb-8 lg:px-12 lg:pt-8 lg:pb-12 lg:mx-auto md:mx-2 sm:mx-2">
-         <TextContainer>
+      <div className="max-w-3xl bg-white rounded-lg px-2 pt-4 pb-4 mx-3 mb-3 my-2 lg:my-12 sm:px-6 sm:pt-4 sm:pb-6 md:px-8 md:pt-6 md:pb-8 lg:px-12 lg:pt-8 lg:pb-12 lg:mx-auto md:mx-12 sm:mx-2">
+         <TextContainer >
          <Paragraph>
          *Maps hold a dear place in my heart. From the sketchy scrawls that envision space and place to full-color continents, in all their mesmerizing detail.*
             </Paragraph>
-            <Heading level={1} visualLevel="h2" alignment="center">
+            <Heading level={1} color="#882888" visualLevel="h2" alignment="center">
               World Design: The Heartlands
             </Heading>
             <Paragraph>
@@ -56,7 +56,7 @@ const Maps: React.FC = () => {
             <Paragraph>
             This project involved an incredible range of collaboration across specialties. There are many areas I won&apos;t get to cover like our Writing team creating the lore, characters, and personality to fill this world, our 3D artists building structure and space, and all the amazing concept art that fueled everyone&apos;s inspiration. But here&apos;s a small slice of that story in top-down form.
             </Paragraph>
-            <Heading level={2} visualLevel="h3" alignment="left">
+            <Heading level={2} color="#882888" visualLevel="h3" alignment="left">
                We needed a connecting zone
             </Heading>
             <Paragraph>
@@ -223,7 +223,7 @@ const Maps: React.FC = () => {
           />
 
           <TextContainer>
-              <Heading level={3} visualLevel="h3" alignment="center" className="retro-header">
+              <Heading level={3} color="#882888" visualLevel="h3" alignment="center" className="retro-header">
                 Retrospective
               </Heading>
               <Paragraph className="retro-body">

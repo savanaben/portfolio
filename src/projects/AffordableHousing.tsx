@@ -11,6 +11,7 @@ const AffordableHousing: React.FC = () => {
       title="Visualizing NJ Affordable Housing"
       titleLevel={1}
       titleVisualLevel="h2"
+      color="#296851"
       content={
         <TextContainer size="3xl">
           <Paragraph>

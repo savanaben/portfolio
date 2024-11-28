@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import Projects from './Projects';
 import Experience from './Experience';
@@ -13,6 +13,14 @@ export const MainPage: React.FC = () => {
   const experienceRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
+  const [pageLoaded, setPageLoaded] = useState(false);
+
+
+  useEffect(() => {
+    // Set pageLoaded to true after the main content is rendered
+    setPageLoaded(true);
+  }, []);
+
 
   useEffect(() => {
     if (location.state && location.state.scrollTo) {
@@ -35,8 +43,8 @@ export const MainPage: React.FC = () => {
   return (
     <AnimatedPage>
       <div className="space-y-12 mb-12"> {/* Add vertical spacing between sections */}
-        <div className="mt-12" id="about" ref={aboutRef}>
-          <About />
+        <div id="about" ref={aboutRef}>
+          <About shouldPreload={pageLoaded} />
         </div>
         <div id="projects" ref={projectsRef}>
           <Projects />

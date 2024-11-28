@@ -53,15 +53,15 @@ export function HeaderResponsive(): JSX.Element {
 
   return (
     <header className={`${classes.header} w-full`}>
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto lg:pl-10 lg:pr-7 md:pl-10 md:pr-7 px-4 max-w-7xl">
         <div className={`${classes.inner} flex justify-between items-center`}>
           <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
           <h1 className="text-2xl font-bold" style={{ color: '#00719c' }}>Ben Gross</h1>
           </Link>
-          <Group gap="sm" visibleFrom="xs" className={classes.group} wrap="nowrap">
+          <Group gap="sm" visibleFrom="sm" className={classes.group} wrap="nowrap">
             {items}
           </Group>
-          <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
+          <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="md" />
         </div>
       </div>
 

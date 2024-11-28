@@ -21,7 +21,7 @@ const TestDesign: React.FC = () => {
           <TextContainer size="2xl">
             <Heading alignment="center" level={3}>Global Attribution</Heading>
             <Paragraph>
-              I want to thank Hilary Persky (Content Lead) and Lonnie Smith (Dev Lead) for being such great team members. You were a joy to work with, and I wish all my app teams were so small and nimble.
+              I want to thank Hilary Persky (Content Lead) and Lonnie Smith (Dev Lead) for being such great team members. You were a joy to work with!
             </Paragraph>
             <p className="text-md italic">
               All content owned by the <Link href="https://nces.ed.gov/" external>National Center for Educational Statistics</Link> and the United States Department of Education.

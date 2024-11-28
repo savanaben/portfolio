@@ -11,6 +11,9 @@ import ScienceFictionDataViz from './projects/ScienceFictionDataViz';
 import DrawProbability from './projects/DrawProbability';
 import MuseumMania from './projects/MuseumMania';
 import Maps from './projects/Maps';
+import SimulatedSearch from './projects/SimulatedSearch';
+import Folio from './projects/Folio';
+import FormativeAssessment from './projects/FormativeAssessment';
 
 
 interface RouteConfig {
@@ -21,7 +24,7 @@ interface RouteConfig {
 }
 
 const routeConfig: RouteConfig[] = [
-  { path: '/', element: MainPage, backgroundColor: '#f3f4f6' },
+  { path: '/', element: MainPage, backgroundColor: '#f3f4f6', fullWidth: true },
   { path: '/project1', element: Project1, backgroundColor: '#f3f4f6' },
   { path: '/design-system', element: TestletDesignSystem, backgroundColor: '#ffffff' },
   { path: '/affordable-housing-viz', element: AffordableHousing, backgroundColor: '#fff9ef', fullWidth: true },
@@ -29,10 +32,12 @@ const routeConfig: RouteConfig[] = [
   { path: '/TestDesign', element: TestDesign, backgroundColor: '#fff9ef', fullWidth: true },
   { path: '/DigitalWork', element: DigitalWork, backgroundColor: '#f3f4f6', fullWidth: true },
   { path: '/DrawProbability', element: DrawProbability, backgroundColor: '#fff9ef', fullWidth: true },
-  { path: '/ScienceFictionDataViz', element: ScienceFictionDataViz, backgroundColor: '#fff9ef', fullWidth: true },
+  { path: '/ScienceFictionDataViz', element: ScienceFictionDataViz, backgroundColor: '#f3f4f6', fullWidth: true },
   { path: '/MuseumMania', element: MuseumMania, backgroundColor: '#FCF0F0', fullWidth: true },
   { path: '/Maps', element: Maps, backgroundColor: '#f3f4f6', fullWidth: true },
-
+  { path: '/SimulatedSearch', element: SimulatedSearch, backgroundColor: '#f3f4f6', fullWidth: true },
+  { path: '/Folio', element: Folio, backgroundColor: '#fff4f8', fullWidth: true },
+  { path: '/FormativeAssessment', element: FormativeAssessment, backgroundColor: '#eefdff', fullWidth: true },
 
 
 ];

@@ -16,6 +16,7 @@ interface ExternalProjectTemplateProps {
   bannerImage: string;
   bannerImageStyle?: React.CSSProperties;
   title: string;
+  color: string;
   titleLevel?: 1 | 2 | 3 | 4 | 5 | 6;
   titleVisualLevel?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
   content: ReactNode;
@@ -30,6 +31,7 @@ const ExternalProjectTemplate: React.FC<ExternalProjectTemplateProps> = ({
   bannerImage,
   bannerImageStyle,
   title,
+  color,
   titleLevel = 1,
   titleVisualLevel = 'h2',
   content,
@@ -137,7 +139,7 @@ const ExternalProjectTemplate: React.FC<ExternalProjectTemplateProps> = ({
         </div>
 
         <TextContainer>
-          <Heading level={titleLevel} visualLevel={titleVisualLevel}>
+          <Heading level={titleLevel} color={color} visualLevel={titleVisualLevel}>
             {title}
           </Heading>
         </TextContainer>

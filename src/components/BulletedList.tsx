@@ -7,9 +7,17 @@ interface BulletedListProps {
 
 const BulletedList: React.FC<BulletedListProps> = ({ items, className = '' }) => {
   return (
-    <ul className={`list-disc list-inside mt-2 space-y-1 mb-4 ${className}`}>
+    <ul className={`mt-2 space-y-4 mb-4 ${className}`}>
       {items.map((item, index) => (
-        <li key={index} className="text-base text-lg">{item}</li>
+        <li key={index} className="relative pl-6">
+          {/* Bullet point */}
+          <span className="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-gray-600" />
+          
+          {/* Content */}
+          <div className="space-y-3">
+            {item}
+          </div>
+        </li>
       ))}
     </ul>
   );

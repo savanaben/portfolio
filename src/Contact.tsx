@@ -32,7 +32,7 @@ const Contact: React.FC = () => {
 
   return (
     <TextContainer size="2xl">
-      <Heading level={2} alignment="center" visualLevel="h2">
+      <Heading level={2} alignment="center" color='#00719c' visualLevel="h2">
         Contact me
       </Heading>
       
@@ -44,7 +44,7 @@ const Contact: React.FC = () => {
       <div className="mt-8">
         <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label htmlFor="name" className="block text-lg font-rethink text-gray-700">
+            <label htmlFor="name" className="block text-lg text-gray-700">
               Your name
             </label>
             <input
@@ -52,12 +52,12 @@ const Contact: React.FC = () => {
               name="user_name"
               id="name"
               required
-              className="mt-2 block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-3 text-lg"
+              className="mt-2 block w-full rounded-lg border-solid border-2 border-gray-400 focus:border-blue-500 focus:ring-blue-500 p-3 text-lg"
             />
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-lg font-rethink text-gray-700">
+            <label htmlFor="email" className="block text-lg text-gray-700">
               Email
             </label>
             <input
@@ -65,12 +65,12 @@ const Contact: React.FC = () => {
               name="user_email"
               id="email"
               required
-              className="mt-2 block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-3 text-lg"
+              className="mt-2 block w-full rounded-lg border-solid border-2 border-gray-400 focus:border-blue-500 focus:ring-blue-500 p-3 text-lg"
             />
           </div>
 
           <div>
-            <label htmlFor="message" className="block text-lg font-rethink text-gray-700">
+            <label htmlFor="message" className="block text-lg text-gray-700">
               Message
             </label>
             <textarea
@@ -78,14 +78,14 @@ const Contact: React.FC = () => {
               id="message"
               required
               rows={4}
-              className="mt-2 block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-3 text-lg"
+              className="mt-2 block w-full rounded-lg border-solid border-2 border-gray-400 focus:border-blue-500 focus:ring-blue-500 p-3 text-lg"
             />
           </div>
 
           <button
             type="submit"
             disabled={status === 'sending'}
-            className="w-full inline-flex justify-center rounded-lg border border-transparent bg-blue-600 py-3 px-6 text-lg font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 transition-colors duration-200"
+            className="w-full inline-flex justify-center rounded-lg border border-transparent bg-purple-600 py-3 px-6 text-lg font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 disabled:opacity-50 transition-colors duration-200"
           >
             {status === 'sending' ? 'Sending...' : 'Send Message'}
           </button>

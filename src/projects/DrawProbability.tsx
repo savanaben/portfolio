@@ -48,6 +48,7 @@ const DrawProbability: React.FC = () => {
       bannerImageStyle={{ objectPosition: 'top' }}
       title="Using simulations to build better decks"
       titleLevel={1}
+      color="#612e00"
       titleVisualLevel="h2"
       content={
         <>
@@ -58,7 +59,7 @@ const DrawProbability: React.FC = () => {
           <Paragraph>
             I built this tool as a challenge to expand my development skills beyond simple front-end components.
           </Paragraph>
-          <Heading visualLevel='h3' level={2}>Hypergeometric Calculator</Heading>
+          <Heading visualLevel='h3' color="#612e00" level={2}>Hypergeometric Calculator</Heading>
         </TextContainer>
         <TextContainer size="3xl">
           <Paragraph>
@@ -85,7 +86,7 @@ const DrawProbability: React.FC = () => {
            />
           
           <TextContainer size="3xl">
-          <Heading visualLevel='h3' level={2}>Monte Carlo Simulation</Heading>
+          <Heading visualLevel='h3' color="#612e00" level={2}>Monte Carlo Simulation</Heading>
           <Paragraph>
             A Monte Carlo simulation is a brute-force way to calculate probabilities by running thousands of trials and averaging the result.
           </Paragraph>
@@ -100,7 +101,7 @@ const DrawProbability: React.FC = () => {
             The ultimate output from the monte carlo simulation is the probability that you&apos;ll get the resources (or colors of mana) you need on certain turns. This is a foundational consideration in magic, and this tool provides deck-specific probability data to help people make informed decisions on what cards (and how many) to add.
           </Paragraph>
           
-          <Heading visualLevel='h4' level={3}>Running a Simulation</Heading>
+          <Heading visualLevel='h4' color="#612e00" level={3}>Running a Simulation</Heading>
         
             <Paragraph>
               First, someone inputs their lands and what color of mana those lands make. In magic mana is the main resource you use to play cards. There are five different types of mana.
@@ -112,8 +113,8 @@ const DrawProbability: React.FC = () => {
               src: `${process.env.PUBLIC_URL}/img/DrawProbability/LandsInput.png`,
               alt: "Interface showing land card input groups with mana symbols and card counts",
               caption: "",
-              width: 2259,
-              height: 1004,
+              width: 1400,
+              height: 964,
             }]}
             maxWidth="xl"
             columns={{ sm: 1, md: 1, lg: 1 }}
@@ -131,8 +132,8 @@ const DrawProbability: React.FC = () => {
               src: `${process.env.PUBLIC_URL}/img/DrawProbability/RampInput.png`,
               alt: "Interface for inputting ramp spells and mana rocks",
               caption: "",
-              width: 2259,
-              height: 1004,
+              width: 876,
+              height: 1088,
             }]}
             maxWidth="sm"
             columns={{ sm: 1, md: 1, lg: 1 }}
@@ -150,8 +151,8 @@ const DrawProbability: React.FC = () => {
               src: `${process.env.PUBLIC_URL}/img/DrawProbability/RequirementsInput.png`,
               alt: "Interface showing mana requirements input for different turns",
               caption: "",
-              width: 2259,
-              height: 1004,
+              width: 1276,
+              height: 700,
             }]}
             maxWidth="xl"
             columns={{ sm: 1, md: 1, lg: 1 }}
@@ -169,8 +170,8 @@ const DrawProbability: React.FC = () => {
               src: `${process.env.PUBLIC_URL}/img/DrawProbability/SimulationRunning.png`,
               alt: "Progress screen showing simulation running with status updates",
               caption: "",
-              width: 2259,
-              height: 1004,
+              width: 1212,
+              height: 918,
             }]}
             maxWidth="xl"
             columns={{ sm: 1, md: 1, lg: 1 }}
@@ -187,8 +188,8 @@ const DrawProbability: React.FC = () => {
               type: 'image' as const,
               src: `${process.env.PUBLIC_URL}/img/DrawProbability/SimulationOutput.png`,              alt: "Results screen showing probability charts and statistics",
               caption: "",
-              width: 2259,
-              height: 1004,
+              width: 751,
+              height: 1566,
             }]}
             maxWidth="sm"
             columns={{ sm: 1, md: 1, lg: 1 }}
@@ -198,7 +199,7 @@ const DrawProbability: React.FC = () => {
 
           <IconsWithContent items={iconItems} />
           <TextContainer size="3xl">
-          <Heading visualLevel='h3' level={2}>Results</Heading>
+          <Heading visualLevel='h3' color="#612e00" level={2}>Results</Heading>
           <Paragraph>
               This tool was released to the magic community via a number of magic-themed sub-reddits and discord groups. At the time of writing, over 2,300 people have visited the site.
           </Paragraph>

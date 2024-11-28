@@ -34,8 +34,8 @@ const IconsWithContent: React.FC<IconsWithContentProps> = ({ items, containerSiz
                   />
                 </div>
               </div>
-              <div className="w-7/10">
-                <Heading level={3} 
+              <div className="w-7/10 mr-4">
+                <Heading level={4} 
                 className="mb-2"
                 style={{ 
                     marginTop: 0,

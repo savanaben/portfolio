@@ -22,6 +22,7 @@ interface PhotoSwipeGalleryProps {
 
 let galleryCounter = 0;
 
+
 const PhotoSwipeGallery: React.FC<PhotoSwipeGalleryProps> = ({ 
   images, 
   options = {}, 
@@ -39,8 +40,22 @@ const PhotoSwipeGallery: React.FC<PhotoSwipeGalleryProps> = ({
       children: 'a',
       pswpModule: () => import('photoswipe'),
       paddingFn: () => ({ top: 30, bottom: 30, left: 70, right: 70 }),
+      tapAction: 'close',
       ...options
     });
+
+  // Add white background to images
+  lightbox.on('firstUpdate', () => {
+    const style = document.createElement('style');
+    style.textContent = `
+      .pswp__img {
+        background-color: white !important;
+        
+      }
+    `;
+    document.head.appendChild(style);
+  });
+
 
     const captionPlugin = new PhotoSwipeDynamicCaption(lightbox, {
       type: 'auto',
@@ -72,7 +87,7 @@ const PhotoSwipeGallery: React.FC<PhotoSwipeGalleryProps> = ({
 />
           </a>
           {showCaptions && image.caption && (
-            <p className="mt-2 mx-2 text-md text-gray-600 mb-4">{image.caption}</p>
+            <p className="mt-2 mx-2 text-md text-gray-600 indent-0 leading-tight mb-4">{image.caption}</p>
           )}
         </div>
       ))}
