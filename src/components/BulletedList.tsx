@@ -9,12 +9,12 @@ const BulletedList: React.FC<BulletedListProps> = ({ items, className = '' }) =>
   return (
     <ul className={`mt-2 space-y-4 mb-4 ${className}`}>
       {items.map((item, index) => (
-        <li key={index} className="relative pl-6">
+        <li key={index} className="relative pl-5">
           {/* Bullet point */}
-          <span className="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-gray-600" />
+          <span className="absolute left-0 top-[0.8rem] w-1.5 h-1.5 rounded-full bg-gray-600" />
           
           {/* Content */}
-          <div className="space-y-3">
+          <div className="space-y-3 text-lg">
             {item}
           </div>
         </li>

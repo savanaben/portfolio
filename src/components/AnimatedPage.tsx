@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigationType } from 'react-router-dom';
 import SkeletonLoader from './SkeletonLoader';
-import useScrollPosition from '../hooks/useScrollPosition';
 
 const pageVariants = {
   initial: {
@@ -19,13 +18,13 @@ const pageVariants = {
 const pageTransition = {
   type: 'tween',
   ease: 'linear',
-  duration: 0.2,
+  duration: 0.2, // Slightly longer duration
 };
 
 const skeletonVariants = {
   exit: {
     opacity: 0,
-    transition: { duration: 0.1 } // 100ms fade out
+    transition: { duration: 0.1 }
   }
 };
 
@@ -35,12 +34,42 @@ interface AnimatedPageProps {
 
 const AnimatedPage: React.FC<AnimatedPageProps> = ({ children }) => {
   const location = useLocation();
+  const navigationType = useNavigationType();
   const [imagesLoaded, setImagesLoaded] = useState(false);
   const [showSkeleton, setShowSkeleton] = useState(false);
+  const scrollPositions = useRef<{ [key: string]: number }>({});
   const skeletonTimerRef = useRef<NodeJS.Timeout | null>(null);
   const loadStartTimeRef = useRef(Date.now());
-  const { scrollToPosition } = useScrollPosition();
+  const isMainPage = location.pathname === '/';
 
+ // Save scroll position when leaving a page
+  useEffect(() => {
+    const handleScroll = () => {
+      scrollPositions.current[location.pathname] = window.scrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [location.pathname]);
+
+// Handle scroll position on navigation
+useEffect(() => {
+  if (navigationType === 'POP') {
+    // For back/forward navigation
+    if (isMainPage && location.state?.previousScroll) {
+      // Restore main page scroll position
+      window.scrollTo(0, location.state.previousScroll);
+    } else if (scrollPositions.current[location.pathname] !== undefined) {
+      // Restore other saved positions
+      window.scrollTo(0, scrollPositions.current[location.pathname]);
+    }
+  } else {
+    // Save current scroll position for non-POP navigation
+    scrollPositions.current[location.pathname] = window.scrollY;
+  }
+}, [location.pathname, navigationType, isMainPage]);
+
+  // Handle image loading
   useEffect(() => {
     loadStartTimeRef.current = Date.now();
     const images = document.querySelectorAll('img');
@@ -97,39 +126,28 @@ const AnimatedPage: React.FC<AnimatedPageProps> = ({ children }) => {
     };
   }, [location]);
 
-  // useEffect(() => {
-  //   // This effect will run after the component has rendered
-  //   const timer = setTimeout(() => {
-  //     scrollToPosition();
-  //   }, 100); // Adjust this delay as needed
-
-  //   return () => clearTimeout(timer);
-  // }, [location, scrollToPosition]);
-
   return (
-    <>
-      <AnimatePresence>
-        {showSkeleton && (
-          <motion.div
-            key="skeleton"
-            variants={skeletonVariants}
-            exit="exit"
-          >
-            <SkeletonLoader />
-          </motion.div>
-        )}
+    <AnimatePresence mode="wait">
+      {showSkeleton && (
         <motion.div
-          key={location.pathname}
-          initial="initial"
-          animate={imagesLoaded ? "in" : "initial"}
-          exit="out"
-          variants={pageVariants}
-          transition={pageTransition}
+          key="skeleton"
+          variants={skeletonVariants}
+          exit="exit"
         >
-          {children}
+          <SkeletonLoader />
         </motion.div>
-      </AnimatePresence>
-    </>
+      )}
+      <motion.div
+        key={location.pathname}
+        initial="initial"
+        animate={imagesLoaded ? "in" : "initial"}
+        exit="out"
+        variants={pageVariants}
+        transition={pageTransition}
+      >
+        {children}
+      </motion.div>
+    </AnimatePresence>
   );
 };
 

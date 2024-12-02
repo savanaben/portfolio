@@ -110,7 +110,7 @@ const TestletDesignSystem: React.FC = () => {
   >
       <Heading color="#0078a7" alignment="center" level={2}>Attribution</Heading>  
       <Paragraph>
-The tasks discussed and shown on this page are <Link href={`https://www.ets.org/k12/classroom-solutions.html`}>owned by ETS</Link>. I can&apos;t list everyone who worked on this project, but know that a really special team of designers, content specialists, item authors, developers, artists, marketers, and more went into this aspirational project. Throughout this page I&apos;ll attribute those who worked specifically on certain tasks or art. 
+The tasks discussed and shown on this page are <Link href={`https://www.ets.org/k12/classroom-solutions.html`}>owned by ETS</Link>. I can&apos;t list everyone who worked on this project, but know that a really special team of designers, content specialists, item authors, developers, artists, marketers, and more went into this product suite. Throughout this page I&apos;ll attribute those who worked specifically on certain tasks or art. 
     </Paragraph>
 </Container>
 
@@ -139,7 +139,7 @@ The tasks discussed and shown on this page are <Link href={`https://www.ets.org/
                   width: 1816,
                   height: 996,
                   alt: 'Space Junk design 1',
-                  caption: "The task begins with two intro screens bringing in the context.",
+                  caption: "The task begins with two intro screens bringing in the context. | Character and background art by Kyle Czepiel. Task content by Ellen Gluck.",
                 },
                 {
                   type: 'image',
@@ -155,16 +155,16 @@ The tasks discussed and shown on this page are <Link href={`https://www.ets.org/
                   width: 1768,
                   height: 944,
                   alt: 'Space Junk design 1',
-                  caption: "After the first batch of questions, a rest screen transitions the student to an article.",
+                  caption: "A rest screen follows the questions and transitions the student to an article.",
                 },
-                {
-                  type: 'image',
-                  src: `${process.env.PUBLIC_URL}/img/FormativeAssessment/biometrics4.png`,
-                  width: 1856,
-                  height: 1043,
-                  alt: 'Space Junk design 1',
-                  caption: "The next three questions focus on the article.",
-                },
+                // {
+                //   type: 'image',
+                //   src: `${process.env.PUBLIC_URL}/img/FormativeAssessment/biometrics4.png`,
+                //   width: 1856,
+                //   height: 1043,
+                //   alt: 'Space Junk design 1',
+                //   caption: "The next three questions focus on the article.",
+                // },
               ]}
               columns={{ sm: 1, md: 1, lg: 2 }}
               maxWidth="3xl"
@@ -173,7 +173,7 @@ The tasks discussed and shown on this page are <Link href={`https://www.ets.org/
               />
             </>,
             <>
-              <Paragraph><strong>Media</strong> - Animations and images are provided not just for question-centric purposes, but to also fill out the world and scenario. We also employed diagrammatic and visual representations of content so text wasn&apos;t the only way for the student to understand complex spatial concepts.</Paragraph>
+              <Paragraph><strong>Media</strong> - As the UX lead I advocated for a variety of art styles, coordinated asset libraries, and reviewed all media for consistency and quality. Animations and images were utilized not just for question-centric purposes, but to also fill out the world and scenario. We also employed diagrammatic and visual representations of content so text wasn&apos;t the only way for the student to understand complex spatial concepts.</Paragraph>
              <MediaContainer
               items={[
                 {
@@ -202,7 +202,8 @@ The tasks discussed and shown on this page are <Link href={`https://www.ets.org/
               items={[
                 {
                   type: 'video',
-                  src: `${process.env.PUBLIC_URL}/img/FormativeAssessment/tiny house animation_003.mp4`,
+                  videoType: 'youtube' as const,
+                  src: "https://www.youtube.com/embed/lzoIn6-4KQ4?si=Ek63NvwI2RIEslgU",
                   width: 1080,
                   height: 930,
                   alt: 'Space Junk design 1',
@@ -216,7 +217,7 @@ The tasks discussed and shown on this page are <Link href={`https://www.ets.org/
               />
             </>,
             <>
-            <Paragraph> <strong>Don&apos;t forget the copy!</strong> - One aspect often overlooked in assessment is the text on the page. There can be an over-focus on technicality and accuracy, which while rightfully important when asking questions, often leads to stuffy and fake-sounding dialog. I pushed the UX team to become more deeply involved in the content and what was written. This led to an incredibly collaborative effort in the writing - content would take the first pass with measurement accuracy in mind, and then we&apos;d perform a review to propose ways to simplify. Where could a complex sentence be broken up. How could character dialog be made more casual and realistic-sounding.</Paragraph>
+            <Paragraph> <strong>Don&apos;t forget the copy!</strong> - One aspect often overlooked in assessment UX is the text on the page. There can be an over-focus on technicality and accuracy, which while rightfully important when asking questions, often leads to stuffy and fake-sounding dialog. I pushed the UX team to become more deeply involved in the copy, proposing ways to simplify and informalize wherever possible.</Paragraph>
             <Paragraph>In study&apos;s with student&apos;s, we received positive feedback to validate our efforts were working!</Paragraph>
             <QuoteBox color="blue" attribution="8th grade student">
             <Paragraph>
@@ -230,7 +231,7 @@ The tasks discussed and shown on this page are <Link href={`https://www.ets.org/
        ]} />
       <Heading color="#0078a7" alignment="left" level={3}>Testing Assumptions and Incorporating Findings</Heading>
       <Paragraph>
-      This project involved a number of small and mid-scale studies. I supported the studies with script-writing, analyzed results, and lead the necessary usability-related follow-ups. Following are two quick examples of studies we conducted and what we learned.</Paragraph>
+      This project involved numerous small and mid-scale studies. I supported the studies with script-writing, analyzed results, and lead the necessary usability-related follow-ups. Following are two quick examples of studies we conducted and what we learned.</Paragraph>
       <Heading color="#0078a7" alignment="left" level={4}>Teacher Feedback</Heading>
       <Paragraph>Nine teachers administered one to two ELA tasks (referred to as “Testlets”) to their students. Overall teachers were impressed, commenting that the testlets provided actionable data, aligned to their curriculum, and were easy to implement. The following teacher quotes were most relevant to my areas of responsibility (student experience, engagement, and task usability).</Paragraph>
       <QuoteBox color="blue" attribution="Teacher 1">
@@ -239,7 +240,7 @@ The tasks discussed and shown on this page are <Link href={`https://www.ets.org/
        </QuoteBox>
        <QuoteBox color="blue" attribution="Teacher 2">
        <Paragraph>
-       ..The best thing about the Testlet was the engagement that I saw in students working through the activities. This allowed them to try and learn the information. One student said “This program should be used in classes since it better helps to understand complicated things by first understanding easier things.”</Paragraph>
+       The best thing about the Testlet was the engagement that I saw in students working through the activities. This allowed them to try and learn the information. One student said “This program should be used in classes since it better helps to understand complicated things by first understanding easier things.”</Paragraph>
        </QuoteBox>
        <QuoteBox color="blue" attribution="Teacher 3">
        <Paragraph>
@@ -261,15 +262,15 @@ The tasks discussed and shown on this page are <Link href={`https://www.ets.org/
           ]}
           columns={{ sm: 1, md: 1, lg: 1 }}
           maxWidth="md"
-          showCaptions={true}
+          showCaptions={false}
           className="mt-3"
         />
       <Paragraph>We found in a study that this button didn&apos;t work so great. <strong>11 of 14</strong> students did not realize it was interactive!</Paragraph>
-      <Paragraph>We changed our approach in two key ways</Paragraph>
+      <Paragraph>We changed our approach in two key ways:</Paragraph>
       <NumberedList
          items={[
           <>
-          <Paragraph>We moved the button from the inline method to be standalone, added stronger call-to-action signaling (“Go to...”), and went with more interactive-looking blue borders. </Paragraph>
+          <Paragraph>We moved the button from an inline position to standalone, added stronger call-to-action signaling (“Go to...”), and went with more interactive-looking blue borders. </Paragraph>
           <MediaContainer
           items={[
             {
@@ -308,13 +309,136 @@ The tasks discussed and shown on this page are <Link href={`https://www.ets.org/
           </>
            ]}
         />
-      <Heading color="#0078a7" alignment="left" level={3}>Wrap Up and Task Samples</Heading>
-      <Paragraph>The ELA team shifted approach and leaned more on quoteboxes so the student did not have to navigate back to the passage.,,,inui iu iuiu uniiun  </Paragraph>
-
-
+      <Heading color="#0078a7" alignment="left" level={3}>Outcomes</Heading>
+      <Paragraph>The testlet project was completed on schedule, significantly expanding ETS&apos;s offering in the K-12 and formative assessment space. The design system and authoring platform was utalized for other projects at ETS, providing a flexible platform for any interactive assessment.</Paragraph>
     </Container>
-   
+    
 
+<Container
+  layout="single"
+  size="2xl"
+  removeHorizontalPadding={false}
+  marginBottom = 'sm'
+  >
+     <Heading color="#0078a7" alignment="left" level={3}>Task Samples</Heading>
+      <Heading color="#0078a7" alignment="left" level={4}>Going to Ceres</Heading>
+      <Paragraph>
+        Students join a crew traveling to the asteroid Ceres. They must ration the food supply for the long space voyage and survey nearby asteroids for mining viability. 
+      </Paragraph>
+      <Paragraph className="italic">
+       Background art by Peter Yeager. Character art by Kyle Czepiel. Task UX by Ben Gross. Content by Shona Ruiz Diaz.  
+      </Paragraph>
+</Container>
+
+<Container
+  layout="single"
+  size="5xl"
+  removeHorizontalPadding={false}
+  marginBottom = 'md'
+  >
+      <MediaContainer
+          items={[
+            {
+              type: 'image',
+              src: `${process.env.PUBLIC_URL}/img/FormativeAssessment/ceres1.jpg`,
+              width: 1816,
+              height: 996,
+              alt: 'Space Junk design 1',
+              caption: "",
+            },
+            {
+              type: 'image',
+              src: `${process.env.PUBLIC_URL}/img/FormativeAssessment/ceres2.jpg`,
+              width: 1816,
+              height: 996,
+              alt: 'Space Junk design 1',
+              caption: "Many tasks include an intro with clear goals that are checked off as you progress.",
+            },
+            {
+              type: 'image',
+              src: `${process.env.PUBLIC_URL}/img/FormativeAssessment/ceres3.jpg`,
+              width: 1816,
+              height: 996,
+              alt: 'Space Junk design 1',
+              caption: "",
+            },
+            {
+              type: 'image',
+              src: `${process.env.PUBLIC_URL}/img/FormativeAssessment/ceres4.jpg`,
+              width: 1816,
+              height: 996,
+              alt: 'Space Junk design 1',
+              caption: "This task included an outro animation of autonomous vehicles collecting ore from an asteroid.",
+            },
+          ]}
+      columns={{ sm: 1, md: 1, lg: 1 }}
+      maxWidth="6xl"
+      showCaptions={true}
+    />
+    </Container>
+
+
+    <Container
+  layout="single"
+  size="2xl"
+  removeHorizontalPadding={false}
+  marginBottom = 'sm'
+  >
+      <Heading color="#0078a7" alignment="left" level={4}>Not Just Jazz</Heading>
+      <Paragraph>
+        Students take on an entrepreneurial venture setting up a scooter tour to different music venues in New Orleans. 
+      </Paragraph>
+      <Paragraph className="italic">
+       Intro background art purchased. Character art by Kyle Czepiel.  Task UX and map art by Ben Gross. Content by Shona Ruiz Diaz.  
+      </Paragraph>
+</Container>
+
+<Container
+  layout="single"
+  size="5xl"
+  removeHorizontalPadding={false}
+  marginBottom = 'md'
+  >
+      <MediaContainer
+          items={[
+            {
+              type: 'image',
+              src: `${process.env.PUBLIC_URL}/img/FormativeAssessment/jazz1.jpg`,
+              width: 1816,
+              height: 996,
+              alt: 'Space Junk design 1',
+              caption: "",
+            },
+            {
+              type: 'image',
+              src: `${process.env.PUBLIC_URL}/img/FormativeAssessment/jazz2.jpg`,
+              width: 1816,
+              height: 996,
+              alt: 'Space Junk design 1',
+              caption: "",
+            },
+            {
+              type: 'image',
+              src: `${process.env.PUBLIC_URL}/img/FormativeAssessment/jazz3.jpg`,
+              width: 1816,
+              height: 996,
+              alt: 'Space Junk design 1',
+              caption: "Throughout the task a map is updated to visually convey the routes discussed.",
+            },
+            {
+              type: 'image',
+              src: `${process.env.PUBLIC_URL}/img/FormativeAssessment/jazz4.jpg`,
+              width: 1816,
+              height: 996,
+              alt: 'Space Junk design 1',
+              caption: "In this task, the rest screens let the student sample three different music genres from the New Orleans region.",
+            },
+          ]}
+      columns={{ sm: 1, md: 1, lg: 1 }}
+      maxWidth="6xl"
+      showCaptions={true}
+    />
+    </Container>
 
       <ProjectFooter />
     </AnimatedPage>

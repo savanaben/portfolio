@@ -74,21 +74,25 @@ const MathMania: React.FC = () => {
   const videoSamples = [
     {
       type: 'video' as const,
+      videoType: 'youtube' as const,
       src: "https://www.youtube-nocookie.com/embed/nd0W0DdoSAA?modestbranding=1;showinfo=0;rel=0;fs=1",
       caption: "Line and Point",
     },
     {
       type: 'video' as const,
+      videoType: 'youtube' as const,
       src: "https://www.youtube.com/embed/-_YvWtI0WAw?modestbranding=1;showinfo=0;rel=0;fs=1",
       caption: "Fraction Models",
     },
     {
       type: 'video' as const,
+      videoType: 'youtube' as const,
       src: "https://www.youtube.com/embed/2N8Cq9ROz-8?modestbranding=1;showinfo=0;rel=0;fs=1",
       caption: "Box and Whisker",
     },
     {
       type: 'video' as const,
+      videoType: 'youtube' as const,
       src: "https://www.youtube.com/embed/bCDLy0jz_NY?modestbranding=1;showinfo=0;rel=0;fs=1",
       caption: "Bar Graph",
     },
@@ -174,6 +178,7 @@ const MathMania: React.FC = () => {
       <MediaContainer 
         items={[{
           type: 'video' as const,
+          videoType: 'youtube' as const,
           src: "https://www.youtube.com/embed/7q8cwA6CCtI?modestbranding=1;showinfo=0;rel=0;fs=1",
           caption: "Keyboard Navigation",
         }]}

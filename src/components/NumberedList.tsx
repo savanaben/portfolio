@@ -9,9 +9,9 @@ const NumberedList: React.FC<NumberedListProps> = ({ items, className = '' }) =>
   return (
     <ol className={`mt-2 mb-4 space-y-4 ${className}`}>
       {items.map((item, index) => (
-        <li key={index} className="relative pl-10">
+        <li key={index} className="relative pl-7">
           {/* Number */}
-          <span className="absolute left-0 top-0 font-bold text-gray-700">
+          <span className="absolute left-0 top-[0.2rem] font-bold text-gray-700">
             {index + 1}.
           </span>
           

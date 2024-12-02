@@ -33,8 +33,9 @@ const AnimatedRoutes = () => {
   }, [location, setBackgroundColor]);
 
   return (
-    <AnimatePresence mode="wait">
-            <ScrollToTop />  {/* Add ScrollToTop component here */}
+    // Remove AnimatePresence wrapper since it's now in AnimatedPage
+    <>
+      <ScrollToTop />
       <Routes location={location} key={location.pathname}>
         {routeConfig.map(({ path, element: Element, fullWidth }) => (
           <Route 
@@ -44,7 +45,7 @@ const AnimatedRoutes = () => {
           />
         ))}
       </Routes>
-    </AnimatePresence>
+    </>
   );
 };
 

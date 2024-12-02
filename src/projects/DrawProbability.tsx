@@ -59,16 +59,16 @@ const DrawProbability: React.FC = () => {
           <Paragraph>
             I built this tool as a challenge to expand my development skills beyond simple front-end components.
           </Paragraph>
-          <Heading visualLevel='h3' color="#612e00" level={2}>Hypergeometric Calculator</Heading>
+          <Heading visualLevel='h3' color="#612e00" level={2}>Feature 1 - Hypergeometric Calculator</Heading>
         </TextContainer>
         <TextContainer size="3xl">
           <Paragraph>
             A hypergeometric calculator can determine the exact probability of drawing certain cards. I layered a rich set of magic-specific features onto the base mathematics:
           </Paragraph>
           <BulletedList items={[
-            <><strong>Multi-group support</strong> - If you have 5 cards in one group and 4 cards in another group, the tool can calculate the chance of getting any number of cards from both groups.</>,
+            <><strong>Multi-group support</strong> - If you have five cards in one group and four cards in another group, the tool can calculate the chance of getting any number of cards from both groups.</>,
             <><strong>Mulligan support</strong> - in Magic, you can redraw your opening hand. The tool supports how this redraw changes probabilities.</>,
-            <><strong>Variable draws per turn</strong> - Normally you draw 1 card per turn in magic. But some decks draw more cards early. The tool lets people account for this.</>
+            <><strong>Variable draws per turn</strong> - Normally you draw one card per turn in magic. But some decks draw more cards early. The tool lets people account for this.</>
           ]} />
           </TextContainer>
           <MediaContainer 
@@ -86,7 +86,7 @@ const DrawProbability: React.FC = () => {
            />
           
           <TextContainer size="3xl">
-          <Heading visualLevel='h3' color="#612e00" level={2}>Monte Carlo Simulation</Heading>
+          <Heading visualLevel='h3' color="#612e00" level={2}>Feature 2 - Monte Carlo Simulator</Heading>
           <Paragraph>
             A Monte Carlo simulation is a brute-force way to calculate probabilities by running thousands of trials and averaging the result.
           </Paragraph>
@@ -94,17 +94,17 @@ const DrawProbability: React.FC = () => {
             Achieving this required complex data management and branching conditional logic. After someone enters their input cards, I run a two-step process:
           </Paragraph>
           <BulletedList items={[
-            <><strong>Data cleaning and combination crunching</strong> - first the simulation condenses the input data and pre-calculates all possible combinations of cards that will meet the users requirements.</>,
+            <><strong>Data cleaning and combination crunching</strong> - First, the simulation condenses the input data and pre-calculates all possible combinations of cards that will meet the users requirements.</>,
             <><strong>Gameplay simulation</strong> - Then, the simulation constructs your deck and &quot;plays&quot; mock games. This involves deep webs of conditional logic that follow the rules of magic and make best-case assumptions on what a person would do.</>
           ]} />
           <Paragraph>
             The ultimate output from the monte carlo simulation is the probability that you&apos;ll get the resources (or colors of mana) you need on certain turns. This is a foundational consideration in magic, and this tool provides deck-specific probability data to help people make informed decisions on what cards (and how many) to add.
           </Paragraph>
           
-          <Heading visualLevel='h4' color="#612e00" level={3}>Running a Simulation</Heading>
+          <Heading visualLevel='h4' color="#612e00" level={3}>Visual Sample of Running a Simulation</Heading>
         
             <Paragraph>
-              First, someone inputs their lands and what color of mana those lands make. In magic mana is the main resource you use to play cards. There are five different types of mana.
+              First, someone inputs their lands and what color of mana those lands make. Mana is the fundamental resource you use in Magic to play cards. 
             </Paragraph>
           </TextContainer>
           <MediaContainer 
@@ -112,7 +112,7 @@ const DrawProbability: React.FC = () => {
               type: 'image' as const,
               src: `${process.env.PUBLIC_URL}/img/DrawProbability/LandsInput.png`,
               alt: "Interface showing land card input groups with mana symbols and card counts",
-              caption: "",
+              caption: "In this example there are 38 total lands ",
               width: 1400,
               height: 964,
             }]}
@@ -123,7 +123,7 @@ const DrawProbability: React.FC = () => {
 
           <TextContainer size="3xl">
             <Paragraph>
-              Next, you can optionally add other ways to make mana.
+              Next, you can optionally add ramp cards, which also provide mana. These options limit simulation complexity while providing the most common attributes ramp cards have. 
             </Paragraph>
           </TextContainer>
           <MediaContainer 
@@ -131,7 +131,7 @@ const DrawProbability: React.FC = () => {
               type: 'image' as const,
               src: `${process.env.PUBLIC_URL}/img/DrawProbability/RampInput.png`,
               alt: "Interface for inputting ramp spells and mana rocks",
-              caption: "",
+              caption: "Ramp cards in Magic can be highly complex and variable. I narrowed the availible parameters to the most common and ",
               width: 876,
               height: 1088,
             }]}
@@ -142,7 +142,7 @@ const DrawProbability: React.FC = () => {
 
           <TextContainer size="3xl">
             <Paragraph>
-              Next, you input your requirements. In this example, I want three different kinds of mana (Plains, Island, Swamp), and one colorless mana.
+              Then, you input your requirements. In this example, I want four different kinds of mana (Plains, colorless, Swamp, Island).
             </Paragraph>
           </TextContainer>
           <MediaContainer 
@@ -161,7 +161,7 @@ const DrawProbability: React.FC = () => {
 
           <TextContainer size="3xl">
             <Paragraph>
-              The simulation runs thousands of games, tracking your probability of achieving your requirements. Given this is an intensive operation, feedback is provided on what&apos;s going on and how much longer it will take.
+              The simulation runs thousands of games, tracking the probability of achieving your requirements. Given this is an intensive calculation, feedback is provided on what&apos;s going on and how much longer it will take.
             </Paragraph>
           </TextContainer>
           <MediaContainer 
@@ -180,7 +180,7 @@ const DrawProbability: React.FC = () => {
 
           <TextContainer size="3xl">
             <Paragraph>
-              The simulation completes and outputs the chances of getting the mana you set for each turn. For this use-case, I achieved an 88% chance of getting the four mana I need by turn four. Those are good odds, and show my manabase will work well!
+              The simulation completes and outputs the probability of getting the mana you required for each turn of the game. For this use-case, I achieved an 88% chance of getting the four mana I need by turn four. Those are good odds, and show my lands and ramp cards will work well!
             </Paragraph>
           </TextContainer>
           <MediaContainer 
@@ -201,7 +201,7 @@ const DrawProbability: React.FC = () => {
           <TextContainer size="3xl">
           <Heading visualLevel='h3' color="#612e00" level={2}>Results</Heading>
           <Paragraph>
-              This tool was released to the magic community via a number of magic-themed sub-reddits and discord groups. At the time of writing, over 2,300 people have visited the site.
+              This tool was released to the magic community via a number of magic-themed sub-reddits and discord groups. At the time of writing, over 2,400 people have used the tool.
           </Paragraph>
           </TextContainer>
       </>

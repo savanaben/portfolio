@@ -1,9 +1,9 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion'; // Add this import
 import ProjectTile from './components/ProjectTile';
 import Heading from './components/Heading';
-import useScrollPosition from './hooks/useScrollPosition';
+
 
 interface Project {
   id: string;
@@ -29,7 +29,7 @@ interface Project {
     {
       id: "draw-probability",
       title: "Probability Crunching",
-      description: "UI, Svelte, Design system, Simulation",
+      description: "A simulation tool to make your Magic the Gathering deck better.",
       image: `${process.env.PUBLIC_URL}/img/DrawProbability/drawProbCover.svg`,
       imageAlt: "Abstract image of a magic card with a percent symbol overtop.",
       link: "/DrawProbability",
@@ -39,17 +39,17 @@ interface Project {
     {
       id: "design-system",
       title: "Prototype Errything",
-      description: "UI, Design system, Project Management",
+      description: "Bits and bobs I've prototyped.",
       image: `${process.env.PUBLIC_URL}/img/design-system-cover.svg`,
       imageAlt: "Abstract image of three shapes coming together to create a page template",
       link: "/design-system",
       featured: false,
-      categories: ["UI", "Project Management"]
+      categories: []
     },
     {
       id: "design-system",
       title: "PlanWise",
-      description: "UI, Design system, Project Management",
+      description: "A Grammerly-style plugin to recommend formative activities to teachers.",
       image: `${process.env.PUBLIC_URL}/img/design-system-cover.svg`,
       imageAlt: "Abstract image of three shapes coming together to create a page template",
       link: "/design-system",
@@ -59,7 +59,7 @@ interface Project {
     {
       id: "design-system",
       title: "Design Systems",
-      description: "UI, Design system, Project Management",
+      description: "My management and contributions to various Design Systems.",
       image: `${process.env.PUBLIC_URL}/img/design-system-cover.svg`,
       imageAlt: "Abstract image of three shapes coming together to create a page template",
       link: "/design-system",
@@ -68,9 +68,9 @@ interface Project {
     },
     {
       id: "design-system",
-      title: "This Site! (WIP)",
-      description: "UI, Design system, Project Management",
-      image: `${process.env.PUBLIC_URL}/img/design-system-cover.svg`,
+      title: "This Site!",
+      description: "A ground-up React rework of my portfolio.",
+      image: `${process.env.PUBLIC_URL}/img/mySite.svg`,
       imageAlt: "Abstract image of three shapes coming together to create a page template",
       link: "/Folio",
       featured: false,
@@ -79,17 +79,17 @@ interface Project {
     {
       id: "design-system",
       title: "Modernizing Formative Assessment",
-      description: "Design system, Project Management, Assessment",
-      image: `${process.env.PUBLIC_URL}/img/design-system-cover.svg`,
+      description: "I lead the UX team in the creation of a suite of engaging formative tasks for 8th graders.",
+      image: `${process.env.PUBLIC_URL}/img/testlet-tiles.jpg`,
       imageAlt: "Abstract image of three shapes coming together to create a page template",
       link: "/FormativeAssessment",
       featured: true,
-      categories: ["UI", "Project Management", "Assessment", "UX"]
+      categories: ["Project Management", "Assessment", "UX"]
     },
     {
       id: "sf-data-viz",
       title: "Science Fiction Data Viz",
-      description: "Data viz, D3, dev, Student work",
+      description: "Bringing unique research to life through data viz.",
       image: `${process.env.PUBLIC_URL}/img/SFdataViz-cover.jpg`,
       imageAlt: "Floating circular nodes in space with various book labels",
       link: "/ScienceFictionDataViz",
@@ -98,8 +98,8 @@ interface Project {
     },
     {
       id: "nj-affordable-housing",
-      title: "NJ Affordable Housing Viz",
-      description: "Data viz, Vue, dev, Storytelling, Student work",
+      title: "Affordable Housing Viz",
+      description: "Affordable housing in NJ through storytelling and data viz.",
       image: `${process.env.PUBLIC_URL}/img/NJ-cover.jpg`,
       imageAlt: "Image related to New Jersey affordable housing visualization",
       link: "/affordable-housing-viz",
@@ -109,7 +109,7 @@ interface Project {
     {
       id: "museum-mania",
       title: "Museum Mania",
-      description: "UI, Dev, Student work",
+      description: "A fun student project to visually explore random museums.",
       image: `${process.env.PUBLIC_URL}/img/museum-mania-cover.svg`,
       imageAlt: "Logo that looks like an abstract museum with the letter M built in it",
       link: "/MuseumMania",
@@ -119,7 +119,7 @@ interface Project {
     {
       id: "math-widget-mania",
       title: "Math Widget Mania",
-      description: "Accessibility, UI, UX",
+      description: "A UI/UX and accessibility refresh of interactive math tools.",
       image: `${process.env.PUBLIC_URL}/img/IIC-card-cover.png`,
       imageAlt: "Image of a coordinate plane with points and lines",
       link: "/MathMania",
@@ -129,7 +129,7 @@ interface Project {
     {
       id: "simulating-searches",
       title: "Simulating Searches",
-      description: "Assessment, Simulation, UI, UX",
+      description: "Measuring a good Google search through walled garden simulation.",
       image: `${process.env.PUBLIC_URL}/img/search.svg`,
       imageAlt: "Image of a search engine user interface",
       link: "/SimulatedSearch",
@@ -139,12 +139,12 @@ interface Project {
     {
       id: "test-design",
       title: "Tests Don't Have to Look Bad",
-      description: "Animation, Assessment, Illustration, Content, UI, UX",
+      description: "Students deserve better!",
       image: `${process.env.PUBLIC_URL}/img/mango.jpg`,
       imageAlt: "Image of a user interface for a reading assessment",
       link: "/TestDesign",
       featured: false,
-      categories: ["UI","UX", "Assessment"]
+      categories: ["UX", "Assessment"]
     },
     // {
     //   id: "toolbar-redesign",
@@ -159,7 +159,7 @@ interface Project {
     {
       id: "macro-world-design",
       title: "Macro World Design",
-      description: "Illustration, World-building, Project management",
+      description: "I lead the design of an open world 3D MMO.",
       image: `${process.env.PUBLIC_URL}/img/heartlands.jpg`,
       imageAlt: "Colorful map with labels of towns",
       link: "/Maps",
@@ -169,7 +169,7 @@ interface Project {
     {
       id: "art-grab-bag",
       title: "Art Grab-Bag",
-      description: "3D Modeling, Abstract, Illustration, Data viz",
+      description: "Drawn, 3D, and 2D art samples.",
       image: `${process.env.PUBLIC_URL}/img/3D-cover.jpg`,
       imageAlt: "Fantastical image of melting mushroom and orange candy-cane trees",
       link: "/DigitalWork",
@@ -199,6 +199,205 @@ interface Project {
 
     // Add more projects here...
   ];
+
+
+
+
+
+
+
+
+  // const projects: Project[] = [
+    
+  //   //this site
+  //   //planwise
+  //   //design systems - across projects
+  //   //testlets
+  //   //prototype samples
+    
+  //   {
+  //     id: "draw-probability",
+  //     title: "Probability Crunching",
+  //     description: "UI, Svelte, Design system, Simulation",
+  //     image: `${process.env.PUBLIC_URL}/img/DrawProbability/drawProbCover.svg`,
+  //     imageAlt: "Abstract image of a magic card with a percent symbol overtop.",
+  //     link: "/DrawProbability",
+  //     featured: true,
+  //     categories: ["UI","dev", "data-viz" ]
+  //   },
+  //   {
+  //     id: "design-system",
+  //     title: "Prototype Errything",
+  //     description: "UI, Design system, Project Management",
+  //     image: `${process.env.PUBLIC_URL}/img/design-system-cover.svg`,
+  //     imageAlt: "Abstract image of three shapes coming together to create a page template",
+  //     link: "/design-system",
+  //     featured: false,
+  //     categories: ["UI", "Project Management"]
+  //   },
+  //   {
+  //     id: "design-system",
+  //     title: "PlanWise",
+  //     description: "UI, Design system, Project Management",
+  //     image: `${process.env.PUBLIC_URL}/img/design-system-cover.svg`,
+  //     imageAlt: "Abstract image of three shapes coming together to create a page template",
+  //     link: "/design-system",
+  //     featured: true,
+  //     categories: ["UI", "UX"]
+  //   },
+  //   {
+  //     id: "design-system",
+  //     title: "Design Systems",
+  //     description: "UI, Design system, Project Management",
+  //     image: `${process.env.PUBLIC_URL}/img/design-system-cover.svg`,
+  //     imageAlt: "Abstract image of three shapes coming together to create a page template",
+  //     link: "/design-system",
+  //     featured: true,
+  //     categories: ["UI", "Project Management"]
+  //   },
+  //   {
+  //     id: "design-system",
+  //     title: "This Site!",
+  //     description: "UI, Design system, Project Management",
+  //     image: `${process.env.PUBLIC_URL}/img/mySite.svg`,
+  //     imageAlt: "Abstract image of three shapes coming together to create a page template",
+  //     link: "/Folio",
+  //     featured: false,
+  //     categories: ["UI", "dev"]
+  //   },
+  //   {
+  //     id: "design-system",
+  //     title: "Modernizing Formative Assessment",
+  //     description: "Design system, Project Management, Assessment",
+  //     image: `${process.env.PUBLIC_URL}/img/testlet-tiles.jpg`,
+  //     imageAlt: "Abstract image of three shapes coming together to create a page template",
+  //     link: "/FormativeAssessment",
+  //     featured: true,
+  //     categories: ["UI", "Project Management", "Assessment", "UX"]
+  //   },
+  //   {
+  //     id: "sf-data-viz",
+  //     title: "Science Fiction Data Viz",
+  //     description: "Data viz, D3, dev, Student work",
+  //     image: `${process.env.PUBLIC_URL}/img/SFdataViz-cover.jpg`,
+  //     imageAlt: "Floating circular nodes in space with various book labels",
+  //     link: "/ScienceFictionDataViz",
+  //     featured: false,
+  //     categories: ["data-viz", "dev"]
+  //   },
+  //   {
+  //     id: "nj-affordable-housing",
+  //     title: "NJ Affordable Housing Viz",
+  //     description: "Data viz, Vue, dev, Storytelling, Student work",
+  //     image: `${process.env.PUBLIC_URL}/img/NJ-cover.jpg`,
+  //     imageAlt: "Image related to New Jersey affordable housing visualization",
+  //     link: "/affordable-housing-viz",
+  //     featured: false,
+  //     categories: ["data-viz", "dev"]
+  //   },
+  //   {
+  //     id: "museum-mania",
+  //     title: "Museum Mania",
+  //     description: "UI, Dev, Student work",
+  //     image: `${process.env.PUBLIC_URL}/img/museum-mania-cover.svg`,
+  //     imageAlt: "Logo that looks like an abstract museum with the letter M built in it",
+  //     link: "/MuseumMania",
+  //     featured: false,
+  //     categories: ["UI", "dev"]
+  //   },
+  //   {
+  //     id: "math-widget-mania",
+  //     title: "Math Widget Mania",
+  //     description: "Accessibility, UI, UX",
+  //     image: `${process.env.PUBLIC_URL}/img/IIC-card-cover.png`,
+  //     imageAlt: "Image of a coordinate plane with points and lines",
+  //     link: "/MathMania",
+  //     featured: false,
+  //     categories: ["UI"]
+  //   },
+  //   {
+  //     id: "simulating-searches",
+  //     title: "Simulating Searches",
+  //     description: "Assessment, Simulation, UI, UX",
+  //     image: `${process.env.PUBLIC_URL}/img/search.svg`,
+  //     imageAlt: "Image of a search engine user interface",
+  //     link: "/SimulatedSearch",
+  //     featured: false,
+  //     categories: ["UX", "Assessment"]
+  //   },
+  //   {
+  //     id: "test-design",
+  //     title: "Tests Don't Have to Look Bad",
+  //     description: "Animation, Assessment, Illustration, Content, UI, UX",
+  //     image: `${process.env.PUBLIC_URL}/img/mango.jpg`,
+  //     imageAlt: "Image of a user interface for a reading assessment",
+  //     link: "/TestDesign",
+  //     featured: false,
+  //     categories: ["UI","UX", "Assessment"]
+  //   },
+  //   // {
+  //   //   id: "toolbar-redesign",
+  //   //   title: "Toolbar Redesign",
+  //   //   description: "Iconography, UI, UX",
+  //   //   image: `${process.env.PUBLIC_URL}/img/toolbar.jpg`,
+  //   //   imageAlt: "Image of two toolbars for a user interface",
+  //   //   link: "/toolbar-redesign",
+  //   //   featured: false,
+  //   //   categories: ["UI"]
+  //   // },
+  //   {
+  //     id: "macro-world-design",
+  //     title: "Macro World Design",
+  //     description: "Illustration, World-building, Project management",
+  //     image: `${process.env.PUBLIC_URL}/img/heartlands.jpg`,
+  //     imageAlt: "Colorful map with labels of towns",
+  //     link: "/Maps",
+  //     featured: false,
+  //     categories: ["UX", "Project Management", "art"]
+  //   },
+  //   {
+  //     id: "art-grab-bag",
+  //     title: "Art Grab-Bag",
+  //     description: "3D Modeling, Abstract, Illustration, Data viz",
+  //     image: `${process.env.PUBLIC_URL}/img/3D-cover.jpg`,
+  //     imageAlt: "Fantastical image of melting mushroom and orange candy-cane trees",
+  //     link: "/DigitalWork",
+  //     featured: false,
+  //     categories: ["art"]
+  //   },
+  //   // {
+  //   //   id: "pratt-usability-study",
+  //   //   title: "Pratt Usability Study",
+  //   //   description: "User Testing, UI, Task Design, Student Work",
+  //   //   image: `${process.env.PUBLIC_URL}/img/pratt-usability-study-cover.jpg`,
+  //   //   imageAlt: "Image related to Pratt usability study",
+  //   //   link: "/pratt-usability-study",
+  //   //   featured: false,
+  //   //   categories: ["design", "UI"]
+  //   // },
+  //   // {
+  //   //   id: "grownyc-design-process",
+  //   //   title: "GrowNYC Design Process",
+  //   //   description: "User Testing, Style Guide, End-to-End, Student Work",
+  //   //   image: `${process.env.PUBLIC_URL}/img/growNYC-cover.jpg`,
+  //   //   imageAlt: "Abstract image related to GrowNYC design process",
+  //   //   link: "/growNYC",
+  //   //   featured: false,
+  //   //   categories: ["design", "UI"]
+  //   // }
+
+  //   // Add more projects here...
+  // ];
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -256,12 +455,21 @@ interface Project {
 
 const Projects: React.FC = () => {
   const navigate = useNavigate();
-  const [activeFilter, setActiveFilter] = useState<string>('');  
+  // Initialize activeFilter from localStorage
+  const [activeFilter, setActiveFilter] = useState<string>(() => {
+    const savedFilter = localStorage.getItem('projectsFilter');
+    return savedFilter || '';
+  });  
 
   const categories = useMemo(() => {
     const allCategories = projects.flatMap(project => project.categories);
     return ['all', ...new Set(allCategories)];
   }, []);
+
+  // Update localStorage when filter changes
+  useEffect(() => {
+    localStorage.setItem('projectsFilter', activeFilter);
+  }, [activeFilter]);
 
   const filteredProjects = useMemo(() => {
     if (activeFilter === '' || activeFilter === 'all') return projects;
@@ -277,7 +485,6 @@ const Projects: React.FC = () => {
     };
   }, [filteredProjects]);
 
-  // Separate handlers for filters and navigation
   const handleFilterClick = (category: string) => {
     if (category === activeFilter) {
       setActiveFilter('');
@@ -287,7 +494,19 @@ const Projects: React.FC = () => {
   };
 
   const handleProjectClick = (link: string) => {
-    navigate(link);
+    // Save current scroll position before navigating
+    const currentScrollPosition = window.scrollY;
+    
+    // Navigate with both the scroll position and new project flag
+    navigate(link, {
+      state: { 
+        isNewProjectClick: true,
+        previousScroll: currentScrollPosition 
+      }
+    });
+    
+    // Then scroll to top
+    window.scrollTo(0, 0);
   };
 
    //------------------------------------------
@@ -364,9 +583,9 @@ const Projects: React.FC = () => {
                 style={{ pointerEvents: 'none' }}
               >
                 <div className="mb-5 flex items-center gap-4">
-                  <div className="flex-grow h-px bg-gray-300" />
-                  <span className="text-gray-700 italic text-lg">Featured</span>
-                  <div className="flex-grow h-px bg-gray-300" />
+                  <div className="flex-grow h-px bg-gray-400" />
+                  <span className="text-gray-800 italic text-xl">Featured</span>
+                  <div className="flex-grow h-px bg-gray-400" />
                 </div>
               </motion.div>
             )}
@@ -395,9 +614,9 @@ const Projects: React.FC = () => {
                 }}
               >
                 <div className="mb-5 flex items-center gap-4">
-                  <div className="flex-grow h-px bg-gray-300" />
-                  <span className="text-gray-700 italic text-lg">More Projects</span>
-                  <div className="flex-grow h-px bg-gray-300" />
+                  <div className="flex-grow h-px bg-gray-400" />
+                  <span className="text-gray-800 italic text-lg">More Projects</span>
+                  <div className="flex-grow h-px bg-gray-400" />
                 </div>
               </motion.div>
             )}

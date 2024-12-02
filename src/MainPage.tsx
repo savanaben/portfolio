@@ -23,22 +23,25 @@ export const MainPage: React.FC = () => {
 
 
   useEffect(() => {
-    if (location.state && location.state.scrollTo) {
+    if (location.state?.scrollTo) {
       const targetRef = 
         location.state.scrollTo === 'projects' ? projectsRef :
         location.state.scrollTo === 'experience' ? experienceRef :
         location.state.scrollTo === 'contact' ? contactRef :
         location.state.scrollTo === 'about' ? aboutRef : null;
-
-      if (targetRef && targetRef.current) {
-        targetRef.current.scrollIntoView({ behavior: 'auto' });
-        window.scrollTo({
-          top: targetRef.current.offsetTop - 80, // Adjust 80 based on your header height
-          behavior: 'auto'
+  
+      if (targetRef?.current) {
+        requestAnimationFrame(() => {
+          if (targetRef.current) {  // Additional null check here
+            window.scrollTo({
+              top: targetRef.current.offsetTop - 80,
+              behavior: 'auto'
+            });
+          }
         });
       }
     }
-  }, [location]);
+  }, [location.state]);
 
   return (
     <AnimatedPage>

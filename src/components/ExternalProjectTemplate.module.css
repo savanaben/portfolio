@@ -46,7 +46,7 @@
   .rainbowButton {
     position: relative;
     transition: all 0.3s ease;
-    background-color: #0035ff !important;
+    background-color: #9333ea !important;
   }
   
   .rainbowButton:hover {

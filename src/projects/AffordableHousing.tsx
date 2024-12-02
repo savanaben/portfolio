@@ -18,7 +18,7 @@ const AffordableHousing: React.FC = () => {
             This project combined storytelling with data visualization to introduce people to the extremely complex topic of affordable housing in New Jersey. Collaborating with the Fair Share Housing Center and David Kinsey, I acquired the latest affordable housing data to enable people to explore how many affordable homes their municipality is required to build under the Mount Laurel Doctrine.
           </Paragraph>
           <Paragraph>
-            This data viz was combined with a storytelling flow to simplify the many court rulings that have shaped affordable housing in NJ.
+            This vue-based data viz was combined with a storytelling flow to simplify the many court rulings that have shaped affordable housing in NJ.
           </Paragraph>
           <Paragraph>
             Thanks again to David Kinsey for sharing the latest affordable housing data and being a core advocate of the Mount Laurel Doctrine.

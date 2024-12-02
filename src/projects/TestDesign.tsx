@@ -144,11 +144,13 @@ const TestDesign: React.FC = () => {
           items={[
             {
               type: 'video',
+              videoType: 'youtube' as const,
               src: 'https://www.youtube.com/embed/xnnv7gqL3d8?modestbranding=1;showinfo=0;rel=0;fs=1',
               caption: 'Using After Effects, I created a semi-accurate representation of space junk density by combining an ArcGIS representation of Earth with point clouds that equal the amount of space junk bigger than 10cm (based on the most <Link href="https://www.nasa.gov/pdf/692076main_Orbital_Debris_Management_and_Risk_Mitigation.pdf" external>up-to-date data</Link> at the time).',
             },
             {
               type: 'video',
+              videoType: 'youtube' as const,
               src: 'https://www.youtube.com/embed/jB7rCDx1qZk?modestbranding=1;showinfo=0;rel=0;fs=1',
               caption: 'Using Autodesk Maya, I created a 3D simulation of capturing a satellite with a space net.',
             },

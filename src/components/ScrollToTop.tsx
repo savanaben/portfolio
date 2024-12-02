@@ -1,31 +1,30 @@
-import { useEffect, useRef } from 'react';
-import { useLocation, useNavigationType } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useLocation, Location } from 'react-router-dom';
+
+interface CustomLocation extends Omit<Location, 'state'> {
+  state: {
+    scrollTo?: string;
+  } | null;
+}
 
 export default function ScrollToTop() {
-  const { pathname } = useLocation();
-  const navigationType = useNavigationType();
-  const scrollPositions = useRef<{ [key: string]: number }>({});
+  const location = useLocation() as CustomLocation;
 
   useEffect(() => {
-    if (navigationType === 'POP') {
-      // Browser's back or forward button was used
-      if (scrollPositions.current[pathname] !== undefined) {
-        setTimeout(() => {
-          window.scrollTo(0, scrollPositions.current[pathname]);
-        }, 0);
+    // Only handle scrolling for main page section targets
+    if (location.state?.scrollTo) {
+      const element = document.getElementById(location.state.scrollTo);
+      if (element) {
+        requestAnimationFrame(() => {
+          const offsetPosition = element.offsetTop - 80;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'auto'
+          });
+        });
       }
-    } else {
-      // New navigation
-      window.scrollTo(0, 0);
     }
-
-    const handleScroll = () => {
-      scrollPositions.current[pathname] = window.scrollY;
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [pathname, navigationType]);
+  }, [location.state]);
 
   return null;
 }

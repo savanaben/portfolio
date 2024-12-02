@@ -10,6 +10,7 @@ interface MediaItem {
   height?: number;
   caption?: string;
   alt?: string;
+  videoType?: 'direct' | 'youtube';  // Add this field
 }
 
 interface MediaContainerProps {
@@ -74,7 +75,6 @@ const MediaContainer: React.FC<MediaContainerProps> = ({
   
     const renderMediaItem = (item: MediaItem, index: number) => {
       if (item.type === 'video') {
-        // If width and height are provided, use them to calculate aspect ratio
         const hasCustomDimensions = item.width && item.height;
         const aspectRatio = hasCustomDimensions 
           ? `${(item.height! / item.width!) * 100}%`
@@ -90,14 +90,25 @@ const MediaContainer: React.FC<MediaContainerProps> = ({
                 margin: item.width ? '0 auto' : undefined
               }}
             >
-              <iframe
-                src={item.src}
-                frameBorder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                title={item.caption || `Video ${index + 1}`}
-                className="absolute top-0 left-0 w-full h-full rounded-lg"
-              />
+               {(item.videoType || 'direct') === 'youtube' ? (
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full rounded-lg"
+                  src={item.src}
+                  title={item.caption || 'Video'}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              ) : (
+                <video
+                  className="absolute top-0 left-0 w-full h-full rounded-lg"
+                  controls
+                  playsInline
+                  preload="metadata"
+                >
+                  <source src={item.src} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              )}
             </div>
             {showCaptions && item.caption && (
               <RichTextCaption content={item.caption} />

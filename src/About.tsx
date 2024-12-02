@@ -229,7 +229,7 @@ const About: React.FC<AboutProps> = ({ shouldPreload = false }) => {
                 I got my start in 3D/digital design, expanded to UX, and now enjoy tinkering in frontend dev. 
               </Paragraph>
               <Paragraph>
-                I&apos;ve worked across the design and creation spectrum making art, animation, UIs, prototypes, and novel tools. As a project lead I&apos;ve managed the completion of a design system, various accessibility initiatives, and the day-to-day client/team collaboration critical to moving projects forward. 
+                I&apos;ve worked across the design and creation spectrum making art, animations, UIs, prototypes, and novel tools. As a project lead I&apos;ve managed the completion of a design system, various accessibility initiatives, and the day-to-day client-team collaboration critical to moving projects forward. 
               </Paragraph>
               <Paragraph>
                 My greatest drive has been challenging the status quo of assessment. We can do better - push for richer, more engaging, and more authentic experiences for students. 
@@ -243,16 +243,25 @@ const About: React.FC<AboutProps> = ({ shouldPreload = false }) => {
               className="image-container flex flex-col items-center justify-center mx-auto lg:pt-16"
            >      
         <motion.img 
-        ref={imageRef}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        onClick={handleImageClick}
-        className="rounded-full w-8/12 mx-4  object-cover cursor-pointer lg:w-96 md:w-96 border-solid border-2 border-gray-200 shadow-[12px_12px_0px_0px_rgba(0,0,0,0.15)]" 
-        src={imagesPreloaded && imageCache[slides[currentSlide].roundedImage] 
-          ? imageCache[slides[currentSlide].roundedImage].src 
-          : `${process.env.PUBLIC_URL}${slides[currentSlide].roundedImage}`}
-        alt={slides[currentSlide].caption}
-      />
+          ref={imageRef}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={handleImageClick}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault(); // Prevent space from scrolling
+              handleImageClick();
+            }
+          }}
+          tabIndex={0}
+          role="button"
+          aria-label={`View next photo: ${slides[currentSlide].caption}`}
+          className="rounded-full w-8/12 mx-4 object-cover cursor-pointer lg:w-96 md:w-96 border-solid border-2 border-gray-200 shadow-[12px_12px_0px_0px_rgba(0,0,0,0.15)] focus:ring-offset-4"           
+          src={imagesPreloaded && imageCache[slides[currentSlide].roundedImage] 
+            ? imageCache[slides[currentSlide].roundedImage].src 
+            : `${process.env.PUBLIC_URL}${slides[currentSlide].roundedImage}`}
+          alt={slides[currentSlide].caption}
+        />
 
             {hasBeenClicked && (
               <motion.div

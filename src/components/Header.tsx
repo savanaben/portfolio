@@ -51,13 +51,36 @@ export function HeaderResponsive(): JSX.Element {
     </button>
   ));
 
+
+  const handleNameClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (location.pathname === '/') {
+      const element = document.getElementById('about');
+      if (element) {
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - HEADER_HEIGHT;
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    } else {
+      navigate('/', { state: { scrollTo: 'about' } });
+    }
+  };
+
   return (
     <header className={`${classes.header} w-full`}>
       <div className="container mx-auto lg:pl-10 lg:pr-7 md:pl-10 md:pr-7 px-4 max-w-7xl">
         <div className={`${classes.inner} flex justify-between items-center`}>
-          <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+        <Link 
+          to="/" 
+          onClick={handleNameClick}
+          style={{ textDecoration: 'none', color: 'inherit' }}
+        >
           <h1 className="text-2xl font-bold" style={{ color: '#00719c' }}>Ben Gross</h1>
-          </Link>
+        </Link>
           <Group gap="sm" visibleFrom="sm" className={classes.group} wrap="nowrap">
             {items}
           </Group>
