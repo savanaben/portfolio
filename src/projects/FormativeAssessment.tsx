@@ -310,7 +310,7 @@ The tasks discussed and shown on this page are <Link href={`https://www.ets.org/
            ]}
         />
       <Heading color="#0078a7" alignment="left" level={3}>Outcomes</Heading>
-      <Paragraph>The testlet project was completed on schedule, significantly expanding ETS&apos;s offering in the K-12 and formative assessment space. The design system and authoring platform was utalized for other projects at ETS, providing a flexible platform for any interactive assessment.</Paragraph>
+      <Paragraph>The testlet project was completed on schedule, significantly expanding ETS&apos;s product offering in the K-12 and formative assessment space. The design system and authoring platform have since been utilized for other projects at ETS, providing a flexible platform for any interactive assessment.</Paragraph>
     </Container>
     
 
@@ -326,7 +326,7 @@ The tasks discussed and shown on this page are <Link href={`https://www.ets.org/
         Students join a crew traveling to the asteroid Ceres. They must ration the food supply for the long space voyage and survey nearby asteroids for mining viability. 
       </Paragraph>
       <Paragraph className="italic">
-       Background art by Peter Yeager. Character art by Kyle Czepiel. Task UX by Ben Gross. Content by Shona Ruiz Diaz.  
+       Background art by Peter Yeager. Character art by Kyle Czepiel. Task UX by Ben Gross. Content by Shona Ruiz Diaz. Task authoring by Alex Poulos.  
       </Paragraph>
 </Container>
 
@@ -389,7 +389,7 @@ The tasks discussed and shown on this page are <Link href={`https://www.ets.org/
         Students take on an entrepreneurial venture setting up a scooter tour to different music venues in New Orleans. 
       </Paragraph>
       <Paragraph className="italic">
-       Intro background art purchased. Character art by Kyle Czepiel.  Task UX and map art by Ben Gross. Content by Shona Ruiz Diaz.  
+       Intro background art purchased. Character art by Kyle Czepiel.  Task UX and map art by Ben Gross. Content by Shona Ruiz Diaz. Task authoring by Alex Poulos.  
       </Paragraph>
 </Container>
 

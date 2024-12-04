@@ -1,5 +1,7 @@
 import React from 'react';
 import { Group, Burger, Drawer, Stack, CloseButton } from '@mantine/core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { useDisclosure } from '@mantine/hooks';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import classes from './Header.module.css';
@@ -18,11 +20,39 @@ const links: NavLink[] = [
 
 const HEADER_HEIGHT = 80; // Adjust this value to match your header's height
 
+
+// Create a reusable social icons component
+const SocialIcons = () => (
+  <div className="flex gap-2">
+    <a
+      href="https://www.linkedin.com/in/benjamin-gross-762b761b5/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="p-2 hover:bg-gray-50 rounded-full transition-colors text-gray-500"
+      aria-label="LinkedIn Profile"
+    >
+      <FontAwesomeIcon icon={faLinkedin} size="lg" />
+    </a>
+    <a
+      href="https://github.com/savanaben"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="p-2 hover:bg-gray-50 rounded-full transition-colors text-gray-500"
+      aria-label="GitHub Profile"
+    >
+      <FontAwesomeIcon icon={faGithub} size="lg" />
+    </a>
+  </div>
+);
+
 export function HeaderResponsive(): JSX.Element {
   const [opened, { toggle, close }] = useDisclosure(false);
   const navigate = useNavigate();
   const location = useLocation();
 
+
+
+  
   const handleNavClick = (link: string) => {
     if (location.pathname === '/') {
       const element = document.getElementById(link);
@@ -74,15 +104,14 @@ export function HeaderResponsive(): JSX.Element {
     <header className={`${classes.header} w-full`}>
       <div className="container mx-auto lg:pl-10 lg:pr-7 md:pl-10 md:pr-7 px-4 max-w-7xl">
         <div className={`${classes.inner} flex justify-between items-center`}>
-        <Link 
-          to="/" 
-          onClick={handleNameClick}
-          style={{ textDecoration: 'none', color: 'inherit' }}
-        >
-          <h1 className="text-2xl font-bold" style={{ color: '#00719c' }}>Ben Gross</h1>
-        </Link>
+          <Link to="/" onClick={handleNameClick} style={{ textDecoration: 'none', color: 'inherit' }}>
+            <h1 className="text-2xl font-bold" style={{ color: '#00719c' }}>Ben Gross</h1>
+          </Link>
           <Group gap="sm" visibleFrom="sm" className={classes.group} wrap="nowrap">
             {items}
+            <div className="ml-2">
+              <SocialIcons />
+            </div>
           </Group>
           <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="md" />
         </div>
@@ -111,6 +140,9 @@ export function HeaderResponsive(): JSX.Element {
         </div>
         <Stack gap="lg" p="md">
           {items}
+          <div className="flex justify-center mt-2">
+            <SocialIcons />
+          </div>
         </Stack>
       </Drawer>
     </header>

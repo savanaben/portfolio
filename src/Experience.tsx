@@ -24,7 +24,7 @@ const Experience: React.FC = () => {
             <Paragraph className="text-sm text-gray-500 italic mb-0">2021–present</Paragraph>
             <Paragraph>I lead the instructional design and content UX teams for the National Assessment of Educational Progress (NAEP) and directly create components, prototypes, and digital content across a range of assessment and learning projects.</Paragraph>
             <BulletedList items={[
-              "Consistently collaborate with the NAEP client, presenting complex interactions and projects in understandable terms supported by visuals and prototypes.",
+              "Consistently collaborate with the NAEP client, presenting complex projects and interactions in understandable terms supported by research and prototypes.",
               "Coordinate design work across content and development teams to ensure schedules are met, design system expansions are carefully weighed, and products are successfully moved through design, study, and integration processes.",
               "Provide leadership through example in the establishment of design processes, prioritization of research and study to validate assumptions, and promotion of a culture of shared critique, agency, and knowledge-sharing."
             ]} />
