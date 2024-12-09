@@ -37,7 +37,7 @@ const TestletDesignSystem: React.FC = () => {
       imageUrl: `${process.env.PUBLIC_URL}/img/folio/skeleton.svg`,
       imageAlt: 'Svelte icon',
       title: 'Page transitions, deferred loading, skeleton screens',
-      content: 'Moving from one page to another is done via a nice fade effect. Skeleton screens provide a graceful loading experience for heavier pages on slow connections. And, on the homepage I have a deferred loading system implemented so larger background images can continue to load after the main page to reduce up-front wait time.',
+      content: 'Moving from one page to another is done via a nice fade effect. Skeleton screens provide a graceful loading experience for heavier pages on slow connections. On the homepage I have a deferred loading system implemented so larger background images can continue to load after the main page to reduce up-front wait time.',
     },
     {
       imageUrl: `${process.env.PUBLIC_URL}/img/folio/Fun.svg`,
@@ -52,6 +52,7 @@ const TestletDesignSystem: React.FC = () => {
   
   return (
 <AnimatedPage>
+
 <Container
   layout="single"
   size="2xl"

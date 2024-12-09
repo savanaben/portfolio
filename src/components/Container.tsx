@@ -95,14 +95,12 @@ const Container: React.FC<ContainerProps> = ({
             `}>
               <div className={`
                 w-full 
-                ${leftStackedSize !== 'full' ? `max-w-${leftStackedSize}` : ''}
                 ${!removeHorizontalPadding && !bothColumnsAreMedia ? 'px-4' : ''}
               `}>
                 {leftContent}
               </div>
               <div className={`
                 w-full 
-                ${rightStackedSize !== 'full' ? `max-w-${rightStackedSize}` : ''}
                 ${!removeHorizontalPadding && !bothColumnsAreMedia ? 'px-4' : ''}
               `}>
                 {rightContent}

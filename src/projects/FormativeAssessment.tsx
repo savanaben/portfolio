@@ -24,36 +24,7 @@ interface Image {
 
 const TestletDesignSystem: React.FC = () => {
   
-  const iconItems = [
-    {
-      imageUrl: `${process.env.PUBLIC_URL}/img/folio/components.svg`,
-      imageAlt: 'Components icon',
-      title: '20 components so far',
-      content: 'Component range from simple paragraphs and headings to more complex page templates and configuration-rich containers.',
-    },
-    {
-      imageUrl: `${process.env.PUBLIC_URL}/img/folio/Tailwind_Logo.svg`,
-      imageAlt: 'Usability icon',
-      title: 'Supportive frameworks',
-      content: 'React and JSX are at the core, Tailwind simplifies the styling, framer motion enables simpler animations, and photoswipe powers the image lightbox’s.',
-    },
-    {
-      imageUrl: `${process.env.PUBLIC_URL}/img/folio/skeleton.svg`,
-      imageAlt: 'Svelte icon',
-      title: 'Page transitions, deferred loading, skeleton screens',
-      content: 'Moving from one page to another is done via a nice fade effect. Skeleton screens provide a graceful loading experience for heavier pages on slow connections. And, on the homepage I have a deferred loading system implemented so larger background images can continue to load after the main page to reduce up-front wait time.',
-    },
-    {
-      imageUrl: `${process.env.PUBLIC_URL}/img/folio/Fun.svg`,
-      imageAlt: 'Svelte icon',
-      title: 'Fun stuff',
-      content: 'Did you know you can click on my picture on the home page? I wanted this site to include small bursts of the unexpected. My project tiles include a hover-over 3D effect, headers and background colors can change to align to a pages’ theme, and some pages include custom effects to further immerse the reader. ',
-    },
-  ];
 
-
-
-  
   return (
 <AnimatedPage>
 <Container

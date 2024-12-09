@@ -38,21 +38,21 @@ interface Project {
     },
     {
       id: "design-system",
-      title: "Prototype Errything",
+      title: "Prototopia",
       description: "Bits and bobs I've prototyped.",
-      image: `${process.env.PUBLIC_URL}/img/design-system-cover.svg`,
+      image: `${process.env.PUBLIC_URL}/img/Prototopia/PrototopiaCover.svg`,
       imageAlt: "Abstract image of three shapes coming together to create a page template",
-      link: "/design-system",
+      link: "/Prototopia",
       featured: false,
-      categories: []
+      categories: ["UI","dev"]
     },
     {
       id: "design-system",
       title: "PlanWise",
       description: "A Grammerly-style plugin to recommend formative activities to teachers.",
-      image: `${process.env.PUBLIC_URL}/img/design-system-cover.svg`,
+      image: `${process.env.PUBLIC_URL}/img/PlanWise/PlanWiseCover.png`,
       imageAlt: "Abstract image of three shapes coming together to create a page template",
-      link: "/design-system",
+      link: "/PlanWise",
       featured: true,
       categories: ["UI", "UX"]
     },

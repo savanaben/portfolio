@@ -40,8 +40,8 @@ const Heading: React.FC<HeadingProps> = ({
 
   return (
     <Tag 
-      className={`font-rethink ${visualStyle} ${alignmentClass} ${className}`}
-      style={combinedStyle}
+       className={`${visualStyle} ${alignmentClass} font-family-rethink ${className}`} // Moved className to the end
+        style={combinedStyle}
     >
       {children}
     </Tag>
