@@ -51,7 +51,7 @@ const SkeletonLoader: React.FC = () => {
   };
 
   return (
-    <div className="fixed inset-0 flex justify-center items-center">
+    <div className="fixed inset-0 flex justify-center items-center px-4">
       <AnimatePresence mode="wait">
         <motion.div
           key={animationKey}

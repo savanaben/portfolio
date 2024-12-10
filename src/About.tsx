@@ -242,26 +242,40 @@ const About: React.FC<AboutProps> = ({ shouldPreload = false }) => {
               ref={imageContainerRef}
               className="image-container flex flex-col items-center justify-center mx-auto lg:pt-16"
            >      
-        <motion.img 
-          ref={imageRef}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          onClick={handleImageClick}
-          onKeyDown={(e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-              e.preventDefault(); // Prevent space from scrolling
-              handleImageClick();
-            }
-          }}
-          tabIndex={0}
-          role="button"
-          aria-label={`View next photo: ${slides[currentSlide].caption}`}
-          className="rounded-full w-8/12 mx-4 object-cover cursor-pointer lg:w-96 md:w-96 border-solid border-2 border-gray-200 shadow-[12px_12px_0px_0px_rgba(0,0,0,0.15)] focus:ring-offset-4"           
-          src={imagesPreloaded && imageCache[slides[currentSlide].roundedImage] 
-            ? imageCache[slides[currentSlide].roundedImage].src 
-            : `${process.env.PUBLIC_URL}${slides[currentSlide].roundedImage}`}
-          alt={slides[currentSlide].caption}
-        />
+            <motion.img 
+              ref={imageRef}
+              draggable="false"
+              whileHover={{ 
+                scale: 1.05,
+                boxShadow: '14px 14px 0px 0px rgba(0,0,0,0.12)'
+              }}
+              initial={{
+                boxShadow: '11px 11px 0px 0px rgba(0,0,0,0.15)'
+              }}
+              whileTap={{ 
+                scale: 0.95,
+                boxShadow: '7px 7px 0px 0px rgba(0,0,0,0.15)'
+              }}
+              transition={{
+                duration: 0.2,
+                ease: 'easeInOut'
+              }}
+              onClick={handleImageClick}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  handleImageClick();
+                }
+              }}
+              tabIndex={0}
+              role="button"
+              aria-label={`View next photo: ${slides[currentSlide].caption}`}
+              className="rounded-full w-8/12 mx-4 object-cover cursor-pointer lg:w-96 md:w-96 border-solid border-2 border-gray-200 focus:ring-offset-4"           
+              src={imagesPreloaded && imageCache[slides[currentSlide].roundedImage] 
+                ? imageCache[slides[currentSlide].roundedImage].src 
+                : `${process.env.PUBLIC_URL}${slides[currentSlide].roundedImage}`}
+              alt={slides[currentSlide].caption}
+            />
 
             {hasBeenClicked && (
               <motion.div
