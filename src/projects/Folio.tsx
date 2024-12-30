@@ -120,7 +120,8 @@ const TestletDesignSystem: React.FC = () => {
       <Paragraph>
       Most components are self-explanatory, though the container component was particularly challenging. I needed to support a variety of layouts, content types (text, media), and margin sizes across the mobile and desktop views. 
       </Paragraph>
-    </Container>
+  </Container>
+  
     <Container
   layout="single"
   size="5xl"

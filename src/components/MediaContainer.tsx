@@ -7,8 +7,9 @@ import { faPlay } from '@fortawesome/free-solid-svg-icons';
 
 
 interface MediaItem {
-  type: 'image' | 'video' | 'gif' | 'iframe';  // Added gif type
+  type: 'image' | 'video' | 'gif' | 'iframe';  
   src: string;
+  coverImage?: string;  
   thumbnailSrc?: string;
   width?: number;
   height?: number;
@@ -18,7 +19,8 @@ interface MediaItem {
   gifOptions?: {
     playOnce?: boolean;
     showReplayButton?: boolean;
-    duration?: number; // Add duration option
+    duration?: number;
+    autoPlay?: boolean;  
   };
   iframeOptions?: {
     scrolling?: boolean;
@@ -32,10 +34,12 @@ interface MediaContainerProps {
   items: MediaItem[];
   maxWidth?: 'none' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl';
   columns?: {
+    base?: 1 | 2 | 3 | 4;
     sm?: 1 | 2 | 3 | 4;
     md?: 1 | 2 | 3 | 4;
     lg?: 1 | 2 | 3 | 4;
   };
+  gap?: 'none' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';  
   showCaptions?: boolean;
   className?: string;
 }
@@ -43,20 +47,32 @@ interface MediaContainerProps {
 // New GifPlayer component
 const GifPlayer: React.FC<{
   src: string;
+  coverImage?: string;
   width?: number;
   height?: number;
   alt?: string;
   playOnce?: boolean;
   showReplayButton?: boolean;
-  duration?: number; // Add duration prop
-}> = ({ src, width, height, alt, playOnce = true, showReplayButton = true, duration = 3000 }) => { // Default 3s duration
-  const [isPlaying, setIsPlaying] = useState(true);
+  duration?: number;
+  autoPlay?: boolean;  // New prop
+}> = ({ 
+  src, 
+  coverImage,
+  width, 
+  height, 
+  alt, 
+  playOnce = true, 
+  showReplayButton = true, 
+  duration = 3000,
+  autoPlay = true  // Default to true for backward compatibility
+}) => {
+  const [isPlaying, setIsPlaying] = useState(autoPlay);
   const imgRef = useRef<HTMLImageElement>(null);
   const timerRef = useRef<NodeJS.Timeout>();
 
   useEffect(() => {
+    // Only start timer if gif is playing
     if (playOnce && isPlaying) {
-      // Set timer to show replay button after duration
       timerRef.current = setTimeout(() => {
         setIsPlaying(false);
       }, duration);
@@ -69,8 +85,9 @@ const GifPlayer: React.FC<{
     };
   }, [isPlaying, playOnce, duration]);
 
-  const handleReplay = () => {
+  const handlePlay = () => {
     if (imgRef.current) {
+      // Reset gif by clearing and resetting src
       const currentSrc = imgRef.current.src;
       imgRef.current.src = '';
       imgRef.current.src = currentSrc;
@@ -82,22 +99,20 @@ const GifPlayer: React.FC<{
     <div className="relative inline-block">
       <img
         ref={imgRef}
-        src={src}
+        src={!isPlaying && coverImage ? coverImage : src}
         width={width}
         height={height}
         alt={alt || 'Animated GIF'}
         className="rounded-lg w-full"
       />
-        {!isPlaying && showReplayButton && (
+      {!isPlaying && (
         <button
-          onClick={handleReplay}
+          onClick={handlePlay}
           className="absolute inset-0 flex items-center justify-center bg-black/20 rounded-lg transition-all hover:bg-black/30"
-          aria-label="Replay animation"
+          aria-label="Play animation"
         >
           <div className="relative">
-            {/* White circle background */}
             <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center">
-              {/* Play icon, slightly offset to the right for visual balance */}
               <FontAwesomeIcon 
                 icon={faPlay} 
                 className="text-gray-700 text-3xl ml-1" 
@@ -113,7 +128,8 @@ const GifPlayer: React.FC<{
 const MediaContainer: React.FC<MediaContainerProps> = ({
   items,
   maxWidth = 'none',
-  columns = { sm: 1, md: 2, lg: 2 },
+  columns = { base: 1, sm: 1, md: 2, lg: 2 },
+  gap = 'md',
   showCaptions = false,
   className = '',
 }) => {
@@ -134,8 +150,45 @@ const MediaContainer: React.FC<MediaContainerProps> = ({
     }
   };
 
+  const getGapClass = (gap: MediaContainerProps['gap']) => {
+    switch (gap) {
+      case 'none': return 'gap-0';
+      case 'xs': return 'gap-2';    // 0.5rem
+      case 'sm': return 'gap-3';    // 0.75rem
+      case 'md': return 'gap-4';    // 1rem (default)
+      case 'lg': return 'gap-6';    // 1.5rem
+      case 'xl': return 'gap-8';    // 2rem
+      case '2xl': return 'gap-12';  // 3rem
+      default: return 'gap-4';
+    }
+  };
+
+  const getColumnsClass = (columns: MediaContainerProps['columns'] = {}) => {
+    // Ensure columns object exists with default values
+    const cols = {
+      base: columns?.base || 1,
+      sm: columns?.sm,
+      md: columns?.md,
+      lg: columns?.lg
+    };
+  
+    const baseColumns = `grid-cols-${cols.base}`;
+    const smColumns = cols.sm ? `sm:grid-cols-${cols.sm}` : '';
+    const mdColumns = cols.md ? `md:grid-cols-${cols.md}` : '';
+    const lgColumns = cols.lg ? `lg:grid-cols-${cols.lg}` : '';
+  
+    // Filter out empty strings
+    return [baseColumns, smColumns, mdColumns, lgColumns]
+      .filter(Boolean)
+      .join(' ');
+  };
+
+
   const maxWidthClass = getMaxWidthClass(maxWidth);
-  const gridClass = `grid gap-4 grid-cols-1 sm:grid-cols-${columns.sm} md:grid-cols-${columns.md} lg:grid-cols-${columns.lg}`;
+  const gapClass = getGapClass(gap);
+  const columnsClass = getColumnsClass(columns);
+  const gridClass = `grid ${gapClass} ${columnsClass}`;
+
 
   const images = items.filter(item => item.type === 'image').map(item => ({
     largeURL: item.src,
@@ -295,25 +348,30 @@ const MediaContainer: React.FC<MediaContainerProps> = ({
         ? `${(item.height! / item.width!) * 100}%`
         : '56.25%';
 
-      return (
-        <div key={index} className="min-w-[150px] w-full">
-          <div 
-            className="relative w-full" 
-            style={{ 
-              paddingBottom: aspectRatio,
-              maxWidth: item.width ? `${item.width}px` : undefined,
-              margin: item.width ? '0 auto' : undefined
-            }}
-          >
-            {(item.videoType || 'direct') === 'youtube' ? (
-              <iframe
-                className="absolute top-0 left-0 w-full h-full rounded-lg"
-                src={item.src}
-                title={item.caption || 'Video'}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            ) : (
+  // Add quality parameters to YouTube URL
+  const enhancedYoutubeUrl = item.videoType === 'youtube' 
+    ? `${item.src}${item.src.includes('?') ? '&' : '?'}vq=hd1080&modestbranding=1`
+    : item.src;
+
+  return (
+    <div key={index} className="min-w-[150px] w-full">
+      <div 
+        className="relative w-full" 
+        style={{ 
+          paddingBottom: aspectRatio,
+          maxWidth: item.width ? `${item.width}px` : undefined,
+          margin: item.width ? '0 auto' : undefined
+        }}
+      >
+        {item.videoType === 'youtube' ? (
+          <iframe
+            className="absolute top-0 left-0 w-full h-full rounded-lg"
+            src={enhancedYoutubeUrl}
+            title={item.caption || 'Video'}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        ) : (
               <video
                 className="absolute top-0 left-0 w-full h-full rounded-lg"
                 controls
@@ -339,12 +397,14 @@ const MediaContainer: React.FC<MediaContainerProps> = ({
         <div key={index} className="min-w-[150px] w-full">
           <GifPlayer
             src={item.src}
+            coverImage={item.coverImage}  // Add this line
             width={item.width}
             height={item.height}
             alt={item.alt}
             playOnce={item.gifOptions?.playOnce}
             showReplayButton={item.gifOptions?.showReplayButton}
             duration={item.gifOptions?.duration}
+            autoPlay={item.gifOptions?.autoPlay}
           />
           {showCaptions && item.caption && (
             <RichTextCaption content={item.caption} />
@@ -359,19 +419,28 @@ const MediaContainer: React.FC<MediaContainerProps> = ({
   return (
     <div className={`w-full mx-auto ${maxWidthClass} ${!showCaptions ? 'mb-6' : ''} ${className}`}>
       <div className={gridClass}>
-        {images.length > 0 && (
-          <PhotoSwipeGallery
-            images={images}
-            options={{}}
-            className={`col-span-full ${gridClass}`}
-            showCaptions={showCaptions}
-          />
-        )}
-      {items
-        .filter(item => item.type === 'video' || item.type === 'gif' || item.type === 'iframe') 
-        .map(renderMediaItem)}
+        {items.map((item, index) => {
+          if (item.type === 'image') {
+            return (
+              <PhotoSwipeGallery
+                key={index}
+                images={[{
+                  largeURL: item.src,
+                  thumbnailURL: item.thumbnailSrc || item.src,
+                  width: item.width || 1000,
+                  height: item.height || 1000,
+                  caption: item.caption,
+                  alt: item.alt,
+                }]}
+                options={{}}
+                showCaptions={showCaptions}
+              />
+            );
+          }
+          return renderMediaItem(item, index);
+        })}
+      </div>
     </div>
-  </div>
   );
 };
 

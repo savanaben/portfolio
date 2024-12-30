@@ -98,7 +98,8 @@ The tasks discussed and shown on this page are <Link href={`https://www.ets.org/
       </Paragraph>
       <Heading color="#0078a7" alignment="left" level={3}>Advocating for the student experience</Heading>
       <Paragraph>
-      An inherent challenge with an assessment is how to keep it interesting while still asking all the questions you need to ensure validity. We established a number of methods to achieve this:</Paragraph>
+      An inherent challenge with an assessment is how to keep it interesting while still asking all the questions you need to ensure validity. We established a number of methods to achieve this:
+      </Paragraph>
       <BulletedList items={[
             <>
             <Paragraph><strong>Intro and rest screens</strong> - A fundamental task concept we employed was ensuring students got a break every once and a while. If the student just answered four questions back-to-back, we&apos;d provide a non-question “rest” screen. These screens often brought back in the characters and either consolidated information or transitioned to the next part.</Paragraph>
@@ -110,7 +111,7 @@ The tasks discussed and shown on this page are <Link href={`https://www.ets.org/
                   width: 1816,
                   height: 996,
                   alt: 'Space Junk design 1',
-                  caption: "The task begins with two intro screens bringing in the context. | Character and background art by Kyle Czepiel. Task content by Ellen Gluck.",
+                  caption: "This task begins with two intro screens bringing in the context. | Character and background art by Kyle Czepiel. Task content by Ellen Gluck.",
                 },
                 {
                   type: 'image',
@@ -145,21 +146,22 @@ The tasks discussed and shown on this page are <Link href={`https://www.ets.org/
             </>,
             <>
               <Paragraph><strong>Media</strong> - As the UX lead I advocated for a variety of art styles, coordinated asset libraries, and reviewed all media for consistency and quality. Animations and images were utilized not just for question-centric purposes, but to also fill out the world and scenario. We also employed diagrammatic and visual representations of content so text wasn&apos;t the only way for the student to understand complex spatial concepts.</Paragraph>
+              <Paragraph className="italic">Wooden bridge art and animation by David Chapman.</Paragraph>
              <MediaContainer
               items={[
                 {
                   type: 'image',
                   src: `${process.env.PUBLIC_URL}/img/FormativeAssessment/woodenbridge1.png`,
-                  width: 1850,
-                  height: 1093,
+                  width: 1639,
+                  height: 1108,
                   alt: 'Space Junk design 1',
                   caption: "In the Wooden Bridges task, diagrams focus the student on certain parts.",
                 },
                 {
                   type: 'image',
                   src: `${process.env.PUBLIC_URL}/img/FormativeAssessment/woodenbridge2.png`,
-                  width: 1850,
-                  height: 1093,
+                  width: 1720,
+                  height: 973,
                   alt: 'Space Junk design 1',
                   caption: "The student must carefully consider construction to determine if their bridge meets the competitions requirements.",
                 },
@@ -219,14 +221,14 @@ The tasks discussed and shown on this page are <Link href={`https://www.ets.org/
        </QuoteBox>
 
       <Heading color="#0078a7" alignment="left" level={4}>Look Back Button Improvements</Heading>
-      <Paragraph>Sometimes we provide a reference, or “look back” button that students can use to jump to a certain part of a passage.</Paragraph>
+      <Paragraph>Our &apos;look back&apos; feature lets students quickly reference specific parts of a passage or organizer.</Paragraph>
       <MediaContainer
           items={[
             {
               type: 'image',
               src: `${process.env.PUBLIC_URL}/img/FormativeAssessment/oldLBB.png`,
-              width: 1080,
-              height: 930,
+              width: 1115,
+              height: 318,
               alt: 'Space Junk design 1',
               caption: "",
             },
@@ -247,8 +249,8 @@ The tasks discussed and shown on this page are <Link href={`https://www.ets.org/
             {
               type: 'image',
               src: `${process.env.PUBLIC_URL}/img/FormativeAssessment/LBB new.png`,
-              width: 1080,
-              height: 930,
+              width: 366,
+              height: 167,
               alt: 'Space Junk design 1',
               caption: "",
             },
@@ -266,8 +268,8 @@ The tasks discussed and shown on this page are <Link href={`https://www.ets.org/
             {
               type: 'image',
               src: `${process.env.PUBLIC_URL}/img/FormativeAssessment/testletQuotebox.png`,
-              width: 1080,
-              height: 930,
+              width: 1434,
+              height: 905,
               alt: 'Space Junk design 1',
               caption: "",
             },
@@ -312,32 +314,32 @@ The tasks discussed and shown on this page are <Link href={`https://www.ets.org/
             {
               type: 'image',
               src: `${process.env.PUBLIC_URL}/img/FormativeAssessment/ceres1.jpg`,
-              width: 1816,
-              height: 996,
+              width: 2136,
+              height: 1042,
               alt: 'Space Junk design 1',
               caption: "",
             },
             {
               type: 'image',
               src: `${process.env.PUBLIC_URL}/img/FormativeAssessment/ceres2.jpg`,
-              width: 1816,
-              height: 996,
+              width: 2127,
+              height: 1044,
               alt: 'Space Junk design 1',
               caption: "Many tasks include an intro with clear goals that are checked off as you progress.",
             },
             {
               type: 'image',
               src: `${process.env.PUBLIC_URL}/img/FormativeAssessment/ceres3.jpg`,
-              width: 1816,
-              height: 996,
+              width: 2138,
+              height: 1045,
               alt: 'Space Junk design 1',
               caption: "",
             },
             {
               type: 'image',
               src: `${process.env.PUBLIC_URL}/img/FormativeAssessment/ceres4.jpg`,
-              width: 1816,
-              height: 996,
+              width: 2136,
+              height: 1038,
               alt: 'Space Junk design 1',
               caption: "This task included an outro animation of autonomous vehicles collecting ore from an asteroid.",
             },
@@ -375,32 +377,32 @@ The tasks discussed and shown on this page are <Link href={`https://www.ets.org/
             {
               type: 'image',
               src: `${process.env.PUBLIC_URL}/img/FormativeAssessment/jazz1.jpg`,
-              width: 1816,
-              height: 996,
+              width: 2135,
+              height: 1044,
               alt: 'Space Junk design 1',
               caption: "",
             },
             {
               type: 'image',
               src: `${process.env.PUBLIC_URL}/img/FormativeAssessment/jazz2.jpg`,
-              width: 1816,
-              height: 996,
+              width: 2137,
+              height: 1044,
               alt: 'Space Junk design 1',
               caption: "",
             },
             {
               type: 'image',
               src: `${process.env.PUBLIC_URL}/img/FormativeAssessment/jazz3.jpg`,
-              width: 1816,
-              height: 996,
+              width: 2136,
+              height: 1044,
               alt: 'Space Junk design 1',
               caption: "Throughout the task a map is updated to visually convey the routes discussed.",
             },
             {
               type: 'image',
               src: `${process.env.PUBLIC_URL}/img/FormativeAssessment/jazz4.jpg`,
-              width: 1816,
-              height: 996,
+              width: 2139,
+              height: 1044,
               alt: 'Space Junk design 1',
               caption: "In this task, the rest screens let the student sample three different music genres from the New Orleans region.",
             },

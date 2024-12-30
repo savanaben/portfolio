@@ -32,8 +32,9 @@ const Experience: React.FC = () => {
               header="Key stuff I do"
             >
               <BulletedList items={[
-              "Consistently collaborate with the NAEP client, presenting complex projects and interactions in understandable terms supported by research and prototypes.",
+              "Consistently collaborate with our NAEP client, presenting complex projects and interactions in understandable terms supported by research and prototypes.",
               "Coordinate design work across content and development teams to ensure schedules are met, design system expansions are carefully weighed, and products are successfully moved through design, study, and integration processes.",
+              "Rigorously pursue accessibility initiatives, developing novel techniques to meet new WCAG standards in the context of NAEP and large-scale assessment. ",
               "Provide leadership through example in the establishment of design processes, prioritization of research and study to validate assumptions, and promotion of a culture of shared critique, agency, and knowledge-sharing."
             ]} />
             </Accordion>

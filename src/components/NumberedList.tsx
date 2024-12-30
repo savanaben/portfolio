@@ -7,7 +7,7 @@ interface NumberedListProps {
 
 const NumberedList: React.FC<NumberedListProps> = ({ items, className = '' }) => {
   return (
-    <ol className={`mt-2 mb-4 space-y-4 ${className}`}>
+    <ol className={`mt-2 space-y-2 mb-4 ${className}`}>
       {items.map((item, index) => (
         <li key={index} className="relative pl-7">
           {/* Number */}

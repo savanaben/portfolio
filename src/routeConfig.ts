@@ -1,6 +1,6 @@
 import React from 'react';
 import { ScrollRestoration } from 'react-router-dom';
-import MainPage from './MainPage';  // Import MainPage from MainPage.tsx
+import MainPage from './MainPage';  
 import Project1 from './projects/Project1';
 import TestletDesignSystem from './projects/TestletDesignSystem';
 import AffordableHousing from './projects/AffordableHousing';
@@ -16,6 +16,7 @@ import Folio from './projects/Folio';
 import FormativeAssessment from './projects/FormativeAssessment';
 import PlanWise from './projects/PlanWise';
 import Prototopia from './projects/Prototopia';
+import DesignSystems from './projects/DesignSystems';
 
 interface RouteConfig {
   path: string;
@@ -28,6 +29,7 @@ const routeConfig: RouteConfig[] = [
   { path: '/', element: MainPage, backgroundColor: '#f3f4f6', fullWidth: true },
   { path: '/project1', element: Project1, backgroundColor: '#f3f4f6' },
   { path: '/design-system', element: TestletDesignSystem, backgroundColor: '#ffffff' },
+  { path: '/DesignSystems', element: DesignSystems, backgroundColor: '#f3f4f6'},
   { path: '/affordable-housing-viz', element: AffordableHousing, backgroundColor: '#fff9ef', fullWidth: true },
   { path: '/MathMania', element: MathMania, backgroundColor: '#ffffff', fullWidth: true },
   { path: '/TestDesign', element: TestDesign, backgroundColor: '#fff9ef', fullWidth: true },
@@ -40,7 +42,7 @@ const routeConfig: RouteConfig[] = [
   { path: '/Folio', element: Folio, backgroundColor: '#fff4f8', fullWidth: true },
   { path: '/FormativeAssessment', element: FormativeAssessment, backgroundColor: '#eefdff', fullWidth: true },
   { path: '/PlanWise', element: PlanWise, backgroundColor: '#f2fff4', fullWidth: true },
-  { path: '/Prototopia', element: Prototopia, backgroundColor: '#f3f4f6', fullWidth: true },
+  { path: '/Prototopia', element: Prototopia, backgroundColor: '#f3f4f6' },
 
 
 ];

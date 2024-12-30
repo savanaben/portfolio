@@ -62,7 +62,7 @@ interface Project {
       description: "My management and contributions to various Design Systems.",
       image: `${process.env.PUBLIC_URL}/img/design-system-cover.svg`,
       imageAlt: "Abstract image of three shapes coming together to create a page template",
-      link: "/design-system",
+      link: "/DesignSystems",
       featured: true,
       categories: ["UI", "Project Management"]
     },
@@ -94,7 +94,7 @@ interface Project {
       imageAlt: "Floating circular nodes in space with various book labels",
       link: "/ScienceFictionDataViz",
       featured: false,
-      categories: ["data-viz", "dev"]
+      categories: ["data-viz"]
     },
     {
       id: "nj-affordable-housing",
@@ -104,7 +104,7 @@ interface Project {
       imageAlt: "Image related to New Jersey affordable housing visualization",
       link: "/affordable-housing-viz",
       featured: false,
-      categories: ["data-viz", "dev"]
+      categories: ["data-viz"]
     },
     {
       id: "museum-mania",
